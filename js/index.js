@@ -1,4 +1,9 @@
 $(document).ready(function () {
+    var bvi = new isvek.Bvi({
+        target: '.btn-bvi',
+        reload: true
+    });
+
     let scrollTop = 0;
     window.addEventListener('scroll', function () {
         if (!$('body').hasClass('noscroll')) {
