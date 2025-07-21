@@ -1,0 +1,139 @@
+$lg: '(max-width: 992px)';
+$md: '(max-width: 768px)';
+$sm: '(max-width: 576px)';
+
+$font-main: "Roboto", Arial, sans-serif;
+
+$color-primary: #394250;
+$color-secondary: #748CA4;
+$color-border: #E0ECF1;
+$color-active: #009FA2;
+$color-active-secondary: #14787A;
+$color-active-tertiary: #2297BD;
+
+html {
+    font-size: calc(100vw / 1920 * 10);
+
+    @media #{$lg} {
+        font-size: calc(100vw / 768 * 10);
+    }
+
+    @media #{$md} {
+        font-size: calc(100vw / 576 * 10);
+    }
+
+    @media #{$sm} {
+        font-size: calc(100vw / 375 * 10);
+    }
+}
+
+body {
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 71rem;
+        background: url(../images/body-bg.jpg) no-repeat center / cover;
+        z-index: -1;
+        top: 0;
+        left: 0;
+
+        @media #{$lg} {
+            content: none;
+        }
+    }
+
+    &.noscroll {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        overflow-y: hidden;
+    }
+
+    * {
+        font-family: $font-main;
+        font-size: 1.6rem;
+        margin: 0;
+    }
+
+    main {
+        padding-top: 16rem;
+        box-sizing: border-box;
+        min-height: calc(100dvh - 66rem);
+
+        @media #{$lg} {
+            padding-top: 14rem;
+            min-height: calc(100dvh - 66.7rem);
+        }
+
+        @media #{$md} {
+            min-height: calc(100dvh - 68.7rem);
+        }
+
+        @media #{$sm} {
+            min-height: calc(100dvh - 70.6rem);
+        }
+    }
+
+    h1, h2 {
+        font-weight: 600;
+        color: #000;
+    }
+
+    h1 {
+        font-size: 4rem;
+        line-height: 3.5rem;
+
+        @media #{lg} {
+            font-size: 3rem;
+            line-height: 2.5rem;
+        }
+    }
+
+    h2 {
+        font-size: 3rem;
+        line-height: 2.5rem;
+
+        @media #{lg} {
+            font-weight: 500;
+            font-size: 2.5rem;
+            line-height: 2rem;
+        }
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+
+        @media #{$lg} {
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+        }
+    }
+
+    a {
+        font-weight: 400;
+        font-size: 1.6rem;
+        color: $color-active;
+    }
+}
+
+.container {
+    max-width: 133.5rem;
+
+
+    &, &-large {
+        width: 100%;
+        margin: 0 auto;
+
+        @media #{$lg} {
+            width: calc(100% - 2.8rem);
+            margin: 0 1.4rem;
+        }
+    }
+
+    &-large {
+        max-width: 161rem;
+    }
+}

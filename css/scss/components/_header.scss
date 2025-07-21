@@ -1,0 +1,322 @@
+.header {
+    position: fixed;
+    width: 100%;
+    top: 1rem;
+    left: 0;
+    z-index: 100;
+
+    @media #{$lg} {
+        top: 0;
+    }
+
+    &_mob {
+        top: 0;
+
+        .header {
+            &__content {
+                display: none;
+            }
+
+            &-mob {
+                display: flex;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        gap: 5.2rem;
+        background-color: rgba(#fff, 0.4);
+        backdrop-filter: blur(15px);
+        box-shadow: 0 0.4rem 3rem 0 rgba(#000, 0.05);
+        box-sizing: border-box;
+        padding: 1.5rem 1.5rem 0.7rem 4rem;
+        border-radius: 2rem;
+
+        @media #{$lg} {
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            width: 100%;
+            background-color: #E5F5F9;
+            backdrop-filter: none;
+            padding: 1rem 1.4rem;
+            border-radius: 0 0 2rem 2rem;
+            margin: 0;
+        }
+    }
+
+    &__burger-btn {
+        display: none;
+
+        @media #{$lg} {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 3rem;
+            height: 1.2rem;
+            background-color: transparent;
+            box-sizing: content-box;
+            padding: 1.2rem 1rem;
+            border: none;
+            cursor: pointer;
+            top: 1rem;
+            left: 1.4rem;
+        }
+
+        &:hover {
+            span {
+                background-color: $color-active;
+            }
+        }
+
+        span {
+            width: 100%;
+            height: 0.2rem;
+            background-color: #98A2A2;
+            transition: all .1s linear;
+        }
+    }
+
+    &__logo {
+        display: flex;
+        width: 27rem;
+        height: 7rem;
+        margin: auto 0;
+
+        @media #{$lg} {
+            width: 14.4rem;
+            height: 3.7rem;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+
+    &__blocks {
+        display: flex;
+        gap: 1rem;
+
+        @media #{$lg} {
+            width: 100%;
+        }
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        @media #{$lg} {
+            width: 100%;
+            height: max-content;
+        }
+    }
+
+    .menu, .phone span, .socials, .btn-bvi {
+        @media #{$lg} {
+            display: none;
+        }
+    }
+    
+    .menu {
+        ul {
+            gap: 15rem;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 0.8rem;
+
+        @media #{$lg} {
+            width: 100%;
+        }
+
+        .btn:not(.btn-lk) {
+            @media #{$lg} {
+                width: 100%;
+            }
+        }
+
+        .btn-lk {
+            @media #{$lg} {
+                position: absolute;
+                top: 0.7rem;
+                right: 5.8rem;
+            }
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        gap: 2rem;
+
+        .socials {
+            @media #{$lg} {
+                display: none;
+            }
+        }
+
+        .phone {
+            @media #{$lg} {
+                position: absolute;
+                width: 4rem;
+                height: 4rem;
+                background: linear-gradient(90deg, rgba($color-active-tertiary, 0.8), rgba(#21B2E0, 0.8));
+                border-radius: 1.5rem;
+                transition: all .1s linear;
+                top: 0.7rem;
+                right: 1.4rem;
+            }
+
+            &:hover {
+                @media #{$lg} {
+                    background: $color-active-tertiary;
+                }
+            }
+
+            svg {
+                @media #{$lg} {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                path {
+                    @media #{$lg} {
+                        fill: #fff;
+                    }
+                }
+            }
+
+            span {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    &-mob {
+        display: none;
+        background-color: rgba(#fff, 0.4);
+        backdrop-filter: blur(15px);
+        padding: 2rem 0;
+        border-bottom: 1px #fff solid;
+
+        @media #{$lg} {
+            background-color: rgba(#fff, 0.5);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0.4rem 3rem 0 rgba($color-active, 0.2);
+            padding: 1rem 0;
+            border-bottom: none;
+        }
+
+        .header {
+            &__burger-btn {
+                position: static;
+            }
+        }
+
+        &__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+
+            @media #{$lg} {
+                gap: 0;
+            }
+
+            .menu {
+                ul {
+                    gap: 12rem;
+                }
+            }
+
+            .search {
+                width: 61.5rem;
+
+                @media #{$lg} {
+                    display: none;
+                }
+            }
+        }
+
+        &__logo {
+            display: flex;
+            width: 16.3rem;
+            height: 4.3rem;
+
+            @media #{$lg} {
+                width: 11.4rem;
+                height: 3.7rem;
+                margin-right: 1rem;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                object-position: center;
+            }
+        }
+
+        &__buttons {
+            display: none;
+
+            @media #{$lg} {
+                display: flex;
+                gap: 0.5rem;
+            }
+
+            .btn {
+                @media #{$lg} {
+                    line-height: 4rem;
+                    height: 4rem;
+                    padding: 0 1.5rem;
+                    background: linear-gradient(90deg, rgba(#1E9FA1, 0.7), rgba(#00C1C4, 0.7));
+                }
+
+                &:hover {
+                    @media #{$lg} {
+                        background: $color-active;
+                    }
+                }
+            }
+
+            .phone {
+                @media #{$lg} {
+                    width: 4rem;
+                    height: 4rem;
+                    background: linear-gradient(90deg, rgba($color-active-tertiary, 0.8), rgba(#21B2E0, 0.8));
+                    border-radius: 1.5rem;
+                    transition: all .1s linear;
+                }
+
+                &:hover {
+                    @media #{$lg} {
+                        background: $color-active-tertiary;
+                    }
+                }
+
+                svg {
+                    @media #{$lg} {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    path {
+                        @media #{$lg} {
+                            fill: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

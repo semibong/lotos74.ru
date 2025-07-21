@@ -1,0 +1,123 @@
+.burger {
+    position: fixed;
+    width: 100%;
+    height: calc(100% - 5.5rem);
+    background-color: rgba(#003B3C, 0.4);
+    backdrop-filter: blur(15px);
+    transition: all .3s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 101;
+    top: 5.5rem;
+    left: 0;
+
+    @media (min-width: 993px) {
+        display: none;
+    }
+
+    &-opened {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    &__close {
+        position: absolute;
+        width: 4rem;
+        height: 4rem;
+        background: url(../images/svg/burger-close.svg) no-repeat center / contain;
+        padding: 0;
+        border: none;
+        top: -4.8rem;
+        left: 1.8rem;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        max-height: calc(100% - 2rem);
+        padding: 1rem 0;
+        overflow-y: scroll;
+    }
+
+    &__controls {
+        display: flex;
+        gap: 0.5rem;
+
+        .search {
+            height: 4rem;
+
+            &__input {
+                background: linear-gradient(-90deg, rgba(255, 255, 255, 0.5), #fff);
+            }
+        }
+
+        .btn-bvi {
+            background: rgba(#fff, 0.8);
+        }
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        gap: 5.5rem;
+        background-color: rgba(#fff, 0.85);
+        backdrop-filter: blur(4px);
+        padding: 0.8rem 0;
+        border: 1px #fff solid;
+        border-radius: 2rem;
+
+        &:nth-of-type(2) .menu a {
+            font-weight: 400;
+            color: $color-secondary;
+
+            &:hover {
+                color: $color-active;
+            }
+        }
+    }
+
+    .menu {
+        ul {
+            flex-direction: column;
+            gap: 0;
+
+            li {
+                display: flex;
+                border-bottom: 1px #fff solid;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+
+                a {
+                    font-weight: 500;
+                    line-height: 4.8rem;
+                    display: flex;
+                    width: 100%;
+                    padding: 0 2rem;
+                }
+            }
+        }
+    }
+
+    &__contacts {
+        padding: 0 1.6rem 1rem;
+
+        .socials {
+            gap: 0;
+            margin-bottom: 0.7rem;
+
+            &>a {
+                width: 5rem;
+                height: 5rem;
+            }
+        }
+
+        .phone {
+            span {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}

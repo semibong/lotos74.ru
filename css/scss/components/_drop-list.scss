@@ -1,0 +1,73 @@
+.drop-list {
+    @media #{$lg} {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(#fff, 0.6);
+        box-sizing: border-box;
+        border: 1px #DBEEF5 solid;
+        border-radius: 1.4rem;
+        overflow: hidden;
+    }
+
+    &__button {
+        display: none;
+
+        @media #{$lg} {
+            position: absolute;
+            display: flex;
+            width: 100%;
+            height: 4.2rem;
+            background: transparent;
+            padding: 0;
+            border: none;
+            cursor: pointer;
+            top: 0;
+            right: 0;
+        }
+
+        &.active {
+            @media #{$lg} {
+                width: 5.6rem;
+            }
+
+            &::before {
+                rotate: 180deg;
+                transform: translateY(50%);
+            }
+        }
+        
+        &::before {
+            content: '';
+            position: absolute;
+            width: 3.6rem;
+            height: 3.6rem;
+            background: url(../images/svg/drop-list-icon.svg) no-repeat center / contain;
+            transform: translateY(-50%);
+            top: 50%;
+            right: 1rem;
+        }
+    }
+
+    &>div {
+        @media #{$lg} {
+            font-size: 1.6rem;
+            line-height: 2rem;
+            color: $color-primary;
+            min-height: 4.2rem;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            order: 2;
+        }
+
+        &.active {
+            @media #{$lg} {
+                color: $color-active;
+                padding: 0 2rem;
+                order: 1;
+            }
+        }
+    }
+}

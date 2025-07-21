@@ -1,0 +1,22 @@
+.menu {
+    ul {
+        display: flex;
+        gap: 3rem;
+        list-style: none;
+        padding-left: 0;
+
+        li {
+            a {
+                font-size: 1.7rem;
+                line-height: 3.4rem;
+                text-decoration: none;
+                color: $color-primary;
+                transition: all .1s linear;
+
+                &:hover {
+                    color: $color-active;
+                }
+            }
+        }
+    }
+}

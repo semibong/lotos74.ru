@@ -1,0 +1,102 @@
+.search {
+    position: relative;
+    width: 77.7rem;
+    height: 4.8rem;
+
+    @media #{$lg} {
+        width: 100%;
+        height: 4.2rem;
+    }
+    
+    &__input {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, rgba(#fff, 0.5), #fff);
+        border-radius: 1.5rem;
+
+        &:has(>input:focus) + button>svg>path {
+            @media #{$lg} {
+                stroke: $color-active;
+            }
+        }
+
+        input {
+            color: $color-primary;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            border: none;
+            border-radius: 1.5rem;
+            outline: none;
+            padding: 0 2rem;
+
+            @media #{$lg} {
+                font-size: 1.4rem;
+                padding: 0 1rem 0 4.5rem;
+            }
+
+            &::-webkit-search-cancel-button {
+                display: none;
+            }
+
+            &::placeholder {
+                color: transparent;
+
+                @media #{$lg} {
+                    font-size: 1.4rem;
+                    color: $color-secondary;
+                }
+            }
+        }
+    }
+
+    button {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        gap: 1.3rem;
+        width: max-content;
+        height: 100%;
+        background-color: transparent;
+        padding: 0 3rem 0 1rem;
+        border: none;
+        cursor: pointer;
+        top: 0;
+        right: 0;
+
+        @media #{$lg} {
+            pointer-events: none;
+            padding: 0;
+            left: 1rem;
+            right: auto;
+        }
+
+        &:hover {
+            svg path {
+                stroke: $color-active;
+            }
+
+            span {
+                color: $color-active;
+            }
+        }
+
+        svg {
+            width: 2.4rem;
+            height: 2.4rem;
+            
+            path {
+                transition: all .1s linear;
+            }
+        }
+
+        span {
+            color: $color-secondary;
+            transition: all .1s linear;
+
+            @media #{$lg} {
+                display: none;
+            }
+        }
+    }
+}
