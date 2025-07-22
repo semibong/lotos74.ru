@@ -1723,6 +1723,8 @@ body a {
 .drop-down {
   position: fixed;
   width: 100%;
+  pointer-events: none;
+  opacity: 0;
   transition: all 0.3s ease-in-out;
   top: 11rem;
   left: 0;
