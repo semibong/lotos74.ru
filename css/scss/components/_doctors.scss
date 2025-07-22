@@ -181,6 +181,7 @@
         }
 
         &__image {
+            position: relative;
             display: flex;
             width: 10rem;
             height: 10rem;
@@ -192,6 +193,29 @@
                 object-fit: cover;
                 object-position: center;
                 border-radius: 2rem;
+            }
+        }
+
+        &__video {
+            position: absolute;
+            width: 3rem;
+            height: 3rem;
+            right: -0.4rem;
+            bottom: -0.4rem;
+
+            &:hover {
+                svg path {
+                    fill: $color-active-secondary;
+                }
+            }
+
+            svg {
+                width: 100%;
+                height: 100%;
+
+                path {
+                    transition: all .1s linear;
+                }
             }
         }
 

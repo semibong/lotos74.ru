@@ -32,6 +32,32 @@ $(document).ready(function () {
         window.scroll(0, scrollTop);
     });
 
+    $('.btn-sign-up').on('click', function () {
+        const signUp = $('.sign-up');
+        const body = $('body');
+
+        signUp.addClass('sign-up-opened');
+
+        if (window.innerWidth < 993) {
+            if (signUp.hasClass('sign-up-opened')) {
+                body.addClass('noscroll');
+                body.css('top', `-${scrollTop}px`);
+            } else {
+                body.removeClass('noscroll');
+                window.scroll(0, scrollTop);
+            }
+        }
+    });
+
+    $('.sign-up__close, .sign-up__space').on('click', function () {
+        $('.sign-up').removeClass('sign-up-opened');
+
+        if (window.innerWidth < 993) {
+            $('body').removeClass('noscroll');
+            window.scroll(0, scrollTop);
+        }
+    });
+
     $(document).on('scroll', function() {
         if ($(window).scrollTop() >= 120) {
             $('.header').addClass('header_mob');
@@ -53,10 +79,23 @@ $(document).ready(function () {
         }, 500, 'swing');
     });
 
+    if ($('.search').length) {
+        let searchBacking = document.createElement('div');
+        searchBacking.classList.add('search__backing');
+        $(document.body).prepend(searchBacking);
+
+        $('.search input').on('focus', function () {
+            $('.search__backing').addClass('active')
+        }).on('blur', function () {
+            $('.search__backing').removeClass('active');
+        });
+    }
+
     if ($('.screen__slider').length) {
         const screenSlider = new Swiper('.screen__slider .swiper', {
             speed: 1000,
             spaceBetween: 22,
+            effect: 'fade',
             autoplay: {
                 delay: 3000,
                 disableOnInteraction: false,
@@ -75,7 +114,7 @@ $(document).ready(function () {
 
     if ($('.services__slider').length) {
         const servicesSlider = new Swiper('.services__slider .swiper', {
-            speed: 1000,
+            speed: 500,
             spaceBetween: 14,
             slidesPerView: 0.5,
             freeMode: true,

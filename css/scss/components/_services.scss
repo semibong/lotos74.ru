@@ -58,9 +58,17 @@
         display: flex;
         flex-wrap: wrap;
         gap: 4rem 6rem;
+        opacity: 0;
+        scale: (0.8);
+        transition: scale .5s ease-in-out, opacity .5s cubic-bezier(1, 0.01, 0.55, 0.35);;
 
         @media #{$lg} {
             gap: 1.4rem;
+        }
+
+        &.swiper-slide-active {
+            scale: (1);
+            opacity: 1;
         }
     }
 

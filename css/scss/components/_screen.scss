@@ -72,10 +72,6 @@
         background: url(../images/screen-slide-bg.jpg) no-repeat right center / cover;
         overflow: hidden;
 
-        @media #{$sm} {
-            background: url(../images/screen-slide-bg-mob.jpg) no-repeat right bottom / cover;
-        }
-
         &__content {
             position: relative;
             box-sizing: border-box;
