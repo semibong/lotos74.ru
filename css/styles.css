@@ -396,7 +396,7 @@ body a {
   background-color: transparent;
   padding: 0 3rem 0 1rem;
   border: none;
-  cursor: pointer;
+  pointer-events: none;
   top: 0;
   right: 0;
 }
