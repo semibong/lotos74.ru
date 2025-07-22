@@ -120,6 +120,20 @@ $(document).ready(function () {
         });
     }
 
+    if ($('.screen__banner').length) {
+        $('.screen__banner').each(function () {
+            $(this).on('mouseenter', function () {
+                if ($(this).find('video').length) {
+                    $(this).find('video')[0].play();
+                }
+            }).on('mouseleave', function () {
+                if ($(this).find('video').length) {
+                    $(this).find('video')[0].pause();
+                }
+            });
+        });
+    }
+
     if ($('.services__slider').length) {
         const servicesSlider = new Swiper('.services__slider .swiper', {
             speed: 500,

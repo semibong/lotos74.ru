@@ -143,6 +143,7 @@
         box-sizing: border-box;
         padding: 2.5rem;
         border-radius: 3rem;
+        overflow: hidden;
 
         &__info {
             margin-bottom: 5.5rem;
@@ -161,7 +162,7 @@
             }
         }
 
-        &>img {
+        &>img, &>video {
             position: absolute;
             width: auto;
             height: 100%;

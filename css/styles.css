@@ -2028,6 +2028,7 @@ body a {
   box-sizing: border-box;
   padding: 2.5rem;
   border-radius: 3rem;
+  overflow: hidden;
 }
 .screen__banner__info {
   margin-bottom: 5.5rem;
@@ -2043,7 +2044,7 @@ body a {
   line-height: 2.2rem;
   color: #394250;
 }
-.screen__banner > img {
+.screen__banner > img, .screen__banner > video {
   position: absolute;
   width: auto;
   height: 100%;
