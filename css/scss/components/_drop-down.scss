@@ -1,8 +1,8 @@
 .drop-down {
     position: fixed;
     width: 100%;
-    pointer-events: none;
-    opacity: 0;
+    // pointer-events: none;
+    // opacity: 0;
     transition: all .3s ease-in-out;
     top: 11rem;
     left: 0;
@@ -113,24 +113,24 @@
             right: 0;
         }
 
-        ul {
+        &>ul {
             display: flex;
             flex-direction: column;
             gap: 2rem;
             list-style: none;
             padding-left: 0;
 
-            li {
+            &>li {
                 position: relative;
                 padding-left: 3rem;
 
                 &.active {
-                    a {
+                    &>a {
                         color: $color-active;
                     }
                 }
 
-                a {
+                &>a {
                     font-size: 1.6rem;
                     text-decoration: none;
                     color: $color-primary;
@@ -146,14 +146,56 @@
         &__sub {
             cursor: pointer;
 
-            &::before {
+            &.active {
+                &::before {
+                    opacity: 0;
+                }
+
+                &::after {
+                    opacity: 1;
+                }
+            }
+
+            &::before, &::after {
                 content: '';
                 position: absolute;
                 width: 2.5rem;
                 height: 2.5rem;
-                background: url(../images/svg/plus.svg) no-repeat center / contain;
+                transition: all .1s linear;
                 top: -0.4rem;
                 left: 0;
+            }
+
+            &::before {
+                background: url(../images/svg/plus.svg) no-repeat center / contain;
+                opacity: 1;
+            }
+
+            &::after {
+                background: url(../images/svg/minus.svg) no-repeat center / contain;
+                opacity: 0;
+            }
+
+            ul {
+                display: none;
+                flex-direction: column;
+                gap: 0.6rem;
+                list-style: none;
+                padding-left: 0;
+                margin-top: 1.5rem;
+
+                li {
+                    a {
+                        font-size: 1.4rem;
+                        text-decoration: none;
+                        color: #4B5563;
+                        transition: all .1s linear;
+
+                        &:hover {
+                            color: $color-active;
+                        }
+                    }
+                }
             }
         }
     }

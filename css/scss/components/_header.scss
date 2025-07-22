@@ -64,6 +64,7 @@
             box-sizing: content-box;
             padding: 1.2rem 1rem;
             border: none;
+            transition: filter .3s ease-in-out;
             cursor: pointer;
             top: 1rem;
             left: 1.4rem;
@@ -88,6 +89,7 @@
         width: 27rem;
         height: 7rem;
         margin: auto 0;
+        transition: filter .3s ease-in-out;
 
         @media #{$lg} {
             width: 14.4rem;
@@ -175,7 +177,7 @@
                 height: 4rem;
                 background: linear-gradient(90deg, rgba($color-active-tertiary, 0.8), rgba(#21B2E0, 0.8));
                 border-radius: 1.5rem;
-                transition: all .1s linear;
+                transition: all .1s linear, filter .3s ease-in-out;
                 top: 0.7rem;
                 right: 1.4rem;
             }
