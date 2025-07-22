@@ -126,11 +126,13 @@ $(document).ready(function () {
                 if ($(this).find('video').length) {
                     $(this).find('video')[0].play();
                 }
-            }).on('mouseleave', function () {
-                if ($(this).find('video').length) {
-                    $(this).find('video')[0].pause();
-                }
             });
+
+            if ($(this).find('video').length) {
+                setTimeout(() => {
+                    $(this).find('video')[0].play();
+                }, 10_000);
+            }
         });
     }
 
