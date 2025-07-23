@@ -329,10 +329,8 @@ $(document).ready(function () {
 
         $('.drop-down__list__sub>ul').slideUp(0);
         $('.drop-down__list__sub').on('click', function () {
-            $('.drop-down__list__sub').removeClass('active');
             $(this).toggleClass('active');
-            $('.drop-down__list__sub:not(.active)>ul').slideUp(250);
-            $(this.children.item(1)).slideDown(250);
+            $(this.children.item(1)).slideToggle(250);
         });
     }
 });

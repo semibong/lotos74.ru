@@ -1669,6 +1669,7 @@ body a {
   height: 3.6rem;
 }
 .sidebar__item a {
+  position: relative;
   width: 100%;
   height: 100%;
   background: transparent;
@@ -1682,12 +1683,35 @@ body a {
 .sidebar__item a:hover svg path {
   fill: #009FA2;
 }
+.sidebar__item a:hover span {
+  opacity: 1;
+}
 .sidebar__item a svg {
   width: 100%;
   height: 100%;
 }
 .sidebar__item a svg path {
   transition: all 0.1s linear;
+}
+.sidebar__item a span {
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  color: #7890A8;
+  position: absolute;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
+  box-shadow: 0 0.2rem 2rem 0 rgba(78, 102, 126, 0.15);
+  padding: 0.6rem 1.4rem;
+  border: 1px #fff solid;
+  border-radius: 0.7rem 0.7rem 0 0.7rem;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.1s linear;
+  transform: translate(-100%, -100%);
+  top: 0;
+  left: 0;
 }
 
 .up {
@@ -2891,16 +2915,15 @@ body a {
   pointer-events: none;
 }
 .reviews__header__sources__item.active::before {
-  opacity: 1;
+  width: 100%;
 }
 .reviews__header__sources__item::before {
   content: "";
   position: absolute;
-  width: 100%;
+  width: 0;
   height: 1px;
   background-color: #009FA2;
-  opacity: 0;
-  transition: all 0.1s linear;
+  transition: all 0.3s ease-in-out;
   left: 0;
   bottom: 0;
 }
