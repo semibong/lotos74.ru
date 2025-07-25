@@ -55,68 +55,74 @@ body {
         font-size: 1.6rem;
         margin: 0;
     }
+}
 
-    main {
-        padding-top: 16rem;
-        box-sizing: border-box;
-        min-height: calc(100dvh - 66rem);
+main {
+    padding-top: 16rem;
+    box-sizing: border-box;
+    min-height: calc(100dvh - 66rem);
 
-        @media #{$lg} {
-            padding-top: 14rem;
-            min-height: calc(100dvh - 66.7rem);
-        }
-
-        @media #{$md} {
-            min-height: calc(100dvh - 68.7rem);
-        }
-
-        @media #{$sm} {
-            min-height: calc(100dvh - 70.6rem);
-        }
+    @media #{$lg} {
+        padding-top: 14rem;
+        min-height: calc(100dvh - 66.7rem);
     }
 
-    h1, h2 {
-        font-weight: 600;
-        color: #000;
+    @media #{$md} {
+        min-height: calc(100dvh - 68.7rem);
     }
 
-    h1 {
-        font-size: 4rem;
-        line-height: 3.5rem;
-
-        @media #{lg} {
-            font-size: 3rem;
-            line-height: 2.5rem;
-        }
+    @media #{$sm} {
+        min-height: calc(100dvh - 70.6rem);
     }
+}
 
-    h2 {
+h1, h2 {
+    font-weight: 600;
+    color: #000;
+}
+
+h1 {
+    font-size: 4rem;
+    line-height: 3.5rem;
+
+    @media #{lg} {
         font-size: 3rem;
         line-height: 2.5rem;
-
-        @media #{lg} {
-            font-weight: 500;
-            font-size: 2.5rem;
-            line-height: 2rem;
-        }
     }
+}
 
-    p {
-        font-weight: 400;
-        font-size: 1.6rem;
-        line-height: 2.2rem;
+h2 {
+    font-size: 3rem;
+    line-height: 2.5rem;
 
-        @media #{$lg} {
-            font-size: 1.4rem;
-            line-height: 1.8rem;
-        }
+    @media #{lg} {
+        font-weight: 500;
+        font-size: 2.5rem;
+        line-height: 2rem;
     }
+}
 
-    a {
-        font-weight: 400;
-        font-size: 1.6rem;
-        color: $color-active;
+p {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+
+    @media #{$lg} {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
     }
+}
+
+a {
+    font-weight: 400;
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: $color-active;
+    transition: all .1s linear;
+
+    &:hover {
+        color: $color-active-secondary;
+    }    
 }
 
 .container {

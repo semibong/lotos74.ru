@@ -73,67 +73,78 @@ body * {
   font-size: 1.6rem;
   margin: 0;
 }
-body main {
+
+main {
   padding-top: 16rem;
   box-sizing: border-box;
   min-height: calc(100dvh - 66rem);
 }
 @media (max-width: 992px) {
-  body main {
+  main {
     padding-top: 14rem;
     min-height: calc(100dvh - 66.7rem);
   }
 }
 @media (max-width: 768px) {
-  body main {
+  main {
     min-height: calc(100dvh - 68.7rem);
   }
 }
 @media (max-width: 576px) {
-  body main {
+  main {
     min-height: calc(100dvh - 70.6rem);
   }
 }
-body h1, body h2 {
+
+h1, h2 {
   font-weight: 600;
   color: #000;
 }
-body h1 {
+
+h1 {
   font-size: 4rem;
   line-height: 3.5rem;
 }
 @media lg {
-  body h1 {
+  h1 {
     font-size: 3rem;
     line-height: 2.5rem;
   }
 }
-body h2 {
+
+h2 {
   font-size: 3rem;
   line-height: 2.5rem;
 }
 @media lg {
-  body h2 {
+  h2 {
     font-weight: 500;
     font-size: 2.5rem;
     line-height: 2rem;
   }
 }
-body p {
+
+p {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 2.2rem;
 }
 @media (max-width: 992px) {
-  body p {
+  p {
     font-size: 1.4rem;
     line-height: 1.8rem;
   }
 }
-body a {
+
+a {
   font-weight: 400;
   font-size: 1.6rem;
+  text-decoration: none;
   color: #009FA2;
+  transition: all 0.1s linear;
+}
+a:hover {
+  color: #14787A;
 }
 
 .container {
