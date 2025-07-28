@@ -63,8 +63,8 @@
                 flex-direction: column;
                 gap: 1rem;
 
-                li {
-                    a, span {
+                li {   
+                    &, a, span {
                         font-size: 1.4rem;
                         line-height: 1.4rem;
                     }
