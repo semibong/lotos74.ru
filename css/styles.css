@@ -2156,6 +2156,12 @@ a:hover {
 }
 @media (max-width: 992px) {
   .services__slide {
+    opacity: 1;
+    scale: 1;
+  }
+}
+@media (max-width: 992px) {
+  .services__slide {
     gap: 1.4rem;
   }
 }
