@@ -2174,6 +2174,7 @@ a:hover {
   border: 1px #fff solid;
   border-radius: 3rem;
   overflow: hidden;
+  transition: all 0.3s ease-in-out;
 }
 @media (max-width: 992px) {
   .services__item {
@@ -2183,6 +2184,9 @@ a:hover {
 }
 .services__item:hover .services__item__image img {
   scale: 1.15;
+}
+.services__item:hover h3 {
+  color: rgb(255, 255, 110);
 }
 .services__item > a {
   position: absolute;
@@ -2198,6 +2202,7 @@ a:hover {
   line-height: 2rem;
   color: #fff;
   margin-bottom: 0.8rem;
+  transition: all 0.3s ease-in-out;
 }
 @media (max-width: 992px) {
   .services__item h3 {
@@ -2615,6 +2620,9 @@ a:hover {
   padding: 2rem 3rem;
   border-radius: 3rem;
   pointer-events: all;
+}
+.utp__item[data-wp-child] {
+  opacity: 0;
 }
 .utp__item:nth-of-type(1) {
   min-width: 40rem;

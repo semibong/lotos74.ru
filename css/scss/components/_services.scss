@@ -84,6 +84,7 @@
         border: 1px #fff solid;
         border-radius: 3rem;
         overflow: hidden;
+        transition: all .3s ease-in-out;
 
         @media #{$lg} {
             width: calc(25% - 1.05rem);
@@ -91,8 +92,14 @@
         }
 
         &:hover {
+            // border: 1px $color-active solid;
+
             .services__item__image img {
                 scale: 1.15;
+            }
+
+            h3 {
+                color: rgb(255, 255, 110);
             }
         }
 
@@ -111,6 +118,7 @@
             line-height: 2rem;
             color: #fff;
             margin-bottom: 0.8rem;
+            transition: all .3s ease-in-out;
 
             @media #{$lg} {
                 font-size: 1.6rem;

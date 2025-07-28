@@ -101,6 +101,10 @@
         padding: 2rem 3rem;
         border-radius: 3rem;
         pointer-events: all;
+
+        &[data-wp-child] {
+            opacity: 0;
+        }
         
         &:nth-of-type(1) {
             min-width: 40rem;

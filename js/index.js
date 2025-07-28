@@ -163,7 +163,9 @@ $(document).ready(function () {
         $('.services__item__image').each(function () {
             const parallax = new Parallax(this, {
                 invertX: false,
-                invertY: false
+                invertY: false,
+                scalarX: 3,
+                scalarY: 3
             });
         });
     }
@@ -249,7 +251,7 @@ $(document).ready(function () {
                 pointerEvents: true,
                 selector: '.utp__item__image',
                 invertX: false,
-                invertY: false
+                invertY: false,
             });
             const parallaxBorder = new Parallax(this, {
                 pointerEvents: true,
