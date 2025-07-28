@@ -2178,6 +2178,7 @@ a:hover {
 @media (max-width: 992px) {
   .services__item {
     width: calc(25% - 1.05rem);
+    height: 100%;
   }
 }
 .services__item:hover .services__item__image img {
