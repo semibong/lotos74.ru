@@ -40,6 +40,7 @@
     &>svg {
         width: 2.4rem;
         height: 2.4rem;
+        flex-shrink: 0;
     }
 
     &-red {
@@ -49,6 +50,11 @@
 
     &-yellow {
         background: linear-gradient(90deg, #E9B383, #F4C397, #E9B383);
+        background-size: 200%;
+    }
+
+    &-blue {
+        background: #2297BD linear-gradient(90deg, #2297BD, #21B2E0, #2297BD);
         background-size: 200%;
     }
 

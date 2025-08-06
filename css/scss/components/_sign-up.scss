@@ -116,21 +116,17 @@
             }
 
             .btn {
+                gap: 0.5rem;
                 width: calc(33% - 0.5rem);
                 text-wrap: wrap;
+                padding: 0 0.5rem 0 1rem;
 
                 @media #{$lg} {
+                    gap: 1.6rem;
                     width: 100%;
                     height: 6rem;
                     justify-content: start;
-                }
-
-                &:not(.btn-lk) {
-                    padding: 0;
-
-                    @media #{$lg} {
-                        padding: 0 2rem;
-                    }
+                    padding: 0 2rem;
                 }
 
                 &.btn-lk {
@@ -152,14 +148,6 @@
                         @media #{$lg} {
                             display: initial;
                         }
-                    }
-                }
-
-                span {
-                    width: min-content;
-
-                    @media #{$lg} {
-                        width: auto;
                     }
                 }
             }
