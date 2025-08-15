@@ -1,0 +1,38 @@
+.breadcrumb {
+    margin-bottom: 4.5rem;
+
+    @media #{$lg} {
+        margin-bottom: 2rem;
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        padding-left: 2.2rem;
+    }
+
+    &__item {
+        a, span, i {
+            font-family: $font-main;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.4rem;
+            line-height: 2.5rem;
+            color: $color-secondary;
+        }
+
+        a {
+            &:hover {
+                span {
+                    color: $color-active;
+                }
+            }
+
+            span {
+                transition: all .1s linear;
+            }
+        }
+    }
+}

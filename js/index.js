@@ -335,4 +335,46 @@ $(document).ready(function () {
             $(this.children.item(1)).slideToggle(250);
         });
     }
+
+    if ($('.search-page').length) {
+        const input = document.querySelector('input[name=q]');
+        const clear = document.getElementById('search-clear');
+        const startButton = document.getElementById('search-recognition');
+
+        clear.addEventListener('click', () => {
+            input.value = '';
+        });
+
+        if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            const recognition = new SpeechRecognition();
+
+            recognition.lang = 'ru-RU';
+            recognition.continuous = false;
+            recognition.interimResults = true;
+
+            recognition.onresult = (event) => {
+            const transcript = event.results[0][0].transcript;
+            input.value = transcript;
+            };
+
+            recognition.onerror = (event) => {
+            console.error('Ошибка распознавания речи:', event.error);
+            };
+
+            startButton.addEventListener('click', () => {
+            recognition.start();
+            });
+
+        } else {
+            startButton.disabled = true;
+            startButton.textContent = 'Голосовой ввод не поддерживается';
+            console.error('SpeechRecognition API не поддерживается в этом браузере.');
+        }
+
+
+        $('.b-list__item__expand').on('click', function () {
+            $(this).prev().toggleClass('expanded');
+        });
+    }
 });
