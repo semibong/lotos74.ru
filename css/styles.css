@@ -3447,14 +3447,14 @@ a:hover {
 .search-page .b-list__item__image {
   display: flex;
   width: 20rem;
-  height: 20rem;
+  height: 13rem;
   box-sizing: border-box;
   flex-shrink: 0;
 }
 @media (max-width: 992px) {
   .search-page .b-list__item__image {
     width: 12rem;
-    height: 12rem;
+    height: 7.8rem;
   }
 }
 .search-page .b-list__item__image.no-photo {

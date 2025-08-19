@@ -239,13 +239,13 @@
             &__image {
                 display: flex;
                 width: 20rem;
-                height: 20rem;
+                height: 13rem;
                 box-sizing: border-box;
                 flex-shrink: 0;
 
                 @media #{$lg} {
                     width: 12rem;
-                    height: 12rem;
+                    height: 7.8rem;
                 }
 
                 &.no-photo {
