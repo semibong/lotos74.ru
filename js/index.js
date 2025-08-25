@@ -377,4 +377,77 @@ $(document).ready(function () {
             $(this).prev().toggleClass('expanded');
         });
     }
+
+    if ($('.services-page').length) {
+        $('.services-page__category').on('click', function () {
+            $('.services-page__category').removeClass('active');
+            $(this).addClass('active');
+        });
+
+        $('.services-page__category').each(function () {
+            const parallax = new Parallax(this, {
+                pointerEvents: true,
+                selector: '.services-page__category__image',
+                invertX: false,
+                invertY: false,
+            });
+            const parallaxBorder = new Parallax(this, {
+                pointerEvents: true,
+                selector: '.services-page__category__border',
+            });
+        });
+
+        $('.services-page__list__column>.services-page_sub').each(function () {
+            $(this).find('.services-page__list_sub').slideUp(0);
+        });
+
+        $('.services-page_sub>button').on('click', function () {
+            const parent = $(this).offsetParent();
+            parent.toggleClass('active');
+            
+            if (parent.hasClass('active')) {
+                parent.find('.services-page__list_sub').slideDown(300);
+            } else {
+                parent.find('.services-page__list_sub').slideUp(300);
+            }
+        });
+    }
+
+    if ($('.promotions').length) {
+        const parallaxBorder = new Parallax(document.querySelector('.promotions__item_all'), {
+            pointerEvents: true,
+            selector: '.promotions__item_all__border',
+        });
+        
+        const pack = $('.promotions__content').packery({
+            itemSelector: '.promotions__item',
+            gutter: 20
+        });
+
+        function layoutPackery() {
+            var windowWidth = $(window).width();  
+            
+            if (windowWidth < 1207) {
+                pack.packery('option', {
+                    gutter: 10
+                });
+            } else if (windowWidth < 1454) {
+                pack.packery('option', {
+                    gutter: 15
+                });
+            } else if (windowWidth < 1701) {
+                pack.packery('option', {
+                    gutter: 18
+                });
+            }
+            
+            pack.packery();
+        }
+
+        layoutPackery();
+
+        $(window).resize(function() {
+          layoutPackery();
+        });
+    };
 });

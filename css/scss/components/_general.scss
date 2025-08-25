@@ -68,6 +68,19 @@ body {
 
         main {
             padding-top: 16rem;
+            min-height: calc(100dvh - 66rem);
+
+            @media #{$lg} {
+                min-height: calc(100dvh - 66.7rem);
+            }
+
+            @media #{$md} {
+                min-height: calc(100dvh - 68.7rem);
+            }
+            
+            @media #{$sm} {
+                min-height: calc(100dvh - 70.6rem);
+            }
         }
     }
 }
@@ -75,19 +88,19 @@ body {
 main {
     padding-top: 14.2rem;
     box-sizing: border-box;
-    min-height: calc(100dvh - 66rem);
+    min-height: calc(100dvh - 58.5rem);
 
     @media #{$lg} {
         padding-top: 14rem;
-        min-height: calc(100dvh - 66.7rem);
+        min-height: calc(100dvh - 62.3rem);
     }
 
     @media #{$md} {
-        min-height: calc(100dvh - 68.7rem);
+        min-height: calc(100dvh - 64.3rem);
     }
 
     @media #{$sm} {
-        min-height: calc(100dvh - 70.6rem);
+        min-height: calc(100dvh - 66.2rem);
     }
 }
 
