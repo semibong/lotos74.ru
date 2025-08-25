@@ -4069,6 +4069,34 @@ a:hover {
     aspect-ratio: 347/198;
   }
 }
+.promotions__item:not(.promotions__item_all):hover::before {
+  opacity: 0;
+}
+.promotions__item:not(.promotions__item_all):hover::after {
+  opacity: 1;
+}
+.promotions__item:not(.promotions__item_all)::before, .promotions__item:not(.promotions__item_all)::after {
+  content: "";
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  transition: all 0.1s linear;
+  right: 0.5rem;
+  bottom: 0.5rem;
+}
+@media (max-width: 992px) {
+  .promotions__item:not(.promotions__item_all)::before, .promotions__item:not(.promotions__item_all)::after {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+.promotions__item:not(.promotions__item_all)::before {
+  background: url(../images/svg/promotions-arrow.svg) no-repeat center/contain;
+}
+.promotions__item:not(.promotions__item_all)::after {
+  background: url(../images/svg/promotions-arrow-active.svg) no-repeat center/contain;
+  opacity: 0;
+}
 .promotions__item > a {
   position: absolute;
   width: 100%;

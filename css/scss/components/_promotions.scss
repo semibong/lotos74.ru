@@ -70,6 +70,43 @@
             }
         }
 
+        &:not(.promotions__item_all) {
+            &:hover {
+                &::before {
+                    opacity: 0;
+                }
+
+                &::after {
+                    opacity: 1;
+                }
+            }
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                width: 5rem;
+                height: 5rem;
+                transition: all .1s linear;
+                right: 0.5rem;
+                bottom: 0.5rem;
+
+                @media #{$lg} {
+                    width: 3.5rem;
+                    height: 3.5rem;
+                }
+            }
+
+            &::before {
+                background: url(../images/svg/promotions-arrow.svg) no-repeat center / contain;
+            }
+
+            &::after {
+                background: url(../images/svg/promotions-arrow-active.svg) no-repeat center / contain;
+                opacity: 0;
+            }
+        }
+
         &>a {
             position: absolute;
             width: 100%;
