@@ -469,7 +469,12 @@ $(document).ready(function () {
         function layoutPackery() {
             var windowWidth = $(window).width();  
             
-            if (windowWidth < 1207) {
+            if (windowWidth < 993) {
+                pack.packery('option', {
+                    gutter: 5
+                });
+            }
+            else if (windowWidth < 1207) {
                 pack.packery('option', {
                     gutter: 10
                 });
