@@ -487,8 +487,10 @@
                 width: calc(100% - 19rem);
 
                 @media #{$lg} {
-                    width: 100%;
+                    width: calc(100% + 2rem);
+                    margin-left: -2rem;
                     order: 1;
+                    transform: translateX(1rem);
                 }
             }
 

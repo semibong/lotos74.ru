@@ -13,18 +13,25 @@
     }
 
     &__categories {
-        display: flex;
-        gap: 3rem;
         margin-bottom: 4rem;
 
         @media #{$lg} {
-            gap: 0.5rem;
             width: calc(100% + 1.4rem);
             margin-bottom: 1.5rem;
             overflow-x: scroll;
         }
         &::-webkit-scrollbar {
             display: none;
+        }
+
+        &__content {
+            display: flex;
+            gap: 3rem;
+            transition: transform 0.3s ease-in-out;
+
+            @media #{$lg} {
+                gap: 0.5rem;
+            }
         }
     }
 
@@ -199,8 +206,8 @@
         margin-bottom: 3rem;
 
         @media #{$lg} {
-            width: 100%;
-            margin-left: 0;
+            width: calc(100% + 2rem);
+            margin-left: -1rem;
             margin-bottom: 1.5rem;
             order: -1;
         }
@@ -217,6 +224,8 @@
 
         @media #{$lg} {
             gap: 0.5rem;
+            width: calc(100% + 2rem);
+            margin-left: -1rem;
         }
 
         &__column {

@@ -382,6 +382,42 @@ $(document).ready(function () {
         $('.services-page__category').on('click', function () {
             $('.services-page__category').removeClass('active');
             $(this).addClass('active');
+
+            const slider = document.querySelector('.services-page__categories__content');
+            const sliderRect = slider.getBoundingClientRect();
+            const itemRect = this.getBoundingClientRect();
+            const sliderWidth = sliderRect.width;
+            const itemWidth = itemRect.width;
+
+            // Текущее смещение через DOMMatrix
+            const style = window.getComputedStyle(slider);
+            const matrix = new DOMMatrix(style.transform);
+            let translateX = matrix.m41;
+
+            // Позиция элемента с учетом текущего смещения
+            const itemPos = itemRect.left - sliderRect.left + translateX;
+            const contentWidth = slider.scrollWidth;
+            const minTranslateX = sliderWidth - contentWidth;
+
+            // Логика определения конечного положения
+            if (itemPos < sliderWidth / 2) {
+                // Элемент близко к началу
+                translateX = 0;
+            }
+            else if ((contentWidth - (itemPos + itemWidth)) < sliderWidth / 2) {
+                // Элемент близко к концу
+                translateX = minTranslateX;
+            }
+            else {
+                // Центрирование элемента
+                const targetCenter = sliderWidth / 2;
+                const itemCenter = itemPos + itemWidth / 2;
+                translateX += (targetCenter - itemCenter);
+            }
+
+            // Изменение положения
+            translateX = Math.max(minTranslateX, Math.min(0, translateX));
+            slider.style.transform = `translateX(${translateX}px)`;
         });
 
         $('.services-page__category').each(function () {
