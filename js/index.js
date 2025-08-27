@@ -391,10 +391,16 @@ $(document).ready(function () {
                 invertX: false,
                 invertY: false,
             });
+
             const parallaxBorder = new Parallax(this, {
                 pointerEvents: true,
                 selector: '.services-page__category__border',
             });
+
+            if ($(window).width() < 993) {
+                parallax.disable();
+                parallaxBorder.disable();
+            }
         });
 
         $('.services-page__list__column>.services-page_sub').each(function () {
