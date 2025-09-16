@@ -4,6 +4,18 @@ $(document).ready(function () {
         reload: true
     });
 
+    Fancybox.bind('[data-fancybox]');
+
+    $('input[type=tel]').inputmask({
+        mask: '+7 (*{1}99) 999-99-99',
+        placeholder: "+7 (___) ___-__-__",
+        definitions: {
+            '*': {
+                validator: "[0-6,9]"
+            }
+        }
+    });
+
     let scrollTop = 0;
     window.addEventListener('scroll', function () {
         if (!$('body').hasClass('noscroll')) {
@@ -497,4 +509,55 @@ $(document).ready(function () {
           layoutPackery();
         });
     };
+
+    if ($('.lk-enter').length) {
+        $('.lk-enter__form__input>input').on('input', function () {
+            if ($(this).val().length !== 0) {
+                $('.lk-enter__form__input>button').addClass('active');
+            } else {
+                $('.lk-enter__form__input>button').removeClass('active');
+            }
+        });
+
+        $('.lk-enter__form__input>button').on('click', function () {
+            $('.lk-enter__form__input>input').val('');
+            $(this).removeClass('active');
+        });
+
+        $('.lk-enter__change-step').on('click', function () {
+            let id = $('.lk-enter__form__block.active').data('id');
+
+            $('.lk-enter__form__block.active').removeClass('active');
+
+            if (id === 1) {
+                $('.lk-enter__form__block[data-id=2]').addClass('active');
+                $('.pincode-input-text.first').focus();
+            } else if (id === 2) {
+                $('.lk-enter__form__block[data-id=1]').addClass('active');
+            }
+        });
+
+        $('#lk-code').pincodeInput({inputs: 4, change: (el, val) => {
+            if (val) {
+                $(el).addClass('active');
+            } else {
+                $(el).removeClass('active');
+            }
+        }, complete: () => {
+            Fancybox.show([{
+                src: '#lk-enter-modal',
+                type: 'inline'
+            }]);
+        }});
+
+        $('.lk-enter__modal-form__input>select').select2({
+            placeholder: 'Не выбрано',
+            width: 'element'
+        });
+
+        $('.lk-enter__icons__item>label').on('click', function () {
+            let avatar = this.children[1].cloneNode(true);
+            $('.lk-enter__icons__image').html(avatar);
+        });
+    }
 });

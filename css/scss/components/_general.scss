@@ -84,6 +84,16 @@ body {
             }
         }
     }
+
+    &.lk-page {
+        main {
+            min-height: calc(100dvh - 12rem);
+
+            @media #{$lg} {
+                min-height: calc(100dvh - 10.8rem);
+            }
+        }
+    }
 }
 
 main {

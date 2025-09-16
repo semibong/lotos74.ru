@@ -20,6 +20,7 @@
     border: none;
     border-radius: 1.5rem;
     cursor: pointer;
+    outline: none;
     transition: all .3s ease-in-out;
 
     @media #{$lg} {
