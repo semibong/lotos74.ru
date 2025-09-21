@@ -207,6 +207,22 @@
         }
     }
 
+    .lk__user {
+        @media #{$lg} {
+            position: absolute;
+            height: 4rem;
+            padding-right: 0;
+            top: 0.7rem;
+            right: 5.8rem;
+        }
+
+        &>div {
+            @media #{$lg} {
+                display: none;
+            }
+        }
+    }
+
     &-mob {
         position: absolute;
         display: flex;
