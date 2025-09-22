@@ -79,4 +79,16 @@ $(document).ready(function () {
             window.scroll(0, scrollTop);
         });
     }
+
+    $('.lk__appointment__expand-btn').on('click', function () {
+        let parent = $(this).parent();
+        parent.toggleClass('expanded');
+        let collapsedParts = parent.find('.lk__appointment__part:not(.lk__appointment__user, .lk__appointment__detail)');
+
+        if (parent.hasClass('expanded')) {
+            collapsedParts.slideDown(300);
+        } else {
+            collapsedParts.slideUp(300);
+        }
+    });
 });
