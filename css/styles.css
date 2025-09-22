@@ -6666,6 +6666,136 @@ a:hover {
   object-position: center;
   border-radius: 50%;
 }
+.lk__family {
+  min-height: 54.4rem;
+  margin-bottom: 6rem;
+}
+.lk__family h2 {
+  margin-bottom: 5rem;
+}
+@media (max-width: 992px) {
+  .lk__family h2 {
+    margin-bottom: 1.5rem;
+  }
+}
+.lk__family__profiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 3.4rem;
+}
+@media (max-width: 992px) {
+  .lk__family__profiles {
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1.4rem;
+  }
+}
+.lk__family__profile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  width: max-content;
+  height: 6.5rem;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 0.8rem 3.5rem 0.8rem 0.8rem;
+  border-radius: 2rem;
+}
+@media (max-width: 992px) {
+  .lk__family__profile {
+    width: 100%;
+  }
+}
+.lk__family__profile:hover .lk__family__profile__name {
+  color: #009FA2;
+}
+.lk__family__profile img {
+  width: 4.8rem;
+  height: 4.8rem;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 50%;
+}
+.lk__family__profile__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.lk__family__profile__name {
+  font-size: 1.6rem;
+  line-height: 1.4rem;
+  color: #394250;
+  transition: all 0.2s linear;
+}
+.lk__family__profile__status {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.lk__family__profile__status.active p {
+  color: #009FA2;
+}
+.lk__family__profile__status svg {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+.lk__family__profile__status p {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: #394250;
+}
+.lk__family__profile_add {
+  gap: 2.8rem;
+  padding: 0 4rem 0 2.6rem;
+}
+.lk__family__profile_add:hover::before {
+  bottom: 4.9rem;
+}
+@media (max-width: 992px) {
+  .lk__family__profile_add:hover::before {
+    bottom: 0;
+  }
+}
+.lk__family__profile_add::before {
+  content: "";
+  position: absolute;
+  width: 20.7rem;
+  height: 14.4rem;
+  background: url(../images/lk-add-profile-img.png) no-repeat center/contain;
+  pointer-events: none;
+  rotate: 7deg;
+  transition: all 0.2s linear;
+  z-index: -1;
+  right: -5rem;
+  bottom: 1.3rem;
+}
+@media (max-width: 992px) {
+  .lk__family__profile_add::before {
+    width: 12.6rem;
+    height: 8.8rem;
+    rotate: 0deg;
+    right: -1rem;
+    bottom: 0;
+    z-index: 0;
+  }
+}
+.lk__family__profile_add > svg {
+  width: 2.5rem;
+  height: 2.6rem;
+}
+.lk__family__text {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  color: #6B7788;
+}
+@media (max-width: 992px) {
+  .lk__family__text {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+}
 
 .select2-dropdown {
   border: 1px #D5DFE3 solid;
