@@ -2055,6 +2055,145 @@
             }
         }
     }
+
+    &__my-appointments {
+        backdrop-filter: blur(4px);
+        box-sizing: border-box;
+        box-shadow: 0 0.4rem 6rem 0 rgba(#00AAAE, 0.1);
+        padding: 3.8rem 2.3rem 5.5rem 3.5rem;
+        border: 1px #fff solid;
+        border-radius: 3rem;
+        margin-bottom: 8rem;
+
+        @media #{$lg} {
+            backdrop-filter: none;
+            box-shadow: none;
+            padding: 0;
+            border: none;
+            border-radius: 0;
+        }
+
+        &>h2 {
+            font-weight: 400;
+            font-size: 3rem;
+            line-height: 3rem;
+            color: $color-primary;
+            padding-left: 1.2rem;
+            margin-bottom: 4.5rem;
+
+            @media #{$lg} {
+                margin-bottom: 2.5rem;
+            }
+        }
+
+        &__filter {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+
+            @media #{$lg} {
+                flex-wrap: wrap;
+                gap: 1.8rem 0.5rem;
+                margin-bottom: 3.5rem;
+            }
+
+            &__item {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                max-width: 21.2rem;
+                width: 100%;
+                height: 4.8rem;
+                background-color: rgba(#fff, 0.4);
+                box-sizing: border-box;
+                transition: all .2s linear;
+                padding-right: 3rem;
+                border-radius: 5rem;
+
+                @media #{$lg} {
+                    max-width: calc(50% - 0.25rem);
+                }
+
+                &.active, &:hover {
+                    background-color: rgba(#fff, 0.8);
+
+                    &>div {
+                        img {
+                            @media #{$lg} {
+                                filter: none;
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+
+                &.active {
+                    box-shadow: 0 0.4rem 6rem 0 #C6E6ED;
+                }
+
+                &>p {
+                    font-size: 1.6rem;
+                    line-height: 1.4rem;
+                    color: $color-primary;
+                }
+                
+                &>div {
+                    position: absolute;
+                    display: flex;
+                    width: max-content;
+                    height: 100%;
+                    transform: translateX(100%);
+                    top: 0;
+                    right: 4.8rem;
+
+                    img {
+                        width: 4.8rem;
+                        height: 4.8rem;
+                        object-fit: contain;
+                        object-position: center;
+                        border-radius: 50%;
+                        margin-left: -2rem;
+                        transition: all .2s linear;
+
+                        @media #{$lg} {
+                            filter: grayscale(1);
+                            opacity: 0.5;
+                        }
+
+                        &:first-of-type {
+                            margin-left: 0;
+                        }
+                    }
+                }
+
+                &_all {
+                    max-width: 15.6rem;
+                    padding-left: 1.7rem;
+                    margin-right: 5.6rem;
+
+                    @media #{$lg} {
+                        max-width: 13rem;
+                    }
+
+                    &>p {
+                        max-width: 8.5rem;
+                    }
+
+                    & + .lk__my-appointments__filter__item {
+                        @media #{$lg} {
+                            max-width: calc(50% - 1.1rem);
+                        }
+                    }
+                }
+            }
+
+            .b-search {
+                width: 100%;
+            }
+        }
+    }
 }
 
 .select2 {
