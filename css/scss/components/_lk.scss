@@ -361,6 +361,10 @@
                         fill: $color-active;
                     }
                 }
+
+                p {
+                    color: $color-active;
+                }
             }
 
             &.active {
@@ -1089,6 +1093,7 @@
             }
 
             .lk__user {
+                background-color: rgba(#fff, 0.4);
                 z-index: 2;
 
                 @media #{$lg} {
@@ -1126,6 +1131,61 @@
 
                 span {
                     color: $color-active;
+                }
+            }
+        }
+
+        &__diagnostics {
+            padding-top: 0.5rem;
+
+            @media #{$lg} {
+                position: relative;
+                padding-top: 0;
+            }
+
+            p {
+                color: $color-primary;
+                display: inline-block;
+                width: 55rem;
+                margin-bottom: 2.2rem;
+
+                @media #{$lg} {
+                    width: auto;
+                    padding-left: 5.8rem;
+                }
+
+                &, span {
+                    font-size: 1.6rem;
+                    line-height: 2rem;
+                    transition: all .2s linear;
+
+                    @media #{$lg} {
+                        line-height: 1.6rem;
+                    }
+                }
+
+                span {
+                    color: $color-active;
+                }
+            }
+
+            .lk__document {
+                &>img {
+                    @media #{$lg} {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                }
+
+                &__buttons {
+                    @media #{$lg} {
+                        padding-top: 2rem;
+                    }
+                }
+
+                &__button {
+                    background-color: rgba(#fff, 0.5);
                 }
             }
         }
@@ -2682,6 +2742,12 @@
                 right: -0.7rem;
                 bottom: 7.8rem;
             }
+        }
+    }
+
+    &__diagnostics {
+        &>h2 {
+            margin-bottom: 3.5rem;
         }
     }
 }

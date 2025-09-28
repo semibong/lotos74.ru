@@ -5249,6 +5249,9 @@ a:hover {
 .lk__nav__item.active svg path, .lk__nav__item:hover svg path {
   fill: #009FA2;
 }
+.lk__nav__item.active p, .lk__nav__item:hover p {
+  color: #009FA2;
+}
 .lk__nav__item.active {
   background-color: rgba(255, 255, 255, 0.8);
   box-shadow: 0 0.4rem 6rem 0 #C6E6ED;
@@ -5905,6 +5908,7 @@ a:hover {
   }
 }
 .lk__appointment__user .lk__user {
+  background-color: rgba(255, 255, 255, 0.4);
   z-index: 2;
 }
 @media (max-width: 992px) {
@@ -5943,6 +5947,55 @@ a:hover {
 }
 .lk__appointment__detail p span {
   color: #009FA2;
+}
+.lk__appointment__diagnostics {
+  padding-top: 0.5rem;
+}
+@media (max-width: 992px) {
+  .lk__appointment__diagnostics {
+    position: relative;
+    padding-top: 0;
+  }
+}
+.lk__appointment__diagnostics p {
+  color: #394250;
+  display: inline-block;
+  width: 55rem;
+  margin-bottom: 2.2rem;
+}
+@media (max-width: 992px) {
+  .lk__appointment__diagnostics p {
+    width: auto;
+    padding-left: 5.8rem;
+  }
+}
+.lk__appointment__diagnostics p, .lk__appointment__diagnostics p span {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  transition: all 0.2s linear;
+}
+@media (max-width: 992px) {
+  .lk__appointment__diagnostics p, .lk__appointment__diagnostics p span {
+    line-height: 1.6rem;
+  }
+}
+.lk__appointment__diagnostics p span {
+  color: #009FA2;
+}
+@media (max-width: 992px) {
+  .lk__appointment__diagnostics .lk__document > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+@media (max-width: 992px) {
+  .lk__appointment__diagnostics .lk__document__buttons {
+    padding-top: 2rem;
+  }
+}
+.lk__appointment__diagnostics .lk__document__button {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 .lk__appointment__specialist {
   display: flex;
@@ -7369,6 +7422,9 @@ a:hover {
     right: -0.7rem;
     bottom: 7.8rem;
   }
+}
+.lk__diagnostics > h2 {
+  margin-bottom: 3.5rem;
 }
 
 .select2-dropdown {

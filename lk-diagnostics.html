@@ -196,7 +196,7 @@
                     <div class="lk__nav__wrapper">
                         <button class="lk__nav__close"></button>
                         <div class="lk__nav__content">
-                            <a href="lk.html" class="lk__nav__item active">
+                            <a href="lk.html" class="lk__nav__item">
                                 <img src="images/svg/lk-icon-4.svg" alt="">
                                 <p>Иванов А. <br><span>+7 (902) 600-89-98</span></p>
                             </a>
@@ -233,7 +233,7 @@
                                 </svg>
                                 <p>Анализы</p>
                             </a>
-                            <a href="lk-diagnostics.html" class="lk__nav__item">
+                            <a href="lk-diagnostics.html" class="lk__nav__item active">
                                 <svg class="stroke" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M11.3139 11.1074H41.684C43.1097 11.1074 44.2773 12.2722 44.2773 13.6969V39.3031C44.2773 40.7278 43.1097 41.8926 41.684 41.8926H11.3139C9.88816 41.8926 8.72266 40.7278 8.72266 39.3031V13.6969C8.72266 12.2722 9.88816 11.1074 11.3139 11.1074Z" stroke="#9DA9BC" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M23.9301 31.416H11.7275V13.9896H41.4258V31.416H29.7025" stroke="#9DA9BC" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -259,97 +259,220 @@
                     </div>
                 </div>
                 <div class="lk__content">
-                    <div class="lk__block">
-                        <div class="lk__info">
-                            <div class="lk__info__header">
-                                <h2>Иванов Александр Владимирович</h2>
-                                <div class="lk__info__avatar">
+                    <div class="lk__frame lk__diagnostics">
+                        <h2>Диагностические исследования</h2>
+                        <div class="lk__filter">
+                            <a href="javascript:void(0)" class="lk__filter__item lk__filter__item_all active">
+                                <p>Все профили</p>
+                                <div>
+                                    <img src="images/svg/lk-icon-1.svg" alt="">
+                                    <img src="images/svg/lk-icon-2.svg" alt="">
+                                    <img src="images/svg/lk-icon-3.svg" alt="">
+                                </div>
+                            </a>
+                            <a href="javascript:void(0)" class="lk__filter__item">
+                                <p>Иванов А.</p>
+                                <div>
                                     <img src="images/svg/lk-icon-4.svg" alt="">
                                 </div>
-                            </div>
-                            <div class="lk__info__status">
-                                <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9 18C13.9706 18 18 13.9706 18 9C18 4.02944 13.9706 0 9 0C4.02944 0 0 4.02944 0 9C0 13.9706 4.02944 18 9 18ZM12.5659 11.4343C12.8783 11.7467 12.8783 12.2533 12.5659 12.5657C12.2535 12.8781 11.7469 12.8781 11.4345 12.5657L9.0002 10.1314L6.56588 12.5657C6.25346 12.8781 5.74693 12.8781 5.43451 12.5657C5.12209 12.2533 5.12209 11.7467 5.43451 11.4343L7.86882 9.00001L5.43451 6.5657C5.12209 6.25328 5.12209 5.74675 5.43451 5.43433C5.74693 5.12191 6.25346 5.12191 6.56588 5.43433L9.0002 7.86864L11.4345 5.43433C11.7469 5.12191 12.2535 5.12191 12.5659 5.43433C12.8783 5.74675 12.8783 6.25328 12.5659 6.5657L10.1316 9.00001L12.5659 11.4343Z" fill="#6B7788" fill-opacity="0.2"/>
-                                </svg>
-                                <p>Профиль не подтвержден</p>
-                            </div>
-                            <div class="lk__info-data">
-                                <div class="lk__info-data__item">
-                                    <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12.5968 22.5556C13.1086 22.5556 13.5995 22.3507 13.9614 21.986C14.3233 21.6214 14.5266 21.1268 14.5266 20.6111C14.5266 20.0954 14.3233 19.6008 13.9614 19.2362C13.5995 18.8715 13.1086 18.6667 12.5968 18.6667C12.085 18.6667 11.5941 18.8715 11.2322 19.2362C10.8703 19.6008 10.667 20.0954 10.667 20.6111C10.667 21.1268 10.8703 21.6214 11.2322 21.986C11.5941 22.3507 12.085 22.5556 12.5968 22.5556ZM12.5968 28C13.1086 28 13.5995 27.7951 13.9614 27.4305C14.3233 27.0658 14.5266 26.5713 14.5266 26.0556C14.5266 25.5399 14.3233 25.0453 13.9614 24.6806C13.5995 24.316 13.1086 24.1111 12.5968 24.1111C12.085 24.1111 11.5941 24.316 11.2322 24.6806C10.8703 25.0453 10.667 25.5399 10.667 26.0556C10.667 26.5713 10.8703 27.0658 11.2322 27.4305C11.5941 27.7951 12.085 28 12.5968 28ZM19.9302 20.6111C19.9302 21.1268 19.7268 21.6214 19.3649 21.986C19.003 22.3507 18.5121 22.5556 18.0003 22.5556C17.4885 22.5556 16.9976 22.3507 16.6357 21.986C16.2738 21.6214 16.0705 21.1268 16.0705 20.6111C16.0705 20.0954 16.2738 19.6008 16.6357 19.2362C16.9976 18.8715 17.4885 18.6667 18.0003 18.6667C18.5121 18.6667 19.003 18.8715 19.3649 19.2362C19.7268 19.6008 19.9302 20.0954 19.9302 20.6111ZM18.0003 28C18.5121 28 19.003 27.7951 19.3649 27.4305C19.7268 27.0658 19.9302 26.5713 19.9302 26.0556C19.9302 25.5399 19.7268 25.0453 19.3649 24.6806C19.003 24.316 18.5121 24.1111 18.0003 24.1111C17.4885 24.1111 16.9976 24.316 16.6357 24.6806C16.2738 25.0453 16.0705 25.5399 16.0705 26.0556C16.0705 26.5713 16.2738 27.0658 16.6357 27.4305C16.9976 27.7951 17.4885 28 18.0003 28ZM25.3337 20.6111C25.3337 21.1268 25.1303 21.6214 24.7684 21.986C24.4065 22.3507 23.9157 22.5556 23.4038 22.5556C22.892 22.5556 22.4012 22.3507 22.0392 21.986C21.6773 21.6214 21.474 21.1268 21.474 20.6111C21.474 20.0954 21.6773 19.6008 22.0392 19.2362C22.4012 18.8715 22.892 18.6667 23.4038 18.6667C23.9157 18.6667 24.4065 18.8715 24.7684 19.2362C25.1303 19.6008 25.3337 20.0954 25.3337 20.6111Z" fill="#009FA2"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.1509 5.33333C12.4417 5.33333 12.7207 5.45108 12.9264 5.66068C13.1321 5.87028 13.2476 6.15456 13.2476 6.45098V7.56862H22.753V6.45098C22.753 6.15456 22.8686 5.87028 23.0743 5.66068C23.2799 5.45108 23.5589 5.33333 23.8498 5.33333C24.1407 5.33333 24.4196 5.45108 24.6253 5.66068C24.831 5.87028 24.9466 6.15456 24.9466 6.45098V7.58054C25.1688 7.5865 25.376 7.59743 25.5681 7.61333C26.1238 7.65803 26.6444 7.75937 27.1372 8.01568C27.894 8.4086 28.5094 9.03564 28.8949 9.8069C29.1465 10.3091 29.2459 10.8396 29.2898 11.4059C29.3337 11.9498 29.3337 12.6129 29.3337 13.4102V24.8251C29.3337 25.6223 29.3337 26.2855 29.2898 26.8294C29.2459 27.3957 29.1465 27.9262 28.8949 28.4284C28.5097 29.1994 27.895 29.8264 27.1386 30.2196C26.6444 30.4759 26.1238 30.5772 25.5681 30.622C25.0343 30.6667 24.3836 30.6667 23.6026 30.6667H12.3995C11.6171 30.6667 10.9663 30.6667 10.4326 30.622C9.87688 30.5772 9.35628 30.4759 8.86346 30.2196C8.10706 29.8275 7.49178 29.2015 7.1057 28.4314C6.85418 27.9277 6.75473 27.3972 6.71086 26.8309C6.66699 26.287 6.66699 25.6238 6.66699 24.8281V13.4102C6.66699 12.6129 6.66699 11.9498 6.71086 11.4059C6.75473 10.8396 6.85418 10.3091 7.1057 9.8069C7.49128 9.03564 8.10661 8.4086 8.86346 8.01568C9.35628 7.75937 9.87688 7.65803 10.4326 7.61333C10.6246 7.59743 10.8318 7.5865 11.0541 7.58054V6.45098C11.0541 6.3042 11.0825 6.15887 11.1376 6.02327C11.1927 5.88767 11.2735 5.76446 11.3753 5.66068C11.4772 5.5569 11.5981 5.47457 11.7311 5.4184C11.8642 5.36224 12.0068 5.33333 12.1509 5.33333ZM11.0541 10.1765V9.81584C10.9062 9.82047 10.7585 9.82892 10.611 9.84117C10.1913 9.87545 9.99095 9.93803 9.85934 10.0066C9.51482 10.1853 9.23477 10.4707 9.05942 10.8217C8.99215 10.9558 8.93073 11.16 8.8971 11.5877C8.862 12.0288 8.86054 12.601 8.86054 13.4549V14.2745H27.1401V13.4549C27.1401 12.6025 27.1401 12.0288 27.1036 11.5877C27.0699 11.16 27.0085 10.9558 26.9412 10.8217C26.7659 10.4707 26.4858 10.1853 26.1413 10.0066C26.0097 9.93803 25.8094 9.87545 25.3882 9.84117C25.2412 9.82895 25.094 9.8205 24.9466 9.81584V10.1765C24.9466 10.4729 24.831 10.7572 24.6253 10.9668C24.4196 11.1764 24.1407 11.2941 23.8498 11.2941C23.5589 11.2941 23.2799 11.1764 23.0743 10.9668C22.8686 10.7572 22.753 10.4729 22.753 10.1765V9.80392H13.2476V10.1765C13.2476 10.4729 13.1321 10.7572 12.9264 10.9668C12.7207 11.1764 12.4417 11.2941 12.1509 11.2941C11.86 11.2941 11.581 11.1764 11.3753 10.9668C11.1696 10.7572 11.0541 10.4729 11.0541 10.1765ZM27.1401 15.7647H8.86054V24.7804C8.86054 25.6328 8.86054 26.2065 8.8971 26.6461C8.93073 27.0753 8.99215 27.2794 9.05942 27.4136C9.23491 27.7652 9.51422 28.0499 9.85934 28.2287C9.99095 28.2973 10.1913 28.3598 10.611 28.3941C11.0439 28.4299 11.6054 28.4314 12.4433 28.4314H23.5573C24.3938 28.4314 24.9568 28.4314 25.3882 28.3941C25.8094 28.3598 26.0097 28.2973 26.1413 28.2287C26.4858 28.05 26.7659 27.7646 26.9412 27.4136C27.0085 27.2794 27.0699 27.0753 27.1036 26.6461C27.1386 26.2065 27.1401 25.6328 27.1401 24.7804V15.7647Z" fill="#009FA2"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.667 12C14.667 11.6464 14.7841 11.3072 14.9924 11.0572C15.2008 10.8071 15.4834 10.6667 15.7781 10.6667H20.2225C20.5172 10.6667 20.7998 10.8071 21.0082 11.0572C21.2166 11.3072 21.3337 11.6464 21.3337 12C21.3337 12.3536 21.2166 12.6928 21.0082 12.9428C20.7998 13.1929 20.5172 13.3333 20.2225 13.3333H15.7781C15.4834 13.3333 15.2008 13.1929 14.9924 12.9428C14.7841 12.6928 14.667 12.3536 14.667 12Z" fill="#009FA2"/>
+                            </a>
+                            <form class="b-search" action="" method="get">
+                                <input placeholder="Название диагностики" type="text" name="q">
+                                <input type="submit" value="Найти" class="btn">
+                                <input type="hidden" name="how" value="r">
+                                <div class="search-buttons">
+                                    <button type="button" id="search-clear" class="search-clear">
+                                        <svg viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 1L9 8.65728M9 1L1 8.65728" stroke="#009FA2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                    <button id="search-recognition" type="button" class="search-recognition">
+                                        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6245 7.875V13.125C16.6245 13.8212 16.348 14.4889 15.8557 14.9812C15.3634 15.4734 14.6957 15.75 13.9995 15.75C13.3033 15.75 12.6357 15.4734 12.1434 14.9812C11.6511 14.4889 11.3745 13.8212 11.3745 13.125V7.875C11.3745 7.17881 11.6511 6.51113 12.1434 6.01884C12.6357 5.52656 13.3033 5.25 13.9995 5.25C14.6957 5.25 15.3634 5.52656 15.8557 6.01884C16.348 6.51113 16.6245 7.17881 16.6245 7.875ZM9.62452 7.875C9.62452 6.71468 10.0855 5.60188 10.9059 4.78141C11.7264 3.96094 12.8392 3.5 13.9995 3.5C15.1598 3.5 16.2726 3.96094 17.0931 4.78141C17.9136 5.60188 18.3745 6.71468 18.3745 7.875V13.125C18.3745 14.2853 17.9136 15.3981 17.0931 16.2186C16.2726 17.0391 15.1598 17.5 13.9995 17.5C12.8392 17.5 11.7264 17.0391 10.9059 16.2186C10.0855 15.3981 9.62452 14.2853 9.62452 13.125V7.875ZM7.93577 13.9974C8.14648 15.4553 8.87542 16.7885 9.98905 17.7528C11.1027 18.717 12.5264 19.2478 13.9995 19.2478C15.4726 19.2478 16.8964 18.717 18.01 17.7528C19.1236 16.7885 19.8526 15.4553 20.0633 13.9974C20.1315 13.5188 20.5165 13.125 20.9995 13.125C21.4825 13.125 21.8798 13.5188 21.8264 13.9983C21.6278 15.7738 20.8316 17.4292 19.5684 18.6927C18.3052 19.9562 16.65 20.7528 14.8745 20.9519V22.75C14.8745 22.9821 14.7823 23.2046 14.6182 23.3687C14.4541 23.5328 14.2316 23.625 13.9995 23.625C13.7675 23.625 13.5449 23.5328 13.3808 23.3687C13.2167 23.2046 13.1245 22.9821 13.1245 22.75V20.9519C11.349 20.7528 9.69387 19.9562 8.43068 18.6927C7.16748 17.4292 6.37126 15.7738 6.17265 13.9983C6.12015 13.5188 6.51652 13.125 6.99952 13.125C7.48252 13.125 7.86752 13.5188 7.93577 13.9974Z" fill="#4E667E"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="lk__block lk__appointments">
+                            <div class="lk__appointment">
+                                <button class="lk__appointment__expand-btn">
+                                    <svg viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M22.4998 7.20005C30.9598 7.20005 37.7998 14.04 37.7998 22.5C37.7998 30.96 30.9598 37.8 22.4998 37.8C14.0398 37.8 7.1998 30.96 7.19981 22.5C7.19981 14.04 14.0398 7.20005 22.4998 7.20005ZM22.4998 36C29.9698 36 35.9998 29.97 35.9998 22.5C35.9998 15.03 29.9698 9.00005 22.4998 9.00005C15.0298 9.00005 8.99981 15.03 8.9998 22.5C8.9998 29.97 15.0298 36 22.4998 36Z" fill="#89A1AA"/>
+                                        <path d="M15.03 20.97L22.5 28.44L29.97 20.97L31.23 22.23L22.5 30.96L13.77 22.23L15.03 20.97Z" fill="#89A1AA"/>
+                                        <path d="M23.3999 29.7L21.5999 29.7L21.5999 14.4L23.3999 14.4L23.3999 29.7Z" fill="#89A1AA"/>
                                     </svg>
-                                    <div>
-                                        <span>Дата рождения</span>
-                                        <p>01 января 1984</p>
+                                </button>
+                                <div class="lk__appointment__part lk__appointment__user">
+                                    <p class="lk__appointment__date">2021<span>06 июля, вт</span></p>
+                                    <a href="lk.html" class="lk__user">
+                                        <img src="images/svg/lk-icon-4.svg" alt="">
+                                        <div>
+                                            <p class="lk__user__name">Иванов А.</p>
+                                            <p class="lk__user__phone">+7 (902) 600-89-98</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="lk__appointment__part lk__appointment__diagnostics">
+                                    <p>Прием терапевта пациентов с признаками ОРВИ: <span>3 400 ₽</span></p>
+                                    <div class="lk__document">
+                                        <img src="images/svg/lk-document-icon.svg" alt="">
+                                        <div class="lk__document__buttons">
+                                            <a href="javascript:void(0)" class="lk__document__button lk__document__button_open" target="_blank">Открыть</a>
+                                            <a href="javascript:void(0)" class="lk__document__button lk__document__button_download" download="">Скачать</a>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="lk__info-data__item">
-                                    <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M13.715 16.8425C14.795 18.965 16.535 20.6975 18.6575 21.785L20.3075 20.135C20.51 19.9325 20.81 19.865 21.0725 19.955C21.9125 20.2325 22.82 20.3825 23.75 20.3825C24.1625 20.3825 24.5 20.72 24.5 21.1325V23.75C24.5 24.1625 24.1625 24.5 23.75 24.5C16.7075 24.5 11 18.7925 11 11.75C11 11.3375 11.3375 11 11.75 11H14.375C14.7875 11 15.125 11.3375 15.125 11.75C15.125 12.6875 15.275 13.5875 15.5525 14.4275C15.635 14.69 15.575 14.9825 15.365 15.1925L13.715 16.8425Z" fill="#009FA2"/>
-                                    </svg>
-                                    <div>
-                                        <span>Телефон</span>
-                                        <p>+7 (902) 600-69-96</p>
-                                    </div>
-                                </div>
-                                <div class="lk__info-data__item">
-                                    <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M27 18.0002C27 16.1196 26.411 14.2863 25.3157 12.7578C24.2203 11.2292 22.6736 10.0821 20.8929 9.47762C19.1122 8.87315 17.1868 8.84166 15.3873 9.38758C13.5878 9.93349 12.0044 11.0294 10.8597 12.5213C9.71492 14.0133 9.06627 15.8264 9.00481 17.7059C8.94335 19.5854 9.47218 21.437 10.517 23.0005C11.5619 24.5641 13.0702 25.761 14.8303 26.4233C16.5903 27.0857 18.5136 27.18 20.33 26.6932" stroke="#009FA2" stroke-width="2" stroke-linecap="round"/>
-                                        <path d="M18 22.0002C20.2091 22.0002 22 20.2093 22 18.0002C22 15.791 20.2091 14.0002 18 14.0002C15.7909 14.0002 14 15.791 14 18.0002C14 20.2093 15.7909 22.0002 18 22.0002Z" stroke="#009FA2" stroke-width="2"/>
-                                        <path d="M22 15.0002V19.5002C22 20.1632 22.2634 20.7991 22.7322 21.2679C23.2011 21.7368 23.837 22.0002 24.5 22.0002C25.163 22.0002 25.7989 21.7368 26.2678 21.2679C26.7366 20.7991 27 20.1632 27 19.5002V18.0002" stroke="#009FA2" stroke-width="2" stroke-linecap="round"/>
-                                    </svg>
-                                    <div>
-                                        <span>Email</span>
-                                        <p>artidan@mail.ru</p>
+                                <div class="lk__appointment__part lk__appointment__specialist">
+                                    <a href="lk.html" class="lk__user">
+                                        <img src="images/svg/lk-icon-4.svg" alt="">
+                                        <div>
+                                            <p class="lk__user__name">Иванов А.</p>
+                                            <p class="lk__user__phone">+7 (902) 600-89-98</p>
+                                        </div>
+                                    </a>
+                                    <div class="lk__appointment__specialist__doctor">
+                                        <div class="lk__appointment__specialist__image">
+                                            <img src="images/lk-appointment-specialist-img-1.jpg" alt="">
+                                        </div>
+                                        <p class="lk__appointment__specialist__name">Котова Любовь Дмитриевна</p>
                                     </div>
                                 </div>
                             </div>
-                            <a href="javascript:void(0)" class="btn btn-change">Изменить данные</a>
-                        </div>
-                    </div>
-                    <div class="lk__block">
-                        <div class="lk__confirm">
-                            <h2>Подтвердите профиль</h2>
-                            <p>Чтобы получить доступ к истории посещений, результатам осмотров и анализов, вам необходимо подтвердить вашу личность в любой из наших клиник на стойке регистратуры. <span>Не забудьте взять паспорт</span>. <br>Так мы сможем гарантировать сохранность и приватность данных наших клиентов.</p>
-                            <a href="lk-confirmed.html" class="btn btn-logo">Адреса филиалов</a>
-                            <img src="images/lk-confirm-img.png" alt="">
-                        </div>
-                    </div>
-                    <div class="lk__block">
-                        <form method="post" class="lk__health" id="lk-health">
-                            <h2>Карточка здоровья</h2>
-                            <div class="lk__health__inputs">
-                                <div class="lk-form__input">
-                                    <label for="lk-health-height">Рост</label>
-                                    <input type="text" name="lk-health-height" id="lk-health-height">
+                            <div class="lk__appointment">
+                                <button class="lk__appointment__expand-btn">
+                                    <svg viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M22.4998 7.20005C30.9598 7.20005 37.7998 14.04 37.7998 22.5C37.7998 30.96 30.9598 37.8 22.4998 37.8C14.0398 37.8 7.1998 30.96 7.19981 22.5C7.19981 14.04 14.0398 7.20005 22.4998 7.20005ZM22.4998 36C29.9698 36 35.9998 29.97 35.9998 22.5C35.9998 15.03 29.9698 9.00005 22.4998 9.00005C15.0298 9.00005 8.99981 15.03 8.9998 22.5C8.9998 29.97 15.0298 36 22.4998 36Z" fill="#89A1AA"/>
+                                        <path d="M15.03 20.97L22.5 28.44L29.97 20.97L31.23 22.23L22.5 30.96L13.77 22.23L15.03 20.97Z" fill="#89A1AA"/>
+                                        <path d="M23.3999 29.7L21.5999 29.7L21.5999 14.4L23.3999 14.4L23.3999 29.7Z" fill="#89A1AA"/>
+                                    </svg>
+                                </button>
+                                <div class="lk__appointment__part lk__appointment__user">
+                                    <p class="lk__appointment__date">2021<span>06 июля, вт</span></p>
+                                    <a href="lk.html" class="lk__user">
+                                        <img src="images/svg/lk-icon-3.svg" alt="">
+                                        <div>
+                                            <p class="lk__user__name">Иванова Е.</p>
+                                            <p class="lk__user__phone">+7 (902) 600-89-98</p>
+                                        </div>
+                                    </a>
                                 </div>
-                                <div class="lk-form__input">
-                                    <label for="lk-health-weight">Вес</label>
-                                    <input type="text" name="lk-health-weight" id="lk-health-weight">
+                                <div class="lk__appointment__part lk__appointment__diagnostics">
+                                    <p>Индукция суперовуляции, трансвагинальная пункция яичников, перенос эмбрионов в полость матки: <span>37 400 ₽</span></p>
+                                    <div class="lk__document">
+                                        <img src="images/svg/lk-document-icon.svg" alt="">
+                                        <div class="lk__document__buttons">
+                                            <a href="javascript:void(0)" class="lk__document__button lk__document__button_open" target="_blank">Открыть</a>
+                                            <a href="javascript:void(0)" class="lk__document__button lk__document__button_download" download="">Скачать</a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="lk-form__input">
-                                    <label for="lk-health-blood">Группа крови</label>
-                                    <input type="text" name="lk-health-blood" id="lk-health-blood">
+                                <div class="lk__appointment__part lk__appointment__specialist">
+                                    <a href="lk.html" class="lk__user">
+                                        <img src="images/svg/lk-icon-4.svg" alt="">
+                                        <div>
+                                            <p class="lk__user__name">Иванов А.</p>
+                                            <p class="lk__user__phone">+7 (902) 600-89-98</p>
+                                        </div>
+                                    </a>
+                                    <div class="lk__appointment__specialist__doctor">
+                                        <div class="lk__appointment__specialist__image">
+                                            <img src="images/lk-appointment-specialist-img-2.jpg" alt="">
+                                        </div>
+                                        <p class="lk__appointment__specialist__name">Пашкина Наталья Валентиновна</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="lk-form__input">
-                                <label for="lk-health-disease">Хронические заболевания</label>
-                                <textarea name="lk-health-disease" id="lk-health-disease"></textarea>
+                            <div class="lk__appointment">
+                                <button class="lk__appointment__expand-btn">
+                                    <svg viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M22.4998 7.20005C30.9598 7.20005 37.7998 14.04 37.7998 22.5C37.7998 30.96 30.9598 37.8 22.4998 37.8C14.0398 37.8 7.1998 30.96 7.19981 22.5C7.19981 14.04 14.0398 7.20005 22.4998 7.20005ZM22.4998 36C29.9698 36 35.9998 29.97 35.9998 22.5C35.9998 15.03 29.9698 9.00005 22.4998 9.00005C15.0298 9.00005 8.99981 15.03 8.9998 22.5C8.9998 29.97 15.0298 36 22.4998 36Z" fill="#89A1AA"/>
+                                        <path d="M15.03 20.97L22.5 28.44L29.97 20.97L31.23 22.23L22.5 30.96L13.77 22.23L15.03 20.97Z" fill="#89A1AA"/>
+                                        <path d="M23.3999 29.7L21.5999 29.7L21.5999 14.4L23.3999 14.4L23.3999 29.7Z" fill="#89A1AA"/>
+                                    </svg>
+                                </button>
+                                <div class="lk__appointment__part lk__appointment__user">
+                                    <p class="lk__appointment__date">2021<span>06 июля, вт</span></p>
+                                    <a href="lk.html" class="lk__user">
+                                        <img src="images/svg/lk-icon-4.svg" alt="">
+                                        <div>
+                                            <p class="lk__user__name">Иванов А.</p>
+                                            <p class="lk__user__phone">+7 (902) 600-89-98</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="lk__appointment__part lk__appointment__diagnostics">
+                                    <p>Прием терапевта пациентов с признаками ОРВИ: <span>3 400 ₽</span></p>
+                                    <div class="lk__document">
+                                        <img src="images/svg/lk-document-icon.svg" alt="">
+                                        <div class="lk__document__buttons">
+                                            <a href="javascript:void(0)" class="lk__document__button lk__document__button_open" target="_blank">Открыть</a>
+                                            <a href="javascript:void(0)" class="lk__document__button lk__document__button_download" download="">Скачать</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lk__appointment__part lk__appointment__specialist">
+                                    <a href="lk.html" class="lk__user">
+                                        <img src="images/svg/lk-icon-4.svg" alt="">
+                                        <div>
+                                            <p class="lk__user__name">Иванов А.</p>
+                                            <p class="lk__user__phone">+7 (902) 600-89-98</p>
+                                        </div>
+                                    </a>
+                                    <div class="lk__appointment__specialist__doctor">
+                                        <div class="lk__appointment__specialist__image">
+                                            <img src="images/lk-appointment-specialist-img-1.jpg" alt="">
+                                        </div>
+                                        <p class="lk__appointment__specialist__name">Котова Любовь Дмитриевна</p>
+                                    </div>
+                                </div>
                             </div>
-                            <a href="javascript:void(0)" class="btn btn-change">Изменить данные</a>
-                            <button class="btn">Сохранить</button>
-                        </form>
-                    </div>
-                    <form method="post" class="lk__agreement" id="lk-agreement">
-                        <p>Уважаемые пользователи, благодарим вас за использование личного кабинета МЦ "Лотос".</p>
-                        <div class="lk-form__checkbox">
-                            <input type="checkbox" name="lk-agreement-checkbox" id="lk-agreement-checkbox">
-                            <label for="lk-agreement-checkbox">Дано согласие на получение информационных и маркетинговых рассылок <a href="javascript:void(0)" target="_blank">(Справка)</a></label>
+                            <div class="lk__appointment">
+                                <button class="lk__appointment__expand-btn">
+                                    <svg viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M22.4998 7.20005C30.9598 7.20005 37.7998 14.04 37.7998 22.5C37.7998 30.96 30.9598 37.8 22.4998 37.8C14.0398 37.8 7.1998 30.96 7.19981 22.5C7.19981 14.04 14.0398 7.20005 22.4998 7.20005ZM22.4998 36C29.9698 36 35.9998 29.97 35.9998 22.5C35.9998 15.03 29.9698 9.00005 22.4998 9.00005C15.0298 9.00005 8.99981 15.03 8.9998 22.5C8.9998 29.97 15.0298 36 22.4998 36Z" fill="#89A1AA"/>
+                                        <path d="M15.03 20.97L22.5 28.44L29.97 20.97L31.23 22.23L22.5 30.96L13.77 22.23L15.03 20.97Z" fill="#89A1AA"/>
+                                        <path d="M23.3999 29.7L21.5999 29.7L21.5999 14.4L23.3999 14.4L23.3999 29.7Z" fill="#89A1AA"/>
+                                    </svg>
+                                </button>
+                                <div class="lk__appointment__part lk__appointment__user">
+                                    <p class="lk__appointment__date">2021<span>06 июля, вт</span></p>
+                                    <a href="lk.html" class="lk__user">
+                                        <img src="images/svg/lk-icon-4.svg" alt="">
+                                        <div>
+                                            <p class="lk__user__name">Иванов А.</p>
+                                            <p class="lk__user__phone">+7 (902) 600-89-98</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="lk__appointment__part lk__appointment__diagnostics">
+                                    <p>Прием терапевта пациентов с признаками ОРВИ: <span>3 400 ₽</span></p>
+                                    <div class="lk__document">
+                                        <img src="images/svg/lk-document-icon.svg" alt="">
+                                        <div class="lk__document__buttons">
+                                            <a href="javascript:void(0)" class="lk__document__button lk__document__button_open" target="_blank">Открыть</a>
+                                            <a href="javascript:void(0)" class="lk__document__button lk__document__button_download" download="">Скачать</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lk__appointment__part lk__appointment__specialist">
+                                    <a href="lk.html" class="lk__user">
+                                        <img src="images/svg/lk-icon-4.svg" alt="">
+                                        <div>
+                                            <p class="lk__user__name">Иванов А.</p>
+                                            <p class="lk__user__phone">+7 (902) 600-89-98</p>
+                                        </div>
+                                    </a>
+                                    <div class="lk__appointment__specialist__doctor">
+                                        <div class="lk__appointment__specialist__image">
+                                            <img src="images/lk-appointment-specialist-img-1.jpg" alt="">
+                                        </div>
+                                        <p class="lk__appointment__specialist__name">Котова Любовь Дмитриевна</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <p>Сейчас у нас запущена бета-версия, где функционал находится в режиме тестирования. Просим все возникшие вопросы в ходе работы с личным кабинетом направлять на почту: <a href="mailto:lk@lotos74.ru">lk@lotos74.ru</a>.</p>
-                    </form>
+                    </div>
                 </div>
             </div>
         </section>

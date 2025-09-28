@@ -83,7 +83,7 @@ $(document).ready(function () {
     $('.lk__appointment__expand-btn').on('click', function () {
         let parent = $(this).parent();
         parent.toggleClass('expanded');
-        let collapsedParts = parent.find('.lk__appointment__part:not(.lk__appointment__user, .lk__appointment__detail)');
+        let collapsedParts = parent.find('.lk__appointment__part:not(.lk__appointment__user, .lk__appointment__detail, .lk__appointment__diagnostics)');
 
         if (parent.hasClass('expanded')) {
             collapsedParts.slideDown(300);
