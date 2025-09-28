@@ -5997,6 +5997,58 @@ a:hover {
 .lk__appointment__diagnostics .lk__document__button {
   background-color: rgba(255, 255, 255, 0.5);
 }
+.lk__appointment__tests {
+  padding: 0.4rem 6.2rem 0 3rem;
+}
+@media (max-width: 992px) {
+  .lk__appointment__tests {
+    padding: 0;
+  }
+}
+.lk__appointment__tests > span {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: #009FA2;
+  display: flex;
+  margin-bottom: 2rem;
+}
+@media (max-width: 992px) {
+  .lk__appointment__tests > span {
+    margin-bottom: 1.4rem;
+  }
+}
+.lk__appointment__tests > p {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: #394250;
+  max-width: 34rem;
+  width: 100%;
+}
+@media (max-width: 992px) {
+  .lk__appointment__tests > p {
+    display: none;
+  }
+}
+.lk__appointment__tests > .lk__user {
+  display: none;
+}
+@media (max-width: 992px) {
+  .lk__appointment__tests > .lk__user {
+    display: flex;
+    gap: 1.2rem;
+    height: 6rem;
+    background-color: transparent;
+    box-sizing: content-box;
+    padding: 0;
+  }
+}
+@media (max-width: 992px) {
+  .lk__appointment__tests > .lk__user img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+  }
+}
 .lk__appointment__specialist {
   display: flex;
   align-items: center;
@@ -6104,6 +6156,54 @@ a:hover {
   .lk__appointment__specialist .lk__appointment__controls {
     margin-left: 0;
     margin-top: 1.2rem;
+  }
+}
+.lk__appointment__document {
+  display: flex;
+  align-items: center;
+  padding-left: 5rem;
+}
+@media (max-width: 992px) {
+  .lk__appointment__document {
+    position: relative;
+    display: none;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 0;
+  }
+}
+.lk__appointment__document > p {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: #394250;
+  display: none;
+}
+@media (max-width: 992px) {
+  .lk__appointment__document > p {
+    display: flex;
+    padding-left: 5.8rem;
+  }
+}
+@media (max-width: 992px) {
+  .lk__appointment__document .lk__document {
+    position: static;
+  }
+}
+@media (max-width: 992px) {
+  .lk__appointment__document .lk__document > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+@media (max-width: 992px) {
+  .lk__appointment__document .lk__document__buttons {
+    padding-top: 4rem;
+  }
+}
+@media (max-width: 576px) {
+  .lk__appointment__document .lk__document__buttons {
+    padding-top: 2rem;
   }
 }
 .lk__filter {
@@ -7425,6 +7525,140 @@ a:hover {
 }
 .lk__diagnostics > h2 {
   margin-bottom: 3.5rem;
+}
+.lk__tests > h2 {
+  margin-bottom: 6rem;
+}
+@media (max-width: 992px) {
+  .lk__tests > h2 {
+    margin-bottom: 2.5rem;
+  }
+}
+.lk__tests__form {
+  position: relative;
+  margin-bottom: 3.8rem;
+}
+@media (max-width: 992px) {
+  .lk__tests__form {
+    padding: 0 0.7rem;
+    margin-bottom: 1.8rem;
+  }
+}
+.lk__tests__form:has(button[type=submit]:hover) > .lk__tests__form__decor {
+  scale: 1.2;
+  rotate: -3deg;
+  bottom: -3rem;
+}
+@media (max-width: 992px) {
+  .lk__tests__form:has(button[type=submit]:hover) > .lk__tests__form__decor {
+    scale: 0;
+    rotate: 0deg;
+    bottom: 0;
+  }
+}
+.lk__tests__form p {
+  font-size: 2rem;
+  line-height: 1.4rem;
+  color: #394250;
+  margin-bottom: 1.4rem;
+}
+.lk__tests__form__content {
+  display: flex;
+  gap: 0.8rem;
+}
+@media (max-width: 992px) {
+  .lk__tests__form__content {
+    flex-direction: column;
+  }
+}
+.lk__tests__form__date {
+  position: relative;
+  width: 21.2rem;
+  height: 5rem;
+}
+@media (max-width: 992px) {
+  .lk__tests__form__date {
+    width: 100%;
+  }
+}
+.lk__tests__form__date::before {
+  content: "";
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: url(../images/svg/calendar.svg) no-repeat center/contain;
+  pointer-events: none;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 1.2rem;
+}
+.lk__tests__form__date input[type=date] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+}
+.lk__tests__form__date input[type=date]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+}
+.lk__tests__form__date input[type=text] {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: #748CA4;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  box-sizing: border-box;
+  pointer-events: none;
+  padding: 0 0 0 4.7rem;
+  border: 1px #D2DDEE solid;
+  border-radius: 1.5rem;
+}
+.lk__tests__form__date input[type=text]::placeholder {
+  color: #748CA4;
+}
+@media (max-width: 992px) {
+  .lk__tests__form button[type=submit] {
+    width: 100%;
+    height: 4.8rem;
+  }
+}
+.lk__tests__form__decor {
+  position: absolute;
+  width: 22.6rem;
+  height: 22.7rem;
+  object-fit: contain;
+  object-position: center;
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+  right: 30rem;
+  bottom: -4.8rem;
+}
+@media (max-width: 992px) {
+  .lk__tests__form__decor {
+    width: 13rem;
+    height: 13rem;
+    right: 0;
+    bottom: 5.6rem;
+  }
+}
+@media (max-width: 992px) {
+  .lk__tests .lk__appointment__user .lk__appointment__date span {
+    color: #394250;
+  }
 }
 
 .select2-dropdown {

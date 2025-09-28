@@ -222,7 +222,7 @@
                                     <span>2</span>
                                 </div>
                             </a>
-                            <a href="lk-tests.html" class="lk__nav__item">
+                            <a href="lk-tests.html" class="lk__nav__item active">
                                 <svg class="stroke" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M23.2969 17.3709H29.7031C30.584 17.3709 31.3047 18.0916 31.3047 18.9725C31.3047 19.8533 30.584 20.574 29.7031 20.574H23.2969C22.416 20.574 21.6953 19.8533 21.6953 18.9725C21.6953 18.0916 22.416 17.3709 23.2969 17.3709Z" stroke="#9DA9BC" stroke-width="2" stroke-miterlimit="22.926" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M21.8955 14.1677C22.8879 14.1677 23.6973 13.3583 23.6973 12.366C23.6973 11.3736 22.8879 10.5642 21.8955 10.5642C20.9031 10.5642 20.0938 11.3736 20.0938 12.366C20.0938 13.3583 20.9031 14.1677 21.8955 14.1677Z" stroke="#9DA9BC" stroke-width="2" stroke-miterlimit="22.926" stroke-linecap="round" stroke-linejoin="round"/>
@@ -233,7 +233,7 @@
                                 </svg>
                                 <p>Анализы</p>
                             </a>
-                            <a href="lk-diagnostics.html" class="lk__nav__item active">
+                            <a href="lk-diagnostics.html" class="lk__nav__item">
                                 <svg class="stroke" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M11.3139 11.1074H41.684C43.1097 11.1074 44.2773 12.2722 44.2773 13.6969V39.3031C44.2773 40.7278 43.1097 41.8926 41.684 41.8926H11.3139C9.88816 41.8926 8.72266 40.7278 8.72266 39.3031V13.6969C8.72266 12.2722 9.88816 11.1074 11.3139 11.1074Z" stroke="#9DA9BC" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M23.9301 31.416H11.7275V13.9896H41.4258V31.416H29.7025" stroke="#9DA9BC" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -259,8 +259,25 @@
                     </div>
                 </div>
                 <div class="lk__content">
-                    <div class="lk__frame lk__diagnostics">
-                        <h2>Диагностические исследования</h2>
+                    <div class="lk__frame lk__tests">
+                        <h2>Анализы</h2>
+                        <form method="post" class="lk__tests__form">
+                            <p>Динамика анализов</p>
+                            <div class="lk__tests__form__content">
+                                <div class="lk__tests__form__date">
+                                    <input type="date" id="lk-tests-datepick-start">
+                                    <input type="text" placeholder="Начало периода" name="lk-tests-date-start" id="lk-tests-date-start">
+                                </div>
+                                <div class="lk__tests__form__date">
+                                    <input type="date" id="lk-tests-datepick-end">
+                                    <input type="text" placeholder="Конец периода" name="lk-tests-date-end" id="lk-tests-date-end">
+                                </div>
+                                <div class="lk__tests__form__button">
+                                    <button type="submit" class="btn"><a href="lk-tests-detail.html" style="color: #fff;">Показать</a><!--тег <a> убрать--></button>
+                                </div>
+                            </div>
+                            <img class="lk__tests__form__decor" src="images/lk-tests-form-decor.png" alt="">
+                        </form>
                         <div class="lk__filter">
                             <a href="javascript:void(0)" class="lk__filter__item lk__filter__item_all active">
                                 <p>Все профили</p>
@@ -313,17 +330,9 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="lk__appointment__part lk__appointment__diagnostics">
-                                    <p>Прием терапевта пациентов с признаками ОРВИ: <span>3 400 ₽</span></p>
-                                    <div class="lk__document">
-                                        <img src="images/svg/lk-document-icon.svg" alt="">
-                                        <div class="lk__document__buttons">
-                                            <a href="lk-tests-detail.html" class="lk__document__button lk__document__button_open" target="_blank">Открыть</a>
-                                            <a href="javascript:void(0)" class="lk__document__button lk__document__button_download" download="">Скачать</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="lk__appointment__part lk__appointment__specialist">
+                                <div class="lk__appointment__part lk__appointment__tests">
+                                    <span>№ 1666483</span>
+                                    <p>Цитологическое исследование аспирата полости матки *</p>
                                     <a href="lk.html" class="lk__user">
                                         <img src="images/svg/lk-icon-4.svg" alt="">
                                         <div>
@@ -331,55 +340,15 @@
                                             <p class="lk__user__phone">+7 (902) 600-89-98</p>
                                         </div>
                                     </a>
-                                    <div class="lk__appointment__specialist__doctor">
-                                        <div class="lk__appointment__specialist__image">
-                                            <img src="images/lk-appointment-specialist-img-1.jpg" alt="">
-                                        </div>
-                                        <p class="lk__appointment__specialist__name">Котова Любовь Дмитриевна</p>
-                                    </div>
                                 </div>
-                            </div>
-                            <div class="lk__appointment">
-                                <button class="lk__appointment__expand-btn">
-                                    <svg viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M22.4998 7.20005C30.9598 7.20005 37.7998 14.04 37.7998 22.5C37.7998 30.96 30.9598 37.8 22.4998 37.8C14.0398 37.8 7.1998 30.96 7.19981 22.5C7.19981 14.04 14.0398 7.20005 22.4998 7.20005ZM22.4998 36C29.9698 36 35.9998 29.97 35.9998 22.5C35.9998 15.03 29.9698 9.00005 22.4998 9.00005C15.0298 9.00005 8.99981 15.03 8.9998 22.5C8.9998 29.97 15.0298 36 22.4998 36Z" fill="#89A1AA"/>
-                                        <path d="M15.03 20.97L22.5 28.44L29.97 20.97L31.23 22.23L22.5 30.96L13.77 22.23L15.03 20.97Z" fill="#89A1AA"/>
-                                        <path d="M23.3999 29.7L21.5999 29.7L21.5999 14.4L23.3999 14.4L23.3999 29.7Z" fill="#89A1AA"/>
-                                    </svg>
-                                </button>
-                                <div class="lk__appointment__part lk__appointment__user">
-                                    <p class="lk__appointment__date">2021<span>06 июля, вт</span></p>
-                                    <a href="lk.html" class="lk__user">
-                                        <img src="images/svg/lk-icon-3.svg" alt="">
-                                        <div>
-                                            <p class="lk__user__name">Иванова Е.</p>
-                                            <p class="lk__user__phone">+7 (902) 600-89-98</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="lk__appointment__part lk__appointment__diagnostics">
-                                    <p>Индукция суперовуляции, трансвагинальная пункция яичников, перенос эмбрионов в полость матки: <span>37 400 ₽</span></p>
+                                <div class="lk__appointment__part lk__appointment__document">
+                                    <p>Цитологическое исследование аспирата полости матки *</p>
                                     <div class="lk__document">
                                         <img src="images/svg/lk-document-icon.svg" alt="">
                                         <div class="lk__document__buttons">
                                             <a href="lk-tests-detail.html" class="lk__document__button lk__document__button_open" target="_blank">Открыть</a>
                                             <a href="javascript:void(0)" class="lk__document__button lk__document__button_download" download="">Скачать</a>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="lk__appointment__part lk__appointment__specialist">
-                                    <a href="lk.html" class="lk__user">
-                                        <img src="images/svg/lk-icon-4.svg" alt="">
-                                        <div>
-                                            <p class="lk__user__name">Иванов А.</p>
-                                            <p class="lk__user__phone">+7 (902) 600-89-98</p>
-                                        </div>
-                                    </a>
-                                    <div class="lk__appointment__specialist__doctor">
-                                        <div class="lk__appointment__specialist__image">
-                                            <img src="images/lk-appointment-specialist-img-2.jpg" alt="">
-                                        </div>
-                                        <p class="lk__appointment__specialist__name">Пашкина Наталья Валентиновна</p>
                                     </div>
                                 </div>
                             </div>
@@ -401,17 +370,9 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="lk__appointment__part lk__appointment__diagnostics">
-                                    <p>Прием терапевта пациентов с признаками ОРВИ: <span>3 400 ₽</span></p>
-                                    <div class="lk__document">
-                                        <img src="images/svg/lk-document-icon.svg" alt="">
-                                        <div class="lk__document__buttons">
-                                            <a href="lk-tests-detail.html" class="lk__document__button lk__document__button_open" target="_blank">Открыть</a>
-                                            <a href="javascript:void(0)" class="lk__document__button lk__document__button_download" download="">Скачать</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="lk__appointment__part lk__appointment__specialist">
+                                <div class="lk__appointment__part lk__appointment__tests">
+                                    <span>№ 1666483</span>
+                                    <p>Цитологическое исследование аспирата полости матки *</p>
                                     <a href="lk.html" class="lk__user">
                                         <img src="images/svg/lk-icon-4.svg" alt="">
                                         <div>
@@ -419,11 +380,15 @@
                                             <p class="lk__user__phone">+7 (902) 600-89-98</p>
                                         </div>
                                     </a>
-                                    <div class="lk__appointment__specialist__doctor">
-                                        <div class="lk__appointment__specialist__image">
-                                            <img src="images/lk-appointment-specialist-img-1.jpg" alt="">
+                                </div>
+                                <div class="lk__appointment__part lk__appointment__document">
+                                    <p>Цитологическое исследование аспирата полости матки *</p>
+                                    <div class="lk__document">
+                                        <img src="images/svg/lk-document-icon.svg" alt="">
+                                        <div class="lk__document__buttons">
+                                            <a href="lk-tests-detail.html" class="lk__document__button lk__document__button_open" target="_blank">Открыть</a>
+                                            <a href="javascript:void(0)" class="lk__document__button lk__document__button_download" download="">Скачать</a>
                                         </div>
-                                        <p class="lk__appointment__specialist__name">Котова Любовь Дмитриевна</p>
                                     </div>
                                 </div>
                             </div>
@@ -445,8 +410,19 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="lk__appointment__part lk__appointment__diagnostics">
-                                    <p>Прием терапевта пациентов с признаками ОРВИ: <span>3 400 ₽</span></p>
+                                <div class="lk__appointment__part lk__appointment__tests">
+                                    <span>№ 1666483</span>
+                                    <p>Цитологическое исследование аспирата полости матки *</p>
+                                    <a href="lk.html" class="lk__user">
+                                        <img src="images/svg/lk-icon-4.svg" alt="">
+                                        <div>
+                                            <p class="lk__user__name">Иванов А.</p>
+                                            <p class="lk__user__phone">+7 (902) 600-89-98</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="lk__appointment__part lk__appointment__document">
+                                    <p>Цитологическое исследование аспирата полости матки *</p>
                                     <div class="lk__document">
                                         <img src="images/svg/lk-document-icon.svg" alt="">
                                         <div class="lk__document__buttons">
@@ -455,7 +431,17 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="lk__appointment__part lk__appointment__specialist">
+                            </div>
+                            <div class="lk__appointment">
+                                <button class="lk__appointment__expand-btn">
+                                    <svg viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M22.4998 7.20005C30.9598 7.20005 37.7998 14.04 37.7998 22.5C37.7998 30.96 30.9598 37.8 22.4998 37.8C14.0398 37.8 7.1998 30.96 7.19981 22.5C7.19981 14.04 14.0398 7.20005 22.4998 7.20005ZM22.4998 36C29.9698 36 35.9998 29.97 35.9998 22.5C35.9998 15.03 29.9698 9.00005 22.4998 9.00005C15.0298 9.00005 8.99981 15.03 8.9998 22.5C8.9998 29.97 15.0298 36 22.4998 36Z" fill="#89A1AA"/>
+                                        <path d="M15.03 20.97L22.5 28.44L29.97 20.97L31.23 22.23L22.5 30.96L13.77 22.23L15.03 20.97Z" fill="#89A1AA"/>
+                                        <path d="M23.3999 29.7L21.5999 29.7L21.5999 14.4L23.3999 14.4L23.3999 29.7Z" fill="#89A1AA"/>
+                                    </svg>
+                                </button>
+                                <div class="lk__appointment__part lk__appointment__user">
+                                    <p class="lk__appointment__date">2021<span>06 июля, вт</span></p>
                                     <a href="lk.html" class="lk__user">
                                         <img src="images/svg/lk-icon-4.svg" alt="">
                                         <div>
@@ -463,11 +449,26 @@
                                             <p class="lk__user__phone">+7 (902) 600-89-98</p>
                                         </div>
                                     </a>
-                                    <div class="lk__appointment__specialist__doctor">
-                                        <div class="lk__appointment__specialist__image">
-                                            <img src="images/lk-appointment-specialist-img-1.jpg" alt="">
+                                </div>
+                                <div class="lk__appointment__part lk__appointment__tests">
+                                    <span>№ 1666483</span>
+                                    <p>Цитологическое исследование аспирата полости матки *</p>
+                                    <a href="lk.html" class="lk__user">
+                                        <img src="images/svg/lk-icon-4.svg" alt="">
+                                        <div>
+                                            <p class="lk__user__name">Иванов А.</p>
+                                            <p class="lk__user__phone">+7 (902) 600-89-98</p>
                                         </div>
-                                        <p class="lk__appointment__specialist__name">Котова Любовь Дмитриевна</p>
+                                    </a>
+                                </div>
+                                <div class="lk__appointment__part lk__appointment__document">
+                                    <p>Цитологическое исследование аспирата полости матки *</p>
+                                    <div class="lk__document">
+                                        <img src="images/svg/lk-document-icon.svg" alt="">
+                                        <div class="lk__document__buttons">
+                                            <a href="lk-tests-detail.html" class="lk__document__button lk__document__button_open" target="_blank">Открыть</a>
+                                            <a href="javascript:void(0)" class="lk__document__button lk__document__button_download" download="">Скачать</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
