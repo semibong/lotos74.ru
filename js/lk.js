@@ -1,4 +1,16 @@
 $(document).ready(function () {
+    if ($('.lk__user-box').length) {
+        $('.lk__user__button').on('click', function () {
+            $(this).toggleClass('active');
+
+            if ($(this).hasClass('active')) {
+                $('.lk__user__content').slideDown(300);
+            } else {
+                $('.lk__user__content').slideUp(300);
+            }
+        });
+    }
+
     if ($('.lk-enter').length) {
         $('.lk-enter__form__input>input').on('input', function () {
             if ($(this).val().length !== 0) {

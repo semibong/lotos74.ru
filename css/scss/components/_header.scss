@@ -208,12 +208,28 @@
     }
 
     .lk__user {
+        padding-right: 6.5rem;
+
         @media #{$lg} {
             position: absolute;
             height: 4rem;
             padding-right: 0;
             top: 0.7rem;
             right: 5.8rem;
+        }
+
+        &-box {
+            @media #{$lg} {
+                position: absolute;
+                top: 0.7rem;
+                right: 5.8rem;
+            }
+
+            &>.lk__user {
+                position: relative;
+                top: 0;
+                right: 0;
+            }
         }
 
         &>div {
@@ -347,5 +363,13 @@
                 }
             }
         }
+    }
+}
+
+.lk-page .header .search {
+    width: 73.4rem;
+
+    @media #{$lg} {
+        width: 100%;
     }
 }
