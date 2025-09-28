@@ -5226,6 +5226,7 @@ a:hover {
   }
 }
 .lk__nav__item {
+  position: relative;
   display: flex;
   align-items: center;
   width: 100%;
@@ -5234,6 +5235,12 @@ a:hover {
   box-sizing: border-box;
   padding: 0 1rem;
   border-radius: 4rem;
+}
+@media (max-width: 992px) {
+  .lk__nav__item > .lk__new-message {
+    left: 0;
+    right: auto;
+  }
 }
 .lk__nav__item.active svg.stroke path, .lk__nav__item:hover svg.stroke path {
   fill: none;
@@ -6678,10 +6685,32 @@ a:hover {
     margin-bottom: 1.5rem;
   }
 }
+.lk__family__wrapper {
+  display: flex;
+  gap: 1.5rem;
+}
+@media (max-width: 992px) {
+  .lk__family__wrapper {
+    flex-direction: column;
+    gap: 7rem;
+  }
+}
+.lk__family__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+@media (max-width: 992px) {
+  .lk__family__content {
+    gap: 1.4rem;
+  }
+}
 .lk__family__profiles {
+  flex-shrink: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  flex-direction: column;
+  gap: 1rem;
   margin-bottom: 3.4rem;
 }
 @media (max-width: 992px) {
@@ -6696,12 +6725,13 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  min-width: 28.4rem;
   width: max-content;
   height: 6.5rem;
   background-color: #fff;
   box-sizing: border-box;
-  padding: 0.8rem 3.5rem 0.8rem 0.8rem;
-  border-radius: 2rem;
+  padding: 0.8rem 0 0.8rem 0.8rem;
+  border-radius: 5rem;
 }
 @media (max-width: 992px) {
   .lk__family__profile {
@@ -6710,6 +6740,14 @@ a:hover {
 }
 .lk__family__profile:hover .lk__family__profile__name {
   color: #009FA2;
+}
+.lk__family__profile:first-of-type:not(.lk__family__profile_add) {
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 992px) {
+  .lk__family__profile:first-of-type:not(.lk__family__profile_add) {
+    margin-bottom: 0;
+  }
 }
 .lk__family__profile img {
   width: 4.8rem;
@@ -6744,11 +6782,13 @@ a:hover {
 .lk__family__profile__status p {
   font-size: 1.4rem;
   line-height: 1.6rem;
-  color: #394250;
+  color: #FF7878;
 }
 .lk__family__profile_add {
   gap: 2.8rem;
+  min-width: 0;
   padding: 0 4rem 0 2.6rem;
+  border-radius: 2rem;
 }
 .lk__family__profile_add:hover::before {
   bottom: 4.9rem;
@@ -6789,30 +6829,34 @@ a:hover {
   font-size: 1.6rem;
   line-height: 2.2rem;
   color: #6B7788;
+  padding-left: 2.5rem;
 }
 @media (max-width: 992px) {
   .lk__family__text {
     font-size: 1.4rem;
     line-height: 2rem;
+    padding-left: 0;
   }
 }
-.lk__my-appointments {
+.lk__frame {
   backdrop-filter: blur(4px);
   box-sizing: border-box;
   box-shadow: 0 0.4rem 6rem 0 rgba(0, 170, 174, 0.1);
   padding: 3.8rem 2.3rem 5.5rem 3.5rem;
   border: 1px #fff solid;
   border-radius: 3rem;
-  margin-bottom: 8rem;
 }
 @media (max-width: 992px) {
-  .lk__my-appointments {
+  .lk__frame {
     backdrop-filter: none;
     box-shadow: none;
     padding: 0;
     border: none;
     border-radius: 0;
   }
+}
+.lk__my-appointments {
+  margin-bottom: 8rem;
 }
 .lk__my-appointments > h2 {
   font-weight: 400;
@@ -6923,6 +6967,26 @@ a:hover {
 }
 .lk__my-appointments__filter .b-search {
   width: 100%;
+}
+.lk__new-message {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  background: radial-gradient(circle, rgb(0, 243, 248) 0%, rgb(0, 166, 169) 75%);
+  background-size: 150% 150%;
+  background-position: 0% 98%;
+  border-radius: 50%;
+  pointer-events: none;
+  top: 0;
+  right: 0;
+}
+.lk__new-message span {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #fff;
 }
 
 .select2-dropdown {
