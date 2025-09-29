@@ -109,4 +109,68 @@ $(document).ready(function () {
             $(this).next()[0].value = e.target.value;
         });
     }
+
+    if ($('.lk__test__table').length) {
+        $('.lk__test__table').each(function () {
+            new ScrollableTable(this);
+        });
+
+        $('.lk__test__button_pin').on('click', function () {
+            let table = $(this).parent().parent().find('.lk__test__table');
+            $(this).toggleClass('active');
+
+            if ($(this).hasClass('active')) {
+                $(this).text('Открепить столбец');
+                table.addClass('pined');
+            } else {
+                $(this).text('Закрепить столбец');
+                table.removeClass('pined');
+            }
+        });
+    }
 });
+
+class ScrollableTable {
+    constructor(container) {
+        this.container = container;
+        this.wrapper = container.querySelector('.lk__test__table__wrapper');
+        this.leftBtn = container.querySelector('.lk__test__table__prev');
+        this.rightBtn = container.querySelector('.lk__test__table__next');
+        
+        this.init();
+    }
+    
+    init() {
+        this.scrollStep = 200;
+        this.updateButtons();
+        
+        this.leftBtn.addEventListener('click', () => this.scrollLeft());
+        this.rightBtn.addEventListener('click', () => this.scrollRight());
+        this.wrapper.addEventListener('scroll', () => this.updateButtons());
+        window.addEventListener('resize', () => this.updateButtons());
+    }
+    
+    scrollLeft() {
+        this.wrapper.scrollBy({ left: -this.scrollStep, behavior: 'smooth' });
+    }
+    
+    scrollRight() {
+        this.wrapper.scrollBy({ left: this.scrollStep, behavior: 'smooth' });
+    }
+    
+    updateButtons() {
+        const { scrollLeft, scrollWidth, clientWidth } = this.wrapper;
+        
+        if (scrollLeft <= 0) {
+            $(this.leftBtn).addClass('disabled');
+        } else {
+            $(this.leftBtn).removeClass('disabled');
+        }
+
+        if (scrollLeft >= scrollWidth - clientWidth - 1) {
+            $(this.rightBtn).addClass('disabled');
+        } else {
+            $(this.rightBtn).removeClass('disabled');
+        }
+    }
+}

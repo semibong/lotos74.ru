@@ -7801,6 +7801,356 @@ a:hover {
     color: #394250;
   }
 }
+.lk__test {
+  margin-bottom: 3rem;
+}
+@media (max-width: 992px) {
+  .lk__test {
+    margin-bottom: 4rem;
+  }
+}
+.lk__test__title {
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2rem;
+  color: #009FA2;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 4.8rem;
+  padding-left: 6.2rem;
+  margin: 0 0 1rem 1.5rem;
+}
+@media (max-width: 992px) {
+  .lk__test__title {
+    margin: 0 0 3rem 2rem;
+  }
+}
+.lk__test__title::before {
+  content: "";
+  position: absolute;
+  width: 4.8rem;
+  height: 4.8rem;
+  background: url(../images/svg/lk-document-icon.svg) no-repeat center/contain;
+  top: 0;
+  left: 0;
+}
+.lk__test__content {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(4px);
+  box-sizing: border-box;
+  box-shadow: 0 0.4rem 6rem 0 rgba(0, 170, 174, 0.1);
+  border: 1px #fff solid;
+  border-radius: 2rem;
+}
+.lk__test__table {
+  position: relative;
+  max-width: 120rem;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 992px) {
+  .lk__test__table.pined .lk__test__table__arrows {
+    width: calc(100% - 15.2rem);
+  }
+}
+@media (max-width: 992px) {
+  .lk__test__table.pined table thead th:first-of-type, .lk__test__table.pined table tbody td:first-of-type {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(100px);
+  }
+}
+@media (max-width: 992px) {
+  .lk__test__table.pined table thead th:first-of-type {
+    background-color: #AEE2E5;
+  }
+}
+.lk__test__table.pined table tbody tr:nth-of-type(odd) td:first-of-type {
+  background-color: #fff;
+}
+.lk__test__table.pined table tbody tr:nth-of-type(even) td:first-of-type {
+  background-color: #DBF1F7;
+}
+.lk__test__table__wrapper {
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.lk__test__table__wrapper::-webkit-scrollbar {
+  display: none;
+}
+.lk__test__table__arrows {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 22.2rem);
+  z-index: 2;
+  pointer-events: none;
+  top: 2.2rem;
+  right: 0.6rem;
+}
+@media (max-width: 992px) {
+  .lk__test__table__arrows {
+    width: 100%;
+    right: 0;
+  }
+}
+.lk__test__table__prev, .lk__test__table__next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  background-color: #fff;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  pointer-events: all;
+}
+.lk__test__table__prev.disabled, .lk__test__table__next.disabled {
+  pointer-events: none;
+}
+.lk__test__table__prev.disabled svg path, .lk__test__table__next.disabled svg path {
+  stroke: #9DA9BC;
+}
+.lk__test__table__prev svg, .lk__test__table__next svg {
+  width: 1.1rem;
+  height: 0.9rem;
+}
+.lk__test__table__prev svg path, .lk__test__table__next svg path {
+  transition: all 0.2s linear;
+}
+.lk__test__table table {
+  width: 100%;
+  border-spacing: 0;
+  border-radius: 2rem 2rem 0 0;
+}
+.lk__test__table table thead {
+  height: 6rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-bottom: 1px #fff solid;
+  backdrop-filter: blur(4px);
+  border-radius: 2rem 2rem 0 0;
+}
+.lk__test__table table thead th {
+  height: 100%;
+  padding: 0;
+  border-right: 1px #fff solid;
+}
+.lk__test__table table thead th:first-of-type {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(100px);
+}
+@media (max-width: 992px) {
+  .lk__test__table table thead th:first-of-type {
+    position: static;
+    left: auto;
+    background: transparent;
+    backdrop-filter: none;
+  }
+}
+.lk__test__table table thead th:first-of-type div {
+  padding: 0 4rem 0 5rem;
+}
+@media (max-width: 992px) {
+  .lk__test__table table thead th:first-of-type div {
+    padding: 0 2.5rem 0 2rem;
+  }
+}
+.lk__test__table table thead th:last-of-type {
+  border-right: none;
+}
+.lk__test__table table thead th div {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: #394250;
+  display: flex;
+  width: max-content;
+  height: 100%;
+  padding: 0 3rem;
+}
+@media (max-width: 992px) {
+  .lk__test__table table thead th div {
+    font-size: 1.4rem;
+    padding: 0 1.5rem;
+  }
+}
+.lk__test__table table tbody tr:nth-of-type(odd) {
+  height: 6.5rem;
+}
+.lk__test__table table tbody tr:nth-of-type(even) {
+  height: 4.5rem;
+  background-color: rgba(206, 237, 245, 0.5);
+}
+.lk__test__table table tbody tr:first-of-type {
+  height: 7.7rem;
+}
+.lk__test__table table tbody tr td:first-of-type div {
+  padding-left: 2.7rem;
+}
+@media (max-width: 992px) {
+  .lk__test__table table tbody tr td:first-of-type div {
+    padding-left: 2rem;
+  }
+}
+.lk__test__table table tbody tr td:first-of-type div, .lk__test__table table tbody tr td:nth-last-of-type(2) div, .lk__test__table table tbody tr td:last-of-type div {
+  color: #394250;
+}
+.lk__test__table table tbody td {
+  border-right: 1px #fff solid;
+}
+.lk__test__table table tbody td:first-of-type {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(100px);
+}
+@media (max-width: 992px) {
+  .lk__test__table table tbody td:first-of-type {
+    position: static;
+    left: auto;
+    background: transparent;
+    backdrop-filter: none;
+  }
+}
+.lk__test__table table tbody td:last-of-type {
+  border-right: none;
+}
+.lk__test__table table tbody td div {
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  color: #F51515;
+  text-wrap: balance;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.lk__test__buttons {
+  display: flex;
+  justify-content: end;
+  gap: 1.4rem;
+  padding: 0 1rem 1.5rem;
+}
+@media (max-width: 992px) {
+  .lk__test__buttons {
+    gap: 0.5rem;
+    justify-content: start;
+  }
+}
+.lk__test__button {
+  font-size: 1.6rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4.8rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  box-sizing: border-box;
+  padding: 0 4rem;
+  border: 1px #DDEBF8 solid;
+  border-radius: 1.5rem;
+  transition: all 0.2s linear;
+}
+.lk__test__button.active, .lk__test__button:hover {
+  color: #fff;
+  background-color: #009FA2;
+  border-color: #009FA2;
+}
+.lk__test__button.active::before, .lk__test__button:hover::before {
+  opacity: 0;
+}
+.lk__test__button.active::after, .lk__test__button:hover::after {
+  opacity: 1;
+}
+.lk__test__button_pin {
+  font-size: 1.4rem;
+  display: none;
+  justify-content: start;
+  padding: 0 1rem 0 5rem;
+}
+@media (max-width: 992px) {
+  .lk__test__button_pin {
+    display: flex;
+  }
+}
+.lk__test__button_pin::before, .lk__test__button_pin::after {
+  content: "";
+  position: absolute;
+  width: 2.6rem;
+  height: 2.6rem;
+  transition: all 0.2s linear;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 1.2rem;
+}
+.lk__test__button_pin::before {
+  background: url(../images/svg/lk-pin-icon.svg) no-repeat center/contain;
+}
+.lk__test__button_pin::after {
+  background: url(../images/svg/lk-pin-icon-active.svg) no-repeat center/contain;
+  opacity: 0;
+}
+.lk__test__button_download {
+  padding: 0 4rem 0 5rem;
+}
+@media (max-width: 992px) {
+  .lk__test__button_download {
+    padding: 0 3rem 0 5rem;
+  }
+}
+.lk__test__button_download::before, .lk__test__button_download::after {
+  content: "";
+  position: absolute;
+  width: 1.9rem;
+  height: 1.9rem;
+  transition: all 0.2s linear;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 1.7rem;
+}
+.lk__test__button_download::before {
+  background: url(../images/svg/lk-document-download-icon.svg) no-repeat center/contain;
+}
+.lk__test__button_download::after {
+  background: url(../images/svg/lk-document-download-icon-active.svg) no-repeat center/contain;
+  opacity: 0;
+}
+.lk__test__button_print {
+  padding: 0 1.8rem 0 5.7rem;
+}
+@media (max-width: 992px) {
+  .lk__test__button_print {
+    display: none;
+  }
+}
+.lk__test__button_print::before, .lk__test__button_print::after {
+  content: "";
+  position: absolute;
+  width: 2.4rem;
+  height: 2.2rem;
+  transition: all 0.2s linear;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 1.7rem;
+}
+.lk__test__button_print::before {
+  background: url(../images/svg/lk-print-icon.svg) no-repeat center/contain;
+}
+.lk__test__button_print::after {
+  background: url(../images/svg/lk-print-icon-active.svg) no-repeat center/contain;
+  opacity: 0;
+}
 
 .select2-dropdown {
   border: 1px #D5DFE3 solid;
