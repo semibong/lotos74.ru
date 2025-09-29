@@ -7771,8 +7771,23 @@ a:hover {
 .lk__tests__form__date input[type=text]::placeholder {
   color: #748CA4;
 }
+.lk__tests__form__button {
+  position: relative;
+}
+.lk__tests__form__button_clear::before {
+  content: "";
+  position: absolute;
+  width: 1.8rem;
+  height: 1.8rem;
+  background: url(../images/svg/lk-clear-btn-icon.svg) no-repeat center/contain;
+  pointer-events: none;
+  transform: translateY(-50%);
+  z-index: 1;
+  top: 50%;
+  right: 1.4rem;
+}
 @media (max-width: 992px) {
-  .lk__tests__form button[type=submit] {
+  .lk__tests__form__button button[type=submit] {
     width: 100%;
     height: 4.8rem;
   }
