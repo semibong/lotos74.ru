@@ -7931,14 +7931,15 @@ a:hover {
   border-radius: 2rem 2rem 0 0;
 }
 .lk__test__table table thead {
-  height: 6rem;
   background-color: rgba(255, 255, 255, 0.3);
   border-bottom: 1px #fff solid;
   backdrop-filter: blur(4px);
   border-radius: 2rem 2rem 0 0;
 }
+.lk__test__table table thead tr {
+  height: 6rem;
+}
 .lk__test__table table thead th {
-  height: 100%;
   padding: 0;
   border-right: 1px #fff solid;
 }

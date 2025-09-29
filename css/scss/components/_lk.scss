@@ -3316,14 +3316,16 @@
                 border-radius: 2rem 2rem 0 0;
 
                 thead {
-                    height: 6rem;
                     background-color: rgba(#fff, 0.3);
                     border-bottom: 1px #fff solid;
                     backdrop-filter: blur(4px);
                     border-radius: 2rem 2rem 0 0;
 
+                    tr {
+                        height: 6rem;
+                    }
+
                     th {
-                        height: 100%;
                         padding: 0;
                         border-right: 1px #fff solid;
 
@@ -3488,7 +3490,6 @@
             &_pin {
                 font-size: 1.4rem;
                 display: none;
-                // width: 100%;
                 justify-content: start;
                 padding: 0 1rem 0 5rem;
 
