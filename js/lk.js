@@ -38,7 +38,7 @@ $(document).ready(function () {
             }
         });
 
-        $('#lk-code').pincodeInput({inputs: 4, change: (el, val) => {
+        $('#lk-code').pincodeInput({inputs: 4, hidedigits: false, change: (el, val) => {
             if (val) {
                 $(el).addClass('active');
             } else {
@@ -104,6 +104,47 @@ $(document).ready(function () {
         }
     });
 
+    if ($('.lk__filter').length) {
+        $('.lk__filter__item').on('click', function () {
+            $('.lk__filter__item').removeClass('active');
+            $(this).addClass('active');
+        });
+
+        if ($('.lk__filter__list').length) {
+            $('.lk__filter__list__button').on('click', function () {
+                const list = $(this).parent();
+                const listContent = list.find('.lk__filter__list__content');
+
+                list.toggleClass('active');
+                if (list.hasClass('active')) {
+                    listContent.slideDown(300);
+                } else {
+                    listContent.slideUp(300);
+                }
+            });
+
+            $('.lk__filter__list').find('.lk__filter__item').on('click', function () {
+                const list = $(this).parent().parent().parent();
+                const listContent = list.find('.lk__filter__list__content');
+                const listAccounts = list.find('.lk__filter__list__accounts');
+
+                if ($(this).hasClass('lk__filter__item_list')) {
+                    $(list.children()[0]).addClass('lk__filter__item_list');
+                    $(this).removeClass('lk__filter__item_list');
+
+                    listAccounts.prepend(list.children()[0]);
+                    list.prepend(this);
+                    
+                    list.removeClass('active');
+                } else {
+                    $(this).parent().removeClass('active');
+                }
+
+                listContent.slideUp(300);
+            });
+        }
+    }
+
     if ($('.lk__tests__form').length) {
         $('.lk__tests__form__date input[type=date]').on('change', function (e) {
             $(this).next()[0].value = e.target.value;
@@ -113,6 +154,28 @@ $(document).ready(function () {
     if ($('.lk__test__table').length) {
         $('.lk__test__table').each(function () {
             new ScrollableTable(this);
+
+            const wrapper = $(this).find('.lk__test__table__wrapper');
+            const scrollbar = $(this).find('.lk__test__table__scrollbar');
+
+            if (scrollbar.length) {
+                const scrollbarThumb = scrollbar.find('span');
+                let scrollWidth = wrapper[0].scrollWidth;
+                let clientWidth = wrapper[0].clientWidth;
+                let thumbWidth = (clientWidth / scrollWidth) * 100;
+
+                scrollbarThumb.css('width', `${thumbWidth}%`);
+
+                if (scrollWidth === clientWidth) {
+                    scrollbar.remove();
+                }
+
+                wrapper.on('scroll', function () {
+                    let scrollLeft = this.scrollLeft * (scrollbar.width() / scrollWidth);
+                    
+                    scrollbarThumb.css('margin-left', `${scrollLeft}px`);
+                });
+            }
         });
 
         $('.lk__test__button_pin').on('click', function () {
