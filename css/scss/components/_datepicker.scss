@@ -1,0 +1,108 @@
+.ui-datepicker {
+    width: 27.2rem;
+
+    & &-header {
+        background-color: transparent;
+        padding: 0;
+        border: none;
+        border-radius: 0;
+    }
+
+    & &-prev,
+    & &-next {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2rem;
+        height: 2rem;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        transform: translateY(-50%);
+        top: 50%;
+
+        span {
+            width: 1.08rem;
+            height: 1.8rem;
+            background: url(../images/svg/pagination-arrow.svg) no-repeat center / contain;
+            margin: 0;
+        }
+
+        &.ui-state-disabled {
+            opacity: 0.35;
+        }
+    }
+
+    & &-prev {
+        left: 0.5rem;
+
+        span {
+            transform: translate(50%, 50%);
+            rotate: 180deg;
+        }
+    }
+
+    & &-next {
+        right: 0.5rem;
+
+        span {
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    & &-title {
+        font-weight: 500;
+        color: $color-primary;
+
+        &, span {
+            font-size: 1.8rem;
+        }
+    }
+
+    table {
+        th {
+            font-weight: 500;
+            color: $color-primary;
+            padding: 0.8rem 0;
+        }
+    }
+}
+
+.ui-widget {
+    &.ui-widget-content {
+        background-color: #fff;
+        padding: 0.5rem;
+        border: 1px #D2DDEE solid;
+        border-radius: 1rem;
+    }
+}
+
+.ui-widget-content {
+    .ui-state {
+        &-default {
+            font-weight: 400;
+            text-align: center;
+            color: $color-primary;
+            background-color: #DDF1F1;
+            padding: 0.3rem;
+            border: 1px #DDF1F1 solid;
+            border-radius: 0.5rem;
+        }
+
+        &-active {
+            color: #fff;
+            background-color: $color-active;
+            border: 1px $color-active solid;
+        }
+
+        &-disabled {
+            opacity: 1;
+            
+            span {
+                color: #98A2AD;
+                background-color: #fff;
+                border: 1px #DDF1F1 solid;
+            }
+        }
+    }
+}

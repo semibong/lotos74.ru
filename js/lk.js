@@ -58,6 +58,7 @@ $(document).ready(function () {
     }
 
     $('.lk-form__input>select').select2({
+        minimumResultsForSearch: Infinity,
         placeholder: 'Не выбрано',
         width: 'element'
     });
