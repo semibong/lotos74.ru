@@ -3247,30 +3247,6 @@
                     left: 1.2rem;
                 }
 
-                input[type=date] {
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    opacity: 0;
-                    padding: 0;
-                    margin: 0;
-                    border: none;
-                    cursor: pointer;
-                    top: 0;
-                    left: 0;
-                    
-                    &::-webkit-calendar-picker-indicator {
-                        position: absolute;
-                        width: 100%;
-                        height: 100%;
-                        cursor: pointer;
-                        margin: 0;
-                        padding: 0;
-                        left: 0;
-                        top: 0;
-                    }
-                }
-
                 input[type=text] {
                     font-size: 1.6rem;
                     line-height: 2rem;
@@ -3279,10 +3255,10 @@
                     height: 100%;
                     background-color: rgba(#fff, 0.6);
                     box-sizing: border-box;
-                    pointer-events: none;
                     padding: 0 0 0 4.7rem;
                     border: 1px #D2DDEE solid;
                     border-radius: 1.5rem;
+                    outline: none;
 
                     &::placeholder {
                         color: $color-secondary;
@@ -3394,7 +3370,7 @@
 
         &__table {
             position: relative;
-            max-width: 120rem;
+            max-width: 118.4rem;
             overflow: hidden;
             margin-bottom: 1.5rem;
 
@@ -3878,6 +3854,116 @@
             color: $color-primary;
             padding: 0.2rem 1.3rem;
             margin-bottom: 0.5rem;
+        }
+    }
+}
+
+.ui-datepicker {
+    width: 27.2rem;
+
+    & &-header {
+        background-color: transparent;
+        padding: 0;
+        border: none;
+        border-radius: 0;
+    }
+
+    & &-prev,
+    & &-next {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2rem;
+        height: 2rem;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        transform: translateY(-50%);
+        top: 50%;
+
+        span {
+            width: 1.08rem;
+            height: 1.8rem;
+            background: url(../images/svg/pagination-arrow.svg) no-repeat center / contain;
+            margin: 0;
+        }
+    }
+
+    & &-prev {
+        left: 0.5rem;
+
+        span {
+            transform: translate(50%, 50%);
+            rotate: 180deg;
+        }
+    }
+
+    & &-next {
+        right: 0.5rem;
+
+        span {
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    & &-title {
+        font-weight: 500;
+        color: $color-primary;
+
+        &, span {
+            font-size: 1.8rem;
+        }
+    }
+
+    table {
+        th {
+            font-weight: 500;
+            color: $color-primary;
+            padding: 0.8rem 0;
+        }
+
+        td {
+            a {
+                
+            }
+        }
+    }
+}
+
+.ui-widget {
+    &.ui-widget-content {
+        background-color: #fff;
+        padding: 0.5rem;
+        border: 1px #D2DDEE solid;
+        border-radius: 1rem;
+    }
+}
+
+.ui-widget-content {
+    .ui-state {
+        &-default {
+            font-weight: 400;
+            text-align: center;
+            color: $color-primary;
+            background-color: #DDF1F1;
+            padding: 0.3rem;
+            border: 1px #DDF1F1 solid;
+            border-radius: 0.5rem;
+        }
+
+        &-active {
+            color: #fff;
+            background-color: $color-active;
+            border: 1px $color-active solid;
+        }
+
+        &-disabled {
+            span {
+                color: #98A2AD;
+                background-color: #fff;
+                border: 1px #DDF1F1 solid;
+                opacity: 1;
+            }
         }
     }
 }
