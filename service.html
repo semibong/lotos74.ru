@@ -6,6 +6,7 @@
     <title>Медицинский центр «ЛОТОС» сеть клиник в Челябинске</title>
     <link rel="shortcut icon" href="images/svg/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="js/fancybox/fancybox.css">
     <link rel="stylesheet" href="js/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="js/animate/css/animate.min.css">
     <link rel="stylesheet" href="js/bvi/bvi.css">
@@ -279,15 +280,20 @@
                     <div class="service__info">
                         <div class="service__info__wrapper">
                             <div class="service__info__content">
-                                <h1>УЗИ (ультразвуковые исследования)</h1>
-                                <p>Безопасная диагностика высокой точности без противопоказаний</p>
-                                <ul class="service__info__advantages">
-                                    <li>Современное оборудование экспертного класса</li>
-                                    <li>Опытные врачи высшей категории</li>
-                                    <li>Быстрые результаты и комфортная процедура</li>
-                                    <li>Свободная запись уже на завтра</li>
-                                </ul>
-                                <a href="javascript:void(0)" class="btn">Записаться</a>
+                                <h1>УЗИ <span>(ультразвуковые исследования)</span></h1>
+                                <p class="service__info__description">Безопасная диагностика высокой точности без противопоказаний</p>
+                                <div class="service__info__highlighted">
+                                    <p>Одним из самых доступных и общепризнанных методов исследования является ультразвуковое исследование (УЗИ). В клинике «ЛОТОС» ультразвуковые исследования проводится на современном оборудовании премиального и экспертного класса оснащенным всем необходимым для получения качественного изображения. </p>
+                                </div>
+                                <div class="service__info__offer">
+                                    <p>Регулярная проверка здоровья помогает выявить возможные проблемы <br>на ранней стадии — когда лечение максимально эффективно. <br><span>Сейчас это особенно просто!</span></p>
+                                    <a href="javascript:void(0)" class="btn">
+                                        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.05008 3.63605C5.23755 3.82358 5.34286 4.07788 5.34286 4.34305C5.34286 4.60821 5.23755 4.86252 5.05008 5.05005C4.39999 5.70007 3.88431 6.47177 3.53248 7.3211C3.18066 8.17042 2.99957 9.08074 2.99957 10C2.99957 10.9194 3.18066 11.8297 3.53248 12.679C3.88431 13.5283 4.39999 14.3 5.05008 14.95C5.14559 15.0423 5.22177 15.1526 5.27418 15.2746C5.32659 15.3966 5.35417 15.5279 5.35533 15.6606C5.35648 15.7934 5.33118 15.9251 5.2809 16.048C5.23062 16.1709 5.15637 16.2825 5.06247 16.3764C4.96858 16.4703 4.85693 16.5446 4.73403 16.5949C4.61114 16.6452 4.47946 16.6705 4.34668 16.6693C4.2139 16.6681 4.08268 16.6406 3.96067 16.5882C3.83867 16.5357 3.72832 16.4596 3.63608 16.364C2.80034 15.5283 2.13739 14.5362 1.68509 13.4442C1.2328 12.3523 1 11.182 1 10C1 8.81814 1.2328 7.64781 1.68509 6.55587C2.13739 5.46393 2.80034 4.47178 3.63608 3.63605C3.82361 3.44858 4.07791 3.34326 4.34308 3.34326C4.60824 3.34326 4.86255 3.44858 5.05008 3.63605ZM14.9501 3.63605C15.1376 3.44858 15.3919 3.34326 15.6571 3.34326C15.9222 3.34326 16.1766 3.44858 16.3641 3.63605C17.1998 4.47178 17.8628 5.46393 18.3151 6.55587C18.7674 7.64781 19.0002 8.81814 19.0002 10C19.0002 11.182 18.7674 12.3523 18.3151 13.4442C17.8628 14.5362 17.1998 15.5283 16.3641 16.364C16.2718 16.4596 16.1615 16.5357 16.0395 16.5882C15.9175 16.6406 15.7863 16.6681 15.6535 16.6693C15.5207 16.6705 15.389 16.6452 15.2661 16.5949C15.1432 16.5446 15.0316 16.4703 14.9377 16.3764C14.8438 16.2825 14.7695 16.1709 14.7193 16.048C14.669 15.9251 14.6437 15.7934 14.6448 15.6606C14.646 15.5279 14.6736 15.3966 14.726 15.2746C14.7784 15.1526 14.8546 15.0423 14.9501 14.95C15.6002 14.3 16.1158 13.5283 16.4677 12.679C16.8195 11.8297 17.0006 10.9194 17.0006 10C17.0006 9.08074 16.8195 8.17042 16.4677 7.3211C16.1158 6.47177 15.6002 5.70007 14.9501 5.05005C14.7626 4.86252 14.6573 4.60821 14.6573 4.34305C14.6573 4.07788 14.7626 3.82358 14.9501 3.63605ZM7.87908 6.46405C8.06655 6.65158 8.17186 6.90588 8.17186 7.17105C8.17186 7.43621 8.06655 7.69052 7.87908 7.87805C7.60045 8.15663 7.37943 8.48737 7.22863 8.85138C7.07783 9.21539 7.00022 9.60554 7.00022 9.99955C7.00022 10.3936 7.07783 10.7837 7.22863 11.1477C7.37943 11.5117 7.60045 11.8425 7.87908 12.121C7.97192 12.214 8.04556 12.3242 8.09578 12.4456C8.146 12.567 8.17183 12.6971 8.17178 12.8284C8.17173 12.9598 8.14582 13.0898 8.09551 13.2111C8.0452 13.3325 7.97149 13.4427 7.87858 13.5355C7.78567 13.6284 7.67538 13.702 7.55401 13.7523C7.43264 13.8025 7.30257 13.8283 7.17122 13.8283C7.03988 13.8282 6.90982 13.8023 6.78849 13.752C6.66716 13.7017 6.55692 13.628 6.46408 13.535C5.52672 12.5974 5.00015 11.3259 5.00015 10C5.00015 8.67423 5.52672 7.40269 6.46408 6.46505C6.55695 6.37207 6.66724 6.29831 6.78864 6.24799C6.91004 6.19766 7.04016 6.17176 7.17158 6.17176C7.30299 6.17176 7.43312 6.19766 7.55452 6.24799C7.67592 6.29831 7.7862 6.37107 7.87908 6.46405ZM12.1211 6.46505C12.214 6.37207 12.3242 6.29831 12.4456 6.24799C12.567 6.19766 12.6972 6.17176 12.8286 6.17176C12.96 6.17176 13.0901 6.19766 13.2115 6.24799C13.3329 6.29831 13.4432 6.37207 13.5361 6.46505C14.0005 6.92936 14.3689 7.48061 14.6203 8.08733C14.8716 8.69404 15.001 9.34433 15.001 10.001C15.001 10.6578 14.8716 11.3081 14.6203 11.9148C14.3689 12.5215 14.0005 13.0727 13.5361 13.537C13.3484 13.7247 13.0939 13.8301 12.8286 13.8301C12.5632 13.8301 12.3087 13.7247 12.1211 13.537C11.9334 13.3494 11.828 13.0949 11.828 12.8295C11.828 12.5642 11.9334 12.3097 12.1211 12.122C12.6835 11.5595 12.9994 10.7965 12.9994 10.001C12.9994 9.20556 12.6835 8.44263 12.1211 7.88005C12.0281 7.78718 11.9543 7.67689 11.904 7.55549C11.8537 7.43409 11.8278 7.30396 11.8278 7.17255C11.8278 7.04113 11.8537 6.91101 11.904 6.78961C11.9543 6.66821 12.0281 6.55792 12.1211 6.46505ZM10.0001 9.00005C10.2653 9.00005 10.5196 9.10541 10.7072 9.29294C10.8947 9.48048 11.0001 9.73483 11.0001 10V10.01C11.0001 10.2753 10.8947 10.5296 10.7072 10.7172C10.5196 10.9047 10.2653 11.01 10.0001 11.01C9.73486 11.01 9.48051 10.9047 9.29297 10.7172C9.10544 10.5296 9.00008 10.2753 9.00008 10.01V10C9.00008 9.73483 9.10544 9.48048 9.29297 9.29294C9.48051 9.10541 9.73486 9.00005 10.0001 9.00005Z" fill="white"/>
+                                        </svg>
+                                        Записаться онлайн
+                                    </a>
+                                </div>
                                 <div class="service__info__anchors">
                                     <a href="#service">Об услуге</a>
                                     <a href="#prices">Цены</a>
@@ -300,26 +306,84 @@
                                 <img src="images/service-img.jpg" alt="">
                             </div>
                         </div>
-                        <div class="service__info__highlighted">
-                            <p>Одним из самых доступных и общепризнанных методов исследования является ультразвуковое исследование (УЗИ). В клинике «ЛОТОС» ультразвуковые исследования проводится на современном оборудовании премиального и экспертного класса оснащенным всем необходимым для получения качественного изображения. Прием в клинике ведут опытные специалисты ультразвуковой диагностики (кандидаты медицинских наук и врачи высшей категории).</p>
+                    </div>
+                    <div class="service__utp">
+                        <div class="service__utp__item">
+                            <p>Современное оборудование эксперного класса</p>
+                            <div><img src="images/service-utp-img-1.png" alt=""></div>
+                        </div>
+                        <div class="service__utp__item">
+                            <p>Опытные врачи <br>высшей категории</p>
+                            <div><img src="images/service-utp-img-2.png" alt=""></div>
+                        </div>
+                        <div class="service__utp__item">
+                            <p>Быстрые результаты и комфортная <br>процедура</p>
+                            <div><img src="images/service-utp-img-3.png" alt=""></div>
+                        </div>
+                        <div class="service__utp__item">
+                            <p>Запись день <br>в день</p>
+                            <div><img src="images/service-utp-img-4.png" alt=""></div>
                         </div>
                     </div>
                     <div class="service__specialist">
                         <div class="service__anchor" id="service"></div>
-                        <div class="service__specialist__image">
-                            <img src="images/service-specialist-img.jpg" alt="">
-                        </div>
                         <div class="service__specialist__content">
                             <h3>Лапицкая Елена Владимировна</h3>
                             <span>Заведующая отделением ультразвуковой диагностики, врач ультразвуковой диагностики, врач-педиатр</span>
                             <div class="service__specialist__quote">
                                 <p>Наши специалисты постоянно отслеживают научные достижения в области гастроэнтерологии и гепатологии, чтобы своевременно предлагать нашим пациентам современные методы диагностики и лечения, соответствующие мировым стандартам.</p>
                             </div>
-                            <p class="service__specialist__text">
-                                Ультразвуковое исследование (УЗИ) направлено не только на выявление признаков патологии, но и причин ее появления. Данные исследования оцениваются совместно с клиническими показаниями. <br>
-                                Клиника «ЛОТОС» предлагает комфортные условия и профессиональный подход к ультразвуковому исследованию органов и систем. Мы делаем всё, чтобы наши пациенты могли получить качественное обслуживание и компетентную медицинскую помощь. <br>
-                                УЗИ не вызывает никаких болезненных ощущений и дискомфорта. Исследование проводится с применением датчиков разного типа и зависит от того, какие внутренние органы требуется проверить.
-                            </p>
+                            <p class="service__specialist__text">Ультразвуковое исследование (УЗИ) направлено не только на выявление признаков патологии, но и причин ее появления. Данные исследования оцениваются совместно с клиническими показаниями. Клиника «ЛОТОС» предлагает комфортные условия и профессиональный подход к ультразвуковому исследованию органов и систем. </p>
+                        </div>
+                    </div>
+                    <div class="service__gallery">
+                        <div class="service__gallery__arrows">
+                            <div class="slider-arrow slider-arrow-prev"></div>
+                            <div class="slider-arrow slider-arrow-next"></div>
+                        </div>
+                        <div class="swiper service__gallery__slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide service__gallery__item">
+                                    <a href="images/service-gallery-img-1.jpg" data-fancybox="gallery">
+                                        <img src="images/service-gallery-img-1.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide service__gallery__item">
+                                    <a href="images/service-gallery-img-2.jpg" data-fancybox="gallery">
+                                        <img src="images/service-gallery-img-2.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide service__gallery__item">
+                                    <a href="images/service-gallery-img-3.jpg" data-fancybox="gallery">
+                                        <img src="images/service-gallery-img-3.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide service__gallery__item">
+                                    <a href="images/service-gallery-img-4.jpg" data-fancybox="gallery">
+                                        <img src="images/service-gallery-img-4.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide service__gallery__item">
+                                    <a href="images/service-gallery-img-1.jpg" data-fancybox="gallery">
+                                        <img src="images/service-gallery-img-1.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide service__gallery__item">
+                                    <a href="images/service-gallery-img-2.jpg" data-fancybox="gallery">
+                                        <img src="images/service-gallery-img-2.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide service__gallery__item">
+                                    <a href="images/service-gallery-img-3.jpg" data-fancybox="gallery">
+                                        <img src="images/service-gallery-img-3.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide service__gallery__item">
+                                    <a href="images/service-gallery-img-4.jpg" data-fancybox="gallery">
+                                        <img src="images/service-gallery-img-4.jpg" alt="">
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="service__prices">
@@ -344,7 +408,7 @@
                                         </button>
                                     </div>
                                 </form>
-                                <p class="service__prices__warning">Цены, размещенные на сайте, не являются публичной офертой и носят справочный характер. <br>Стоимость услуг тарифицируется в соответствии с прейскурантом, действующим на момент оказания услуг.</p>
+                                <!-- <p class="service__prices__warning">Цены, размещенные на сайте, не являются публичной офертой и носят справочный характер. <br>Стоимость услуг тарифицируется в соответствии с прейскурантом, действующим на момент оказания услуг.</p> -->
                             </div>
                             <div class="service__prices__content">
                                 <h3>Узи исследования</h3>
@@ -436,8 +500,6 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="service__prices__block">
                             <div class="service__prices__content">
                                 <h3>Гинекологические исследования</h3>
                                 <div class="service__prices__list">
@@ -528,156 +590,38 @@
                                     </div>
                                 </div>
                             </div>
+                            <button class="service__expand service__prices__expand">
+                                Показать еще
+                                <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.87938 6.94075L5.00903 9.95862L8.13867 6.94075M1.87938 1.94095L5.00903 4.95882L8.13867 1.94095" stroke="#009FA2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
                         </div>
+                    </div>
+                    <div class="service__about">
+                        <h2>Подробнее об услуге</h2>
+                        <div class="service__about__text">
+                            <b>Диагностическое исследование проводится</b> <br><br>
+                            <ul>
+                                <li>абдоминальным датчиком (обследование печени, желчного пузыря, поджелудочной железы, селезенки, почек);</li>
+                                <li>вагинальным (обследование матки с придатками);.</li>
+                                <li>трансректальным (обследование предстательной железы);</li>
+                                <li>с использованием кардиологического датчика (обследование сердца);</li>
+                                <li>использованием линейного датчика (обследование сосудов, вен, мягких тканей, щитовидной железы, гортани, молочных желез и др.)</li>
+                            </ul> <br>
+                            <p>Наша клиника оснащена современным оборудованием в соответствии с международными медицинскими стандартами. Точность диагностики гарантируется высочайшим профессионализмом специалистов «ЛОТОСА».</p>
+                        </div>
+                        <button class="service__expand">
+                            Показать еще
+                            <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.87938 6.94075L5.00903 9.95862L8.13867 6.94075M1.87938 1.94095L5.00903 4.95882L8.13867 1.94095" stroke="#009FA2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="reviews" style="background: transparent;">
-            <div class="service__anchor" id="reviews"></div>
-            <h2 class="title">Отзывы</h2>
-            <div class="container">
-                <div class="reviews__header">
-                    <div class="reviews__header__total">
-                        <div class="reviews__header__rating">
-                            4.9
-                            <svg viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9.20831 0.620635C9.31836 0.431795 9.476 0.275109 9.6655 0.166209C9.855 0.0573086 10.0697 0 10.2883 0C10.5069 0 10.7216 0.0573086 10.9111 0.166209C11.1006 0.275109 11.2583 0.431795 11.3683 0.620635L14.1633 5.41864L19.5913 6.59464C19.8048 6.64103 20.0024 6.74258 20.1645 6.88917C20.3265 7.03575 20.4473 7.22225 20.5148 7.43006C20.5823 7.63787 20.5941 7.85974 20.5491 8.07355C20.5041 8.28737 20.4038 8.48565 20.2583 8.64863L16.5583 12.7896L17.1183 18.3146C17.1404 18.5322 17.105 18.7517 17.0157 18.9513C16.9265 19.151 16.7864 19.3237 16.6094 19.4522C16.4325 19.5807 16.225 19.6606 16.0076 19.6838C15.7901 19.7071 15.5704 19.6729 15.3703 19.5846L10.2883 17.3446L5.20632 19.5846C5.00623 19.6729 4.78651 19.7071 4.56907 19.6838C4.35163 19.6606 4.1441 19.5807 3.96719 19.4522C3.79028 19.3237 3.65018 19.151 3.56088 18.9513C3.47159 18.7517 3.43622 18.5322 3.45832 18.3146L4.01832 12.7896L0.318315 8.64964C0.172543 8.48666 0.0720706 8.2883 0.026929 8.07435C-0.0182127 7.86041 -0.00644447 7.63837 0.0610588 7.43039C0.128562 7.22242 0.249439 7.03579 0.411621 6.88913C0.573804 6.74248 0.771618 6.64093 0.985315 6.59464L6.41332 5.41864L9.20831 0.620635Z" fill="url(#paint0_linear_870_504)"/>
-                                <defs>
-                                    <linearGradient id="paint0_linear_870_504" x1="10.2879" y1="0" x2="10.2879" y2="19.6909" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#FFD45E"/>
-                                        <stop offset="1" stop-color="#CDB921"/>
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                        </div>
-                        <div class="reviews__header__count">
-                            <svg viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_870_502)">
-                                    <path d="M6.33944 6.19389H13.8716M6.33944 9.97243H11.9886M15.7546 1.4707C16.5038 1.4707 17.2222 1.76928 17.7519 2.30074C18.2816 2.8322 18.5792 3.55301 18.5792 4.30461V11.8617C18.5792 12.6133 18.2816 13.3341 17.7519 13.8656C17.2222 14.397 16.5038 14.6956 15.7546 14.6956H11.047L6.33944 17.5295V14.6956H4.4564C3.70728 14.6956 2.98884 14.397 2.45913 13.8656C1.92942 13.3341 1.63184 12.6133 1.63184 11.8617V4.30461C1.63184 3.55301 1.92942 2.8322 2.45913 2.30074C2.98884 1.76928 3.70728 1.4707 4.4564 1.4707H15.7546Z" stroke="#748CA4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_870_502">
-                                        <rect width="20" height="19" fill="white"/>
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                            <span><i>5639</i> отзывов</span>
-                        </div>
-                    </div>
-                    <div class="reviews__header__sources">
-                        <a href="javascript:void(0)" class="reviews__header__sources__item active">Все</a>
-                        <a href="javascript:void(0)" class="reviews__header__sources__item">
-                            <span style="color: #f00;">Я</span>ндекс<i>4.7</i>
-                        </a>
-                        <a href="javascript:void(0)" class="reviews__header__sources__item">
-                            <span style="color: #5FB246;">2</span>GIS<i>5.0</i>
-                        </a>
-                        <a href="javascript:void(0)" class="reviews__header__sources__item">
-                            <span style="color: #f00;">Про</span><span style="color: #107CC1;">докторов</span><i>4.9</i>
-                        </a>
-                    </div>
-                </div>
-                <div class="reviews__content">
-                    <div class="reviews__slider">
-                        <div class="swiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide reviews__slide">
-                                    <div class="reviews__item">
-                                        <h3>Елена</h3>
-                                        <div class="reviews__item__info">
-                                            <div class="reviews__item__date">26.03.2025 на</div>
-                                            <a href="javascirpt:void(0)"><span style="color: #f00;">Я</span>ндекс</a>
-                                        </div>
-                                        <div class="stars">
-                                            <div class="stars__current" style="width: 100%;"></div>
-                                        </div>
-                                        <p class="reviews__item__text">От всей души хочу сказать огромное СПАСИБО Попову Сергею Владимировичу. Ваш чуткий подход, высокий профессионализм, деликатное общение с пациентом и, конечно, ваши золотые руки вернули . . . </p>
-                                        <div class="reviews__item__footer"><a href="javascript:void(0)">читать полностью</a></div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide reviews__slide">
-                                    <div class="reviews__item">
-                                        <h3>Вячеслав</h3>
-                                        <div class="reviews__item__info">
-                                            <div class="reviews__item__date">26.03.2025 на </div>
-                                            <a href="javascirpt:void(0)"><span style="color: #5FB246;">2</span>GIS</a>
-                                        </div>
-                                        <div class="stars">
-                                            <div class="stars__current" style="width: 80%;"></div>
-                                        </div>
-                                        <p class="reviews__item__text">Здравствуйте, обследовался в вашей клинике на Труда 187б . И хотел бы сказать огромное спасибо врачу Вильданову Булату Фанилевичу. Отличный врач! Забота, спокойствие, профессионализм . . .</p>
-                                        <div class="reviews__item__footer"><a href="javascript:void(0)">читать полностью</a></div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide reviews__slide">
-                                    <div class="reviews__item">
-                                        <h3>Алла</h3>
-                                        <div class="reviews__item__info">
-                                            <div class="reviews__item__date">26.03.2025 на </div>
-                                            <a href="javascirpt:void(0)"><span style="color: #f00;">Про</span><span style="color: #107CC1;">докторов</span></a>
-                                        </div>
-                                        <div class="stars">
-                                            <div class="stars__current" style="width: 80%;"></div>
-                                        </div>
-                                        <p class="reviews__item__text">От всей души хочу выразить свою благодарность настоящему профессионалу, человеку с золотыми руками и большой душой, лучшему врачу, Белашкиной Елене Борисовне! За ваше трепетное  . . . </p>
-                                        <div class="reviews__item__footer"><a href="javascript:void(0)">читать полностью</a></div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide reviews__slide">
-                                    <div class="reviews__item">
-                                        <h3>Елена</h3>
-                                        <div class="reviews__item__info">
-                                            <div class="reviews__item__date">26.03.2025 на </div>
-                                            <a href="javascirpt:void(0)"><span style="color: #f00;">Я</span>ндекс</a>
-                                        </div>
-                                        <div class="stars">
-                                            <div class="stars__current" style="width: 80%;"></div>
-                                        </div>
-                                        <p class="reviews__item__text">14 марта проходил процедуру ФГС. Хочется выразить искреннюю благодарность за высокий профессионализм, вежливость, доброту и приветливость . . . </p>
-                                        <div class="reviews__item__footer"><a href="javascript:void(0)">читать полностью</a></div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide reviews__slide">
-                                    <div class="reviews__item">
-                                        <h3>Елена</h3>
-                                        <div class="reviews__item__info">
-                                            <div class="reviews__item__date">26.03.2025 на </div>
-                                            <a href="javascirpt:void(0)"><span style="color: #f00;">Я</span>ндекс</a>
-                                        </div>
-                                        <div class="stars">
-                                            <div class="stars__current" style="width: 80%;"></div>
-                                        </div>
-                                        <p class="reviews__item__text">От всей души хочу сказать огромное СПАСИБО Попову Сергею Владимировичу. Ваш чуткий подход, высокий профессионализм, деликатное общение с пациентом и, конечно, ваши золотые руки вернули . . . </p>
-                                        <div class="reviews__item__footer"><a href="javascript:void(0)">читать полностью</a></div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide reviews__slide">
-                                    <div class="reviews__item">
-                                        <h3>Вячеслав</h3>
-                                        <div class="reviews__item__info">
-                                            <div class="reviews__item__date">26.03.2025 на </div>
-                                            <a href="javascirpt:void(0)"><span style="color: #5FB246;">2</span>GIS</a>
-                                        </div>
-                                        <div class="stars">
-                                            <div class="stars__current" style="width: 80%;"></div>
-                                        </div>
-                                        <p class="reviews__item__text">Здравствуйте, обследовался в вашей клинике на Труда 187б . И хотел бы сказать огромное спасибо врачу Вильданову Булату Фанилевичу. Отличный врач! Забота, спокойствие, профессионализм . . .</p>
-                                        <div class="reviews__item__footer"><a href="javascript:void(0)">читать полностью</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="reviews__slider__controls">
-                        <div class="slider-progressbar"></div>
-                        <div class="slider-arrow slider-arrow-prev"></div>
-                        <div class="slider-arrow slider-arrow-next"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="doctors">
+        <section class="doctors" style="background: transparent;">
             <div class="service__anchor" id="specialists"></div>
             <h2 class="title">Специалисты</h2>
             <div class="container">
@@ -1026,6 +970,235 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="blog-list">
+            <h2 class="title">Блог врачей</h2>
+            <div class="container blog-list__content">
+                <div class="blog-list__item">
+                    <div class="blog-list__item__header">
+                        <div class="blog-list__item__name">
+                            <img src="images/blog-list-avatar-1.jpg" alt="">
+                            <h3>Пашкина Наталья <br>Валентиновна</h3>
+                        </div>
+                        <img src="images/blog-list-img-1.jpg" alt="">
+                    </div>
+                    <div class="blog-list__item__content">
+                        <div class="blog-list__item__info">
+                            <span class="blog-list__item__date">19.09.2022</span>
+                            <div class="stars blog-list__item__stars">
+                                <div class="stars__current blog-list__item__stars__current" style="width: 40%;"></div>
+                            </div>
+                            <p class="blog-list__item__views">59</p>
+                        </div>
+                        <a href="javascript:void(0)" class="blog-list__item__title">Страхи о поздней беременности. Оправданы ли?</a>
+                        <p class="blog-list__item__text">«Я впервые стану мамой!» – сегодня говорят женщины в возрасте от 40 до 50 лет.</p>
+                    </div>
+                </div>
+                <div class="blog-list__item">
+                    <div class="blog-list__item__header">
+                        <div class="blog-list__item__name">
+                            <img src="images/blog-list-avatar-2.jpg" alt="">
+                            <h3>Авдеева Юлия <br>Сергеевна</h3>
+                        </div>
+                        <img src="images/blog-list-img-2.jpg" alt="">
+                    </div>
+                    <div class="blog-list__item__content">
+                        <div class="blog-list__item__info">
+                            <span class="blog-list__item__date">19.09.2022</span>
+                            <div class="stars blog-list__item__stars">
+                                <div class="stars__current blog-list__item__stars__current" style="width: 40%;"></div>
+                            </div>
+                            <p class="blog-list__item__views">59</p>
+                        </div>
+                        <a href="javascript:void(0)" class="blog-list__item__title">Генетический анализ на рак: как предотвратить развитие болезни</a>
+                        <p class="blog-list__item__text">Октябрь — всемирный месяц внимания к проблеме рака молочной железы. Распространенность этого . . .</p>
+                    </div>
+                </div>
+                <div class="blog-list__item">
+                    <div class="blog-list__item__header">
+                        <div class="blog-list__item__name">
+                            <img src="images/blog-list-avatar-3.jpg" alt="">
+                            <h3>Яровой Николай <br>Николаевич</h3>
+                        </div>
+                        <img src="images/blog-list-img-3.jpg" alt="">
+                    </div>
+                    <div class="blog-list__item__content">
+                        <div class="blog-list__item__info">
+                            <span class="blog-list__item__date">19.09.2022</span>
+                            <div class="stars blog-list__item__stars">
+                                <div class="stars__current blog-list__item__stars__current" style="width: 40%;"></div>
+                            </div>
+                            <p class="blog-list__item__views">59</p>
+                        </div>
+                        <a href="javascript:void(0)" class="blog-list__item__title">Как победить усталость? И в чем ее реальная причина?</a>
+                        <p class="blog-list__item__text">Врач медцентра «Лотос» рассказал о причинах и способах лечения заболеваний эндокринной системы </p>
+                    </div>
+                </div>
+                <div class="blog-list__item">
+                    <div class="blog-list__item__header">
+                        <div class="blog-list__item__name">
+                            <img src="images/blog-list-avatar-4.jpg" alt="">
+                            <h3>Шаимова Ирина <br>Сергеевна</h3>
+                        </div>
+                        <img src="images/blog-list-img-4.jpg" alt="">
+                    </div>
+                    <div class="blog-list__item__content">
+                        <div class="blog-list__item__info">
+                            <span class="blog-list__item__date">19.09.2022</span>
+                            <div class="stars blog-list__item__stars">
+                                <div class="stars__current blog-list__item__stars__current" style="width: 40%;"></div>
+                            </div>
+                            <p class="blog-list__item__views">59</p>
+                        </div>
+                        <a href="javascript:void(0)" class="blog-list__item__title">Забудьте о гречке и куриной грудке! 7 принципов здорового питания от нутрициолога</a>
+                        <p class="blog-list__item__text">Купальный сезон всё ближе. Чтобы без стыда разгуливать в бикини по пляжу . . .</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="reviews">
+            <div class="service__anchor" id="reviews"></div>
+            <h2 class="title">Отзывы</h2>
+            <div class="container">
+                <div class="reviews__header">
+                    <div class="reviews__header__total">
+                        <div class="reviews__header__rating">
+                            4.9
+                            <svg viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.20831 0.620635C9.31836 0.431795 9.476 0.275109 9.6655 0.166209C9.855 0.0573086 10.0697 0 10.2883 0C10.5069 0 10.7216 0.0573086 10.9111 0.166209C11.1006 0.275109 11.2583 0.431795 11.3683 0.620635L14.1633 5.41864L19.5913 6.59464C19.8048 6.64103 20.0024 6.74258 20.1645 6.88917C20.3265 7.03575 20.4473 7.22225 20.5148 7.43006C20.5823 7.63787 20.5941 7.85974 20.5491 8.07355C20.5041 8.28737 20.4038 8.48565 20.2583 8.64863L16.5583 12.7896L17.1183 18.3146C17.1404 18.5322 17.105 18.7517 17.0157 18.9513C16.9265 19.151 16.7864 19.3237 16.6094 19.4522C16.4325 19.5807 16.225 19.6606 16.0076 19.6838C15.7901 19.7071 15.5704 19.6729 15.3703 19.5846L10.2883 17.3446L5.20632 19.5846C5.00623 19.6729 4.78651 19.7071 4.56907 19.6838C4.35163 19.6606 4.1441 19.5807 3.96719 19.4522C3.79028 19.3237 3.65018 19.151 3.56088 18.9513C3.47159 18.7517 3.43622 18.5322 3.45832 18.3146L4.01832 12.7896L0.318315 8.64964C0.172543 8.48666 0.0720706 8.2883 0.026929 8.07435C-0.0182127 7.86041 -0.00644447 7.63837 0.0610588 7.43039C0.128562 7.22242 0.249439 7.03579 0.411621 6.88913C0.573804 6.74248 0.771618 6.64093 0.985315 6.59464L6.41332 5.41864L9.20831 0.620635Z" fill="url(#paint0_linear_870_504)"/>
+                                <defs>
+                                    <linearGradient id="paint0_linear_870_504" x1="10.2879" y1="0" x2="10.2879" y2="19.6909" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#FFD45E"/>
+                                        <stop offset="1" stop-color="#CDB921"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="reviews__header__count">
+                            <svg viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_870_502)">
+                                    <path d="M6.33944 6.19389H13.8716M6.33944 9.97243H11.9886M15.7546 1.4707C16.5038 1.4707 17.2222 1.76928 17.7519 2.30074C18.2816 2.8322 18.5792 3.55301 18.5792 4.30461V11.8617C18.5792 12.6133 18.2816 13.3341 17.7519 13.8656C17.2222 14.397 16.5038 14.6956 15.7546 14.6956H11.047L6.33944 17.5295V14.6956H4.4564C3.70728 14.6956 2.98884 14.397 2.45913 13.8656C1.92942 13.3341 1.63184 12.6133 1.63184 11.8617V4.30461C1.63184 3.55301 1.92942 2.8322 2.45913 2.30074C2.98884 1.76928 3.70728 1.4707 4.4564 1.4707H15.7546Z" stroke="#748CA4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_870_502">
+                                        <rect width="20" height="19" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <span><i>5639</i> отзывов</span>
+                        </div>
+                    </div>
+                    <div class="reviews__header__sources">
+                        <a href="javascript:void(0)" class="reviews__header__sources__item active">Все</a>
+                        <a href="javascript:void(0)" class="reviews__header__sources__item">
+                            <span style="color: #f00;">Я</span>ндекс<i>4.7</i>
+                        </a>
+                        <a href="javascript:void(0)" class="reviews__header__sources__item">
+                            <span style="color: #5FB246;">2</span>GIS<i>5.0</i>
+                        </a>
+                        <a href="javascript:void(0)" class="reviews__header__sources__item">
+                            <span style="color: #f00;">Про</span><span style="color: #107CC1;">докторов</span><i>4.9</i>
+                        </a>
+                    </div>
+                </div>
+                <div class="reviews__content">
+                    <div class="reviews__slider">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide reviews__slide">
+                                    <div class="reviews__item">
+                                        <h3>Елена</h3>
+                                        <div class="reviews__item__info">
+                                            <div class="reviews__item__date">26.03.2025 на</div>
+                                            <a href="javascirpt:void(0)"><span style="color: #f00;">Я</span>ндекс</a>
+                                        </div>
+                                        <div class="stars">
+                                            <div class="stars__current" style="width: 100%;"></div>
+                                        </div>
+                                        <p class="reviews__item__text">От всей души хочу сказать огромное СПАСИБО Попову Сергею Владимировичу. Ваш чуткий подход, высокий профессионализм, деликатное общение с пациентом и, конечно, ваши золотые руки вернули . . . </p>
+                                        <div class="reviews__item__footer"><a href="javascript:void(0)">читать полностью</a></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide reviews__slide">
+                                    <div class="reviews__item">
+                                        <h3>Вячеслав</h3>
+                                        <div class="reviews__item__info">
+                                            <div class="reviews__item__date">26.03.2025 на </div>
+                                            <a href="javascirpt:void(0)"><span style="color: #5FB246;">2</span>GIS</a>
+                                        </div>
+                                        <div class="stars">
+                                            <div class="stars__current" style="width: 80%;"></div>
+                                        </div>
+                                        <p class="reviews__item__text">Здравствуйте, обследовался в вашей клинике на Труда 187б . И хотел бы сказать огромное спасибо врачу Вильданову Булату Фанилевичу. Отличный врач! Забота, спокойствие, профессионализм . . .</p>
+                                        <div class="reviews__item__footer"><a href="javascript:void(0)">читать полностью</a></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide reviews__slide">
+                                    <div class="reviews__item">
+                                        <h3>Алла</h3>
+                                        <div class="reviews__item__info">
+                                            <div class="reviews__item__date">26.03.2025 на </div>
+                                            <a href="javascirpt:void(0)"><span style="color: #f00;">Про</span><span style="color: #107CC1;">докторов</span></a>
+                                        </div>
+                                        <div class="stars">
+                                            <div class="stars__current" style="width: 80%;"></div>
+                                        </div>
+                                        <p class="reviews__item__text">От всей души хочу выразить свою благодарность настоящему профессионалу, человеку с золотыми руками и большой душой, лучшему врачу, Белашкиной Елене Борисовне! За ваше трепетное  . . . </p>
+                                        <div class="reviews__item__footer"><a href="javascript:void(0)">читать полностью</a></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide reviews__slide">
+                                    <div class="reviews__item">
+                                        <h3>Елена</h3>
+                                        <div class="reviews__item__info">
+                                            <div class="reviews__item__date">26.03.2025 на </div>
+                                            <a href="javascirpt:void(0)"><span style="color: #f00;">Я</span>ндекс</a>
+                                        </div>
+                                        <div class="stars">
+                                            <div class="stars__current" style="width: 80%;"></div>
+                                        </div>
+                                        <p class="reviews__item__text">14 марта проходил процедуру ФГС. Хочется выразить искреннюю благодарность за высокий профессионализм, вежливость, доброту и приветливость . . . </p>
+                                        <div class="reviews__item__footer"><a href="javascript:void(0)">читать полностью</a></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide reviews__slide">
+                                    <div class="reviews__item">
+                                        <h3>Елена</h3>
+                                        <div class="reviews__item__info">
+                                            <div class="reviews__item__date">26.03.2025 на </div>
+                                            <a href="javascirpt:void(0)"><span style="color: #f00;">Я</span>ндекс</a>
+                                        </div>
+                                        <div class="stars">
+                                            <div class="stars__current" style="width: 80%;"></div>
+                                        </div>
+                                        <p class="reviews__item__text">От всей души хочу сказать огромное СПАСИБО Попову Сергею Владимировичу. Ваш чуткий подход, высокий профессионализм, деликатное общение с пациентом и, конечно, ваши золотые руки вернули . . . </p>
+                                        <div class="reviews__item__footer"><a href="javascript:void(0)">читать полностью</a></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide reviews__slide">
+                                    <div class="reviews__item">
+                                        <h3>Вячеслав</h3>
+                                        <div class="reviews__item__info">
+                                            <div class="reviews__item__date">26.03.2025 на </div>
+                                            <a href="javascirpt:void(0)"><span style="color: #5FB246;">2</span>GIS</a>
+                                        </div>
+                                        <div class="stars">
+                                            <div class="stars__current" style="width: 80%;"></div>
+                                        </div>
+                                        <p class="reviews__item__text">Здравствуйте, обследовался в вашей клинике на Труда 187б . И хотел бы сказать огромное спасибо врачу Вильданову Булату Фанилевичу. Отличный врач! Забота, спокойствие, профессионализм . . .</p>
+                                        <div class="reviews__item__footer"><a href="javascript:void(0)">читать полностью</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews__slider__controls">
+                        <div class="slider-progressbar"></div>
+                        <div class="slider-arrow slider-arrow-prev"></div>
+                        <div class="slider-arrow slider-arrow-next"></div>
                     </div>
                 </div>
             </div>
@@ -1562,6 +1735,7 @@
     </div>
     <script src="js/jquery/jquery-3.7.1.min.js"></script>
     <script src="js/jquery/jquery.inputmask.min.js"></script>
+    <script src="js/fancybox/fancybox.umd.js"></script>
     <script src="js/swiper/swiper-bundle.js"></script>
     <script src="js/parallax/parallax.min.js"></script>
     <script src="js/animate/js/noframework.waypoints.min.js"></script>

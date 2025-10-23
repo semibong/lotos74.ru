@@ -1,0 +1,150 @@
+.blog-list {
+    background: url(../images/doctors-bg.jpg) no-repeat center / cover;
+    padding: 10rem 0;
+
+    @media #{$lg} {
+        background: none;
+        padding: 0;
+        margin-bottom: 4.8rem;
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2.2rem;
+    }
+
+    &__item {
+        width: calc(25% - 1.65rem);
+        background-color: rgba(#fff, 0.5);
+        box-sizing: border-box;
+        border: 1px #fff solid;
+        border-radius: 1.5rem;
+
+        @media #{$lg} {
+            width: calc(50% - 1.1rem);
+        }
+
+        @media #{$sm} {
+            width: 100%;
+        }
+
+        &__header {
+            position: relative;
+            display: flex;
+            align-items: end;
+            width: calc(100% + 2px);
+            height: 19.6rem;
+            box-sizing: border-box;
+            padding: 1rem 1.2rem;
+            transform: translate(-1px, -1px);
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(0deg, #043131, transparent);
+                pointer-events: none;
+                border-radius: 1.5rem;
+                z-index: 1;
+                top: 0;
+                left: 0;
+            }
+
+            &>img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 1.5rem;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        &__name {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            z-index: 2;
+
+            img {
+                width: 5.1rem;
+                height: 5.1rem;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 50%;
+            }
+
+            h3 {
+                font-weight: 700;
+                font-size: 1.4rem;
+                line-height: 1.4rem;
+                color: #fff;
+            }
+        }
+
+        &__content {
+            padding: 1rem 1.2rem 1.7rem;
+        }
+
+        &__info {
+            display: flex;
+            margin-bottom: 2rem;
+        }
+
+        &__date {
+            font-weight: 500;
+            font-size: 1.4rem;
+            line-height: 1.5rem;
+            color: $color-secondary;
+            margin-right: 3rem;
+            transform: translateY(0.3rem);
+        }
+
+        &__stars {
+            background-image: url(../images/svg/stars-2.svg);
+            margin-right: 1.8rem;
+
+            &__current {
+                background-image: url(../images/svg/stars-2-active.svg);
+            }
+        }
+
+        &__views {
+            font-weight: 500;
+            font-size: 1.4rem;
+            line-height: 1.4rem;
+            color: $color-active;
+            position: relative;
+            padding-left: 3rem;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 2rem;
+                height: 1.4rem;
+                background: url(../images/svg/eye.svg) no-repeat center / contain;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        &__title {
+            font-weight: 700;
+            font-size: 1.4rem;
+            line-height: 1.4rem;
+            display: flex;
+            margin-bottom: 1.3rem;
+        }
+
+        &__text {
+            font-size: 1.4rem;
+            line-height: 1.7rem;
+            color: #59728C;
+        }
+    }
+}

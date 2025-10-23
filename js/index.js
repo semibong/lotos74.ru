@@ -468,6 +468,33 @@ $(document).ready(function () {
             }
         });
     }
+    
+    if ($('.service').length) {
+        $('.service__prices__expand').on('click', function () {
+            $(this).closest('.service__prices').addClass('expanded');
+        });
+    }
+
+    if ($('.service__gallery').length) {
+        const serviceGallery = new Swiper('.service__gallery__slider', {
+            speed: 1000,
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 22,
+            navigation: {
+                prevEl: '.service__gallery .slider-arrow-prev',
+                nextEl: '.service__gallery .slider-arrow-next'
+            },
+            breakpoints: {
+                993: {
+                    slidesPerView: 4
+                },
+                769: {
+                    slidesPerView: 2
+                }
+            }
+        });
+    }
 
     if ($('.promotions').length) {
         const parallaxBorder = new Parallax(document.querySelector('.promotions__item_all'), {
