@@ -214,49 +214,49 @@ $(document).ready(function () {
     }
 
     if ($('.drop-list').length) {
-        if (window.innerWidth < 993) {
             $('.drop-list').each(function () {
-                let dropList = this;
+                if (window.innerWidth < 993 || $(this).hasClass('drop-list_desktop')) {
+                    let dropList = this;
 
-                let height = $(dropList).outerHeight();
-                $(window).on('resize', function () {
-                    $(dropList).animate({height: '100%'}, 0);
-                    height = $(dropList).outerHeight();
+                    let height = $(dropList).outerHeight();
+                    $(window).on('resize', function () {
+                        $(dropList).animate({height: '100%'}, 0);
+                        height = $(dropList).outerHeight();
+                        $(dropList).animate({height: '4.2rem'}, 0);  
+                    });
+
                     $(dropList).animate({height: '4.2rem'}, 0);  
-                });
 
-                $(dropList).animate({height: '4.2rem'}, 0);  
-
-                let dropListButton;
-                for (let i = 0; i < dropList.children.length; i++) {
-                    if ($(dropList.children.item(i)).hasClass('drop-list__button')) {
-                        dropListButton = dropList.children.item(i);
+                    let dropListButton;
+                    for (let i = 0; i < dropList.children.length; i++) {
+                        if ($(dropList.children.item(i)).hasClass('drop-list__button')) {
+                            dropListButton = dropList.children.item(i);
+                        }
                     }
-                }
 
-                $(dropListButton).on('click', function () {
-                    $(this).toggleClass('active');
+                    $(dropListButton).on('click', function () {
+                        $(this).toggleClass('active');
 
-                    if ($(this).hasClass('active')) {
-                        $(dropList).animate({height: `${height}px`}, 500);
-                    } else {
-                        $(dropList).animate({height: '4.2rem'}, 500);
-                    }
-                });
-
-                for (let i = 0; i < dropList.children.length; i++) {
-                    if (!$(dropList.children.item(i)).hasClass('drop-list__button')) {
-                        $(dropList.children.item(i)).on('click', function () {
-                            for (let i = 0; i < dropList.children.length; i++) {
-                                $(dropList.children.item(i)).removeClass('active');
-                            }
-                            $(this).addClass('active');
+                        if ($(this).hasClass('active')) {
+                            $(dropList).animate({height: `${height}px`}, 500);
+                        } else {
                             $(dropList).animate({height: '4.2rem'}, 500);
-                        });
+                        }
+                    });
+
+                    for (let i = 0; i < dropList.children.length; i++) {
+                        if (!$(dropList.children.item(i)).hasClass('drop-list__button')) {
+                            $(dropList.children.item(i)).on('click', function () {
+                                for (let i = 0; i < dropList.children.length; i++) {
+                                    $(dropList.children.item(i)).removeClass('active');
+                                }
+                                $(this).addClass('active');
+                                $(dropList).animate({height: '4.2rem'}, 500);
+                            });
+                        }
                     }
                 }
             });
-        }
     }
 
     if ($('.utp').length) {
@@ -471,7 +471,44 @@ $(document).ready(function () {
     
     if ($('.service').length) {
         $('.service__prices__expand').on('click', function () {
-            $(this).closest('.service__prices').addClass('expanded');
+            let block = $(this).closest('.service__prices');
+            block.toggleClass('expanded');
+
+            if (block.hasClass('expanded')) {
+                $($(this).children()[0]).text('Свернуть');
+            } else {
+                $($(this).children()[0]).text('Показать еще');
+            }
+        });
+
+        $('.service__about__expand').on('click', function () {
+            let block = $(this).closest('.service__about');
+            block.toggleClass('expanded');
+
+            if (block.hasClass('expanded')) {
+                $($(this).children()[0]).text('Свернуть');
+            } else {
+                $($(this).children()[0]).text('Показать еще');
+            }
+        });
+
+        $('.service__utp__item').each(function () {
+            const parallax = new Parallax(this, {
+                pointerEvents: true,
+                selector: '.service__utp__item__image',
+                invertX: false,
+                invertY: false,
+            });
+
+            const parallaxBorder = new Parallax(this, {
+                pointerEvents: true,
+                selector: '.service__utp__item__border',
+            });
+
+            if ($(window).width() < 993) {
+                parallax.disable();
+                parallaxBorder.disable();
+            }
         });
     }
 
@@ -538,4 +575,24 @@ $(document).ready(function () {
           layoutPackery();
         });
     };
+
+    if ($('.blog-list').length) {
+        const blogListSlider = new Swiper('.blog-list__slider', {
+            speed: 1000,
+            slidesPerView: 1.2,
+            spaceBetween: 22,
+            navigation: {
+                prevEl: '.blog-list__arrows .slider-arrow-prev',
+                nextEl: '.blog-list__arrows .slider-arrow-next'
+            },
+            breakpoints: {
+                993: {
+                    slidesPerView: 4,
+                },
+                769: {
+                    slidesPerView: 2.5,
+                }
+            } 
+        });
+    }
 });

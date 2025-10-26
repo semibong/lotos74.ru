@@ -11,6 +11,56 @@
         overflow: hidden;
     }
 
+    &_desktop {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(#fff, 0.6);
+        box-sizing: border-box;
+        padding-left: 0;
+        border: 1px #DBEEF5 solid;
+        border-radius: 1.4rem;
+        overflow: hidden;
+
+        .drop-list {
+            &__button {
+                position: absolute;
+                display: flex;
+                width: 100%;
+                height: 4.2rem;
+                background: transparent;
+                padding: 0;
+                border: none;
+                cursor: pointer;
+                z-index: 1;
+                top: 0;
+                right: 0;
+
+                &.active {
+                    width: 5.6rem;
+                }
+            }
+        }
+
+        &>div, &>li {
+            font-size: 1.6rem;
+            line-height: 2rem;
+            color: $color-primary;
+            min-height: 4.2rem;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            order: 2;
+
+            &.active {
+                color: $color-active;
+                padding: 0 2rem;
+                order: 1;
+            }
+        }
+    }
+
     &__button {
         display: none;
 

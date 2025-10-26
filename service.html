@@ -295,11 +295,13 @@
                                     </a>
                                 </div>
                                 <div class="service__info__anchors">
-                                    <a href="#service">Об услуге</a>
-                                    <a href="#prices">Цены</a>
-                                    <a href="#specialists">Специалисты</a>
-                                    <a href="#reviews">Отзывы</a>
-                                    <a href="#">Подробнее</a>
+                                    <div class="service__info__anchors__content">
+                                        <a href="#service">Об услуге</a>
+                                        <a href="#prices">Цены</a>
+                                        <a href="#specialists">Специалисты</a>
+                                        <a href="#reviews">Отзывы</a>
+                                        <a href="#">Подробнее</a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="service__info__image">
@@ -310,19 +312,31 @@
                     <div class="service__utp">
                         <div class="service__utp__item">
                             <p>Современное оборудование эксперного класса</p>
-                            <div><img src="images/service-utp-img-1.png" alt=""></div>
+                            <div class="service__utp__item__image" data-depth="0.4">
+                                <img src="images/service-utp-img-1.png" alt="">
+                            </div>
+                            <div class="service__utp__item__border" data-depth="0.2"></div>
                         </div>
                         <div class="service__utp__item">
                             <p>Опытные врачи <br>высшей категории</p>
-                            <div><img src="images/service-utp-img-2.png" alt=""></div>
+                            <div class="service__utp__item__image" data-depth="0.4">
+                                <img src="images/service-utp-img-2.png" alt="">
+                            </div>
+                            <div class="service__utp__item__border" data-depth="0.2"></div>
                         </div>
                         <div class="service__utp__item">
                             <p>Быстрые результаты и комфортная <br>процедура</p>
-                            <div><img src="images/service-utp-img-3.png" alt=""></div>
+                            <div class="service__utp__item__image" data-depth="0.4">
+                                <img src="images/service-utp-img-3.png" alt="">
+                            </div>
+                            <div class="service__utp__item__border" data-depth="0.2"></div>
                         </div>
                         <div class="service__utp__item">
                             <p>Запись день <br>в день</p>
-                            <div><img src="images/service-utp-img-4.png" alt=""></div>
+                            <div class="service__utp__item__image" data-depth="0.4">
+                                <img src="images/service-utp-img-4.png" alt="">
+                            </div>
+                            <div class="service__utp__item__border" data-depth="0.2"></div>
                         </div>
                     </div>
                     <div class="service__specialist">
@@ -408,7 +422,17 @@
                                         </button>
                                     </div>
                                 </form>
-                                <!-- <p class="service__prices__warning">Цены, размещенные на сайте, не являются публичной офертой и носят справочный характер. <br>Стоимость услуг тарифицируется в соответствии с прейскурантом, действующим на момент оказания услуг.</p> -->
+                                <ul class="drop-list drop-list_desktop">
+                                    <button class="drop-list__button"></button>
+                                    <li><a href="javascript:void(0)" class="active">Категория</a></li>
+                                    <li><a href="javascript:void(0)">Гинекологические исследования</a></li>
+                                    <li><a href="javascript:void(0)">Общие исследования</a></li>
+                                    <li><a href="javascript:void(0)">Суставы, позвоночник</a></li>
+                                    <li><a href="javascript:void(0)">УЗИ глазного яблока</a></li>
+                                    <li><a href="javascript:void(0)">УЗИ исследования на VolE10</a></li>
+                                    <li><a href="javascript:void(0)">Ультразвуковая допплерография</a></li>
+                                    <li><a href="javascript:void(0)">Ультразвуковые исследования при беременности</a></li>
+                                </ul>
                             </div>
                             <div class="service__prices__content">
                                 <h3>Узи исследования</h3>
@@ -591,8 +615,8 @@
                                 </div>
                             </div>
                             <button class="service__expand service__prices__expand">
-                                Показать еще
-                                <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <span>Показать еще</span>
+                                <svg viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1.87938 6.94075L5.00903 9.95862L8.13867 6.94075M1.87938 1.94095L5.00903 4.95882L8.13867 1.94095" stroke="#009FA2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </button>
@@ -611,9 +635,20 @@
                             </ul> <br>
                             <p>Наша клиника оснащена современным оборудованием в соответствии с международными медицинскими стандартами. Точность диагностики гарантируется высочайшим профессионализмом специалистов «ЛОТОСА».</p>
                         </div>
-                        <button class="service__expand">
-                            Показать еще
-                            <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <div class="service__about__text">
+                            <b>Диагностическое исследование проводится</b> <br><br>
+                            <ul>
+                                <li>абдоминальным датчиком (обследование печени, желчного пузыря, поджелудочной железы, селезенки, почек);</li>
+                                <li>вагинальным (обследование матки с придатками);.</li>
+                                <li>трансректальным (обследование предстательной железы);</li>
+                                <li>с использованием кардиологического датчика (обследование сердца);</li>
+                                <li>использованием линейного датчика (обследование сосудов, вен, мягких тканей, щитовидной железы, гортани, молочных желез и др.)</li>
+                            </ul> <br>
+                            <p>Наша клиника оснащена современным оборудованием в соответствии с международными медицинскими стандартами. Точность диагностики гарантируется высочайшим профессионализмом специалистов «ЛОТОСА».</p>
+                        </div>
+                        <button class="service__expand service__about__expand">
+                            <span>Показать еще</span>
+                            <svg viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1.87938 6.94075L5.00903 9.95862L8.13867 6.94075M1.87938 1.94095L5.00903 4.95882L8.13867 1.94095" stroke="#009FA2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </button>
@@ -977,89 +1012,193 @@
         <section class="blog-list">
             <h2 class="title">Блог врачей</h2>
             <div class="container blog-list__content">
-                <div class="blog-list__item">
-                    <div class="blog-list__item__header">
-                        <div class="blog-list__item__name">
-                            <img src="images/blog-list-avatar-1.jpg" alt="">
-                            <h3>Пашкина Наталья <br>Валентиновна</h3>
-                        </div>
-                        <img src="images/blog-list-img-1.jpg" alt="">
-                    </div>
-                    <div class="blog-list__item__content">
-                        <div class="blog-list__item__info">
-                            <span class="blog-list__item__date">19.09.2022</span>
-                            <div class="stars blog-list__item__stars">
-                                <div class="stars__current blog-list__item__stars__current" style="width: 40%;"></div>
-                            </div>
-                            <p class="blog-list__item__views">59</p>
-                        </div>
-                        <a href="javascript:void(0)" class="blog-list__item__title">Страхи о поздней беременности. Оправданы ли?</a>
-                        <p class="blog-list__item__text">«Я впервые стану мамой!» – сегодня говорят женщины в возрасте от 40 до 50 лет.</p>
-                    </div>
+                <div class="blog-list__arrows">
+                    <div class="slider-arrow slider-arrow-prev"></div>
+                    <div class="slider-arrow slider-arrow-next"></div>
                 </div>
-                <div class="blog-list__item">
-                    <div class="blog-list__item__header">
-                        <div class="blog-list__item__name">
-                            <img src="images/blog-list-avatar-2.jpg" alt="">
-                            <h3>Авдеева Юлия <br>Сергеевна</h3>
-                        </div>
-                        <img src="images/blog-list-img-2.jpg" alt="">
-                    </div>
-                    <div class="blog-list__item__content">
-                        <div class="blog-list__item__info">
-                            <span class="blog-list__item__date">19.09.2022</span>
-                            <div class="stars blog-list__item__stars">
-                                <div class="stars__current blog-list__item__stars__current" style="width: 40%;"></div>
+                <div class="swiper blog-list__slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="blog-list__item">
+                                <div class="blog-list__item__header">
+                                    <div class="blog-list__item__name">
+                                        <img src="images/blog-list-avatar-1.jpg" alt="">
+                                        <h3>Пашкина Наталья <br>Валентиновна</h3>
+                                    </div>
+                                    <img src="images/blog-list-img-1.jpg" alt="">
+                                </div>
+                                <div class="blog-list__item__content">
+                                    <div class="blog-list__item__info">
+                                        <span class="blog-list__item__date">19.09.2022</span>
+                                        <div class="stars blog-list__item__stars">
+                                            <div class="stars__current blog-list__item__stars__current" style="width: 40%;"></div>
+                                        </div>
+                                        <p class="blog-list__item__views">59</p>
+                                    </div>
+                                    <a href="javascript:void(0)" class="blog-list__item__title">Страхи о поздней беременности. Оправданы ли?</a>
+                                    <p class="blog-list__item__text">«Я впервые стану мамой!» – сегодня говорят женщины в возрасте от 40 до 50 лет.</p>
+                                </div>
                             </div>
-                            <p class="blog-list__item__views">59</p>
                         </div>
-                        <a href="javascript:void(0)" class="blog-list__item__title">Генетический анализ на рак: как предотвратить развитие болезни</a>
-                        <p class="blog-list__item__text">Октябрь — всемирный месяц внимания к проблеме рака молочной железы. Распространенность этого . . .</p>
-                    </div>
-                </div>
-                <div class="blog-list__item">
-                    <div class="blog-list__item__header">
-                        <div class="blog-list__item__name">
-                            <img src="images/blog-list-avatar-3.jpg" alt="">
-                            <h3>Яровой Николай <br>Николаевич</h3>
-                        </div>
-                        <img src="images/blog-list-img-3.jpg" alt="">
-                    </div>
-                    <div class="blog-list__item__content">
-                        <div class="blog-list__item__info">
-                            <span class="blog-list__item__date">19.09.2022</span>
-                            <div class="stars blog-list__item__stars">
-                                <div class="stars__current blog-list__item__stars__current" style="width: 40%;"></div>
+                        <div class="swiper-slide">
+                            <div class="blog-list__item">
+                                <div class="blog-list__item__header">
+                                    <div class="blog-list__item__name">
+                                        <img src="images/blog-list-avatar-2.jpg" alt="">
+                                        <h3>Авдеева Юлия <br>Сергеевна</h3>
+                                    </div>
+                                    <img src="images/blog-list-img-2.jpg" alt="">
+                                </div>
+                                <div class="blog-list__item__content">
+                                    <div class="blog-list__item__info">
+                                        <span class="blog-list__item__date">19.09.2022</span>
+                                        <div class="stars blog-list__item__stars">
+                                            <div class="stars__current blog-list__item__stars__current" style="width: 40%;"></div>
+                                        </div>
+                                        <p class="blog-list__item__views">59</p>
+                                    </div>
+                                    <a href="javascript:void(0)" class="blog-list__item__title">Генетический анализ на рак: как предотвратить развитие болезни</a>
+                                    <p class="blog-list__item__text">Октябрь — всемирный месяц внимания к проблеме рака молочной железы. Распространенность этого . . .</p>
+                                </div>
                             </div>
-                            <p class="blog-list__item__views">59</p>
                         </div>
-                        <a href="javascript:void(0)" class="blog-list__item__title">Как победить усталость? И в чем ее реальная причина?</a>
-                        <p class="blog-list__item__text">Врач медцентра «Лотос» рассказал о причинах и способах лечения заболеваний эндокринной системы </p>
-                    </div>
-                </div>
-                <div class="blog-list__item">
-                    <div class="blog-list__item__header">
-                        <div class="blog-list__item__name">
-                            <img src="images/blog-list-avatar-4.jpg" alt="">
-                            <h3>Шаимова Ирина <br>Сергеевна</h3>
-                        </div>
-                        <img src="images/blog-list-img-4.jpg" alt="">
-                    </div>
-                    <div class="blog-list__item__content">
-                        <div class="blog-list__item__info">
-                            <span class="blog-list__item__date">19.09.2022</span>
-                            <div class="stars blog-list__item__stars">
-                                <div class="stars__current blog-list__item__stars__current" style="width: 40%;"></div>
+                        <div class="swiper-slide">
+                            <div class="blog-list__item">
+                                <div class="blog-list__item__header">
+                                    <div class="blog-list__item__name">
+                                        <img src="images/blog-list-avatar-3.jpg" alt="">
+                                        <h3>Яровой Николай <br>Николаевич</h3>
+                                    </div>
+                                    <img src="images/blog-list-img-3.jpg" alt="">
+                                </div>
+                                <div class="blog-list__item__content">
+                                    <div class="blog-list__item__info">
+                                        <span class="blog-list__item__date">19.09.2022</span>
+                                        <div class="stars blog-list__item__stars">
+                                            <div class="stars__current blog-list__item__stars__current" style="width: 40%;"></div>
+                                        </div>
+                                        <p class="blog-list__item__views">59</p>
+                                    </div>
+                                    <a href="javascript:void(0)" class="blog-list__item__title">Как победить усталость? И в чем ее реальная причина?</a>
+                                    <p class="blog-list__item__text">Врач медцентра «Лотос» рассказал о причинах и способах лечения заболеваний эндокринной системы </p>
+                                </div>
                             </div>
-                            <p class="blog-list__item__views">59</p>
                         </div>
-                        <a href="javascript:void(0)" class="blog-list__item__title">Забудьте о гречке и куриной грудке! 7 принципов здорового питания от нутрициолога</a>
-                        <p class="blog-list__item__text">Купальный сезон всё ближе. Чтобы без стыда разгуливать в бикини по пляжу . . .</p>
+                        <div class="swiper-slide">
+                            <div class="blog-list__item">
+                                <div class="blog-list__item__header">
+                                    <div class="blog-list__item__name">
+                                        <img src="images/blog-list-avatar-4.jpg" alt="">
+                                        <h3>Шаимова Ирина <br>Сергеевна</h3>
+                                    </div>
+                                    <img src="images/blog-list-img-4.jpg" alt="">
+                                </div>
+                                <div class="blog-list__item__content">
+                                    <div class="blog-list__item__info">
+                                        <span class="blog-list__item__date">19.09.2022</span>
+                                        <div class="stars blog-list__item__stars">
+                                            <div class="stars__current blog-list__item__stars__current" style="width: 40%;"></div>
+                                        </div>
+                                        <p class="blog-list__item__views">59</p>
+                                    </div>
+                                    <a href="javascript:void(0)" class="blog-list__item__title">Забудьте о гречке и куриной грудке! 7 принципов здорового питания от нутрициолога</a>
+                                    <p class="blog-list__item__text">Купальный сезон всё ближе. Чтобы без стыда разгуливать в бикини по пляжу . . .</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="blog-list__item">
+                                <div class="blog-list__item__header">
+                                    <div class="blog-list__item__name">
+                                        <img src="images/blog-list-avatar-1.jpg" alt="">
+                                        <h3>Пашкина Наталья <br>Валентиновна</h3>
+                                    </div>
+                                    <img src="images/blog-list-img-1.jpg" alt="">
+                                </div>
+                                <div class="blog-list__item__content">
+                                    <div class="blog-list__item__info">
+                                        <span class="blog-list__item__date">19.09.2022</span>
+                                        <div class="stars blog-list__item__stars">
+                                            <div class="stars__current blog-list__item__stars__current" style="width: 40%;"></div>
+                                        </div>
+                                        <p class="blog-list__item__views">59</p>
+                                    </div>
+                                    <a href="javascript:void(0)" class="blog-list__item__title">Страхи о поздней беременности. Оправданы ли?</a>
+                                    <p class="blog-list__item__text">«Я впервые стану мамой!» – сегодня говорят женщины в возрасте от 40 до 50 лет.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="blog-list__item">
+                                <div class="blog-list__item__header">
+                                    <div class="blog-list__item__name">
+                                        <img src="images/blog-list-avatar-2.jpg" alt="">
+                                        <h3>Авдеева Юлия <br>Сергеевна</h3>
+                                    </div>
+                                    <img src="images/blog-list-img-2.jpg" alt="">
+                                </div>
+                                <div class="blog-list__item__content">
+                                    <div class="blog-list__item__info">
+                                        <span class="blog-list__item__date">19.09.2022</span>
+                                        <div class="stars blog-list__item__stars">
+                                            <div class="stars__current blog-list__item__stars__current" style="width: 40%;"></div>
+                                        </div>
+                                        <p class="blog-list__item__views">59</p>
+                                    </div>
+                                    <a href="javascript:void(0)" class="blog-list__item__title">Генетический анализ на рак: как предотвратить развитие болезни</a>
+                                    <p class="blog-list__item__text">Октябрь — всемирный месяц внимания к проблеме рака молочной железы. Распространенность этого . . .</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="blog-list__item">
+                                <div class="blog-list__item__header">
+                                    <div class="blog-list__item__name">
+                                        <img src="images/blog-list-avatar-3.jpg" alt="">
+                                        <h3>Яровой Николай <br>Николаевич</h3>
+                                    </div>
+                                    <img src="images/blog-list-img-3.jpg" alt="">
+                                </div>
+                                <div class="blog-list__item__content">
+                                    <div class="blog-list__item__info">
+                                        <span class="blog-list__item__date">19.09.2022</span>
+                                        <div class="stars blog-list__item__stars">
+                                            <div class="stars__current blog-list__item__stars__current" style="width: 40%;"></div>
+                                        </div>
+                                        <p class="blog-list__item__views">59</p>
+                                    </div>
+                                    <a href="javascript:void(0)" class="blog-list__item__title">Как победить усталость? И в чем ее реальная причина?</a>
+                                    <p class="blog-list__item__text">Врач медцентра «Лотос» рассказал о причинах и способах лечения заболеваний эндокринной системы </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="blog-list__item">
+                                <div class="blog-list__item__header">
+                                    <div class="blog-list__item__name">
+                                        <img src="images/blog-list-avatar-4.jpg" alt="">
+                                        <h3>Шаимова Ирина <br>Сергеевна</h3>
+                                    </div>
+                                    <img src="images/blog-list-img-4.jpg" alt="">
+                                </div>
+                                <div class="blog-list__item__content">
+                                    <div class="blog-list__item__info">
+                                        <span class="blog-list__item__date">19.09.2022</span>
+                                        <div class="stars blog-list__item__stars">
+                                            <div class="stars__current blog-list__item__stars__current" style="width: 40%;"></div>
+                                        </div>
+                                        <p class="blog-list__item__views">59</p>
+                                    </div>
+                                    <a href="javascript:void(0)" class="blog-list__item__title">Забудьте о гречке и куриной грудке! 7 принципов здорового питания от нутрициолога</a>
+                                    <p class="blog-list__item__text">Купальный сезон всё ближе. Чтобы без стыда разгуливать в бикини по пляжу . . .</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="reviews">
+        <section class="reviews" style="background: transparent;">
             <div class="service__anchor" id="reviews"></div>
             <h2 class="title">Отзывы</h2>
             <div class="container">
