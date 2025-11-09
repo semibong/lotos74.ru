@@ -545,7 +545,7 @@ $(document).ready(function () {
         });
 
         function layoutPackery() {
-            var windowWidth = $(window).width();  
+            var windowWidth = $(window).width();
             
             if (windowWidth < 993) {
                 pack.packery('option', {
@@ -593,6 +593,73 @@ $(document).ready(function () {
                     slidesPerView: 2.5,
                 }
             } 
+        });
+    }
+
+    if ($('.specialists').length) {
+        $('.specialists__filter__profile>select').select2({
+            minimumResultsForSearch: Infinity,
+            placeholder: 'Любой профиль',
+            width: 'element'
+        });
+
+        $('.specialists__address>button').on('click', function () {
+            $('.specialists__address').toggleClass('active');
+
+            if ($(window).width() < 993) {
+                let body = $('body');
+                if ($('.specialists__address').hasClass('active')) {
+                    body.addClass('noscroll');
+                    body.css('top', `-${scrollTop}px`);
+                } else {
+                    body.removeClass('noscroll');
+                    window.scroll(0, scrollTop);
+                }
+            }
+        });
+
+        $('.specialists__address__close').on('click', function () {
+            $('.specialists__address').removeClass('active');
+
+            if ($(window).width() < 993) {
+                $('body').removeClass('noscroll');
+                window.scroll(0, scrollTop);
+            }
+        });
+
+        $('.specialists__sort__button').on('click', function () {
+            $(this).parent().toggleClass('active');
+        });
+
+        $('.specialists__sort__content>a').on('click', function () {
+            $('.specialists__sort__content>a').removeClass('active');
+            $(this).addClass('active');
+            $(this).parent().parent().removeClass('active');
+        });
+    }
+
+    if ($('.control').length) {
+        const controlSlider = new Swiper('.control__slider', {
+            speed: 1000,
+            slidesPerView: 1,
+            spaceBetween: 22,
+            navigation: {
+                prevEl: '.control__slider__controls .slider-arrow-prev',
+                nextEl: '.control__slider__controls .slider-arrow-next'
+            },
+            pagination: {
+                el: '.control__slider__controls .slider-progressbar',
+                type: 'progressbar'
+            },
+            breakpoints: {
+                993: {
+                    slidesPerView: 4
+                },
+
+                769: {
+                    slidesPerView: 2.5
+                }
+            }
         });
     }
 });
