@@ -597,6 +597,11 @@ $(document).ready(function () {
     }
 
     if ($('.specialists').length) {
+        $('.specialists__filter__category>a').on('click', function () {
+           $(this).parent().children().removeClass('active');
+           $(this).addClass('active');
+        });
+
         $('.specialists__filter__profile>select').select2({
             minimumResultsForSearch: Infinity,
             placeholder: 'Любой профиль',

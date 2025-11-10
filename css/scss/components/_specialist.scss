@@ -1,0 +1,329 @@
+.specialist {
+    background: url(../images/specialist-block-bg.jpg) no-repeat center / cover;
+    padding: 6.5rem 0 4.5rem;
+    margin: -8.6rem 0 1.6rem 0;
+
+    @media #{$lg} {
+        padding: 6.6rem 0 1.2rem 0;
+        margin: -6.6rem 0 7.2rem 0;
+    }
+
+    &__wrapper {
+        display: flex;
+        gap: 8rem;
+
+        @media #{$lg} {
+            position: relative;
+            padding-top: 8.6rem;
+        }
+
+        .service__navbar {
+            position: static;
+            z-index: 1;
+
+            @media #{$lg} {
+                position: absolute;
+                width: 100%;
+                left: -1rem;
+            }
+
+            ul {
+                li {
+                    width: 29.5rem;
+
+                    &::before {
+                        content: none;
+                    }
+
+                    a {
+                        background-color: rgba(#fff, 0.3);
+                        box-shadow: 0 0.4rem 7rem 0 rgba($color-active, 0.15);
+                        padding: 0 3.5rem 0 2.3rem;
+                        border-radius: 1rem;
+
+                        @media #{$lg} {
+                            background-color: transparent;
+                            box-shadow: none;
+                            padding: 0;
+                            border-radius: 0;
+                        }
+
+                        &.active {
+                            background-color: rgba(#fff, 0.05);
+                            box-shadow: 0 0.4rem 7rem 0 rgba($color-active, 0.3);
+
+                            @media #{$lg} {
+                                background-color: transparent;
+                                box-shadow: none;
+                            }
+
+                            &::before {
+                                rotate: 90deg;
+                                top: 1.9rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        gap: 3.8rem;
+        padding-top: 2.3rem;
+
+        @media #{$lg} {
+            flex-direction: column;
+            gap: 4.5rem;
+            padding-top: 0;
+        }
+    }
+
+    &__column {
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1.6rem;
+
+        @media #{$lg} {
+            gap: 1rem;
+        }
+    }
+
+    &__image {
+        position: relative;
+        display: flex;
+        width: 30.8rem;
+        height: 30.8rem;
+
+        @media #{$lg} {
+            width: 34.7rem;
+            height: 34.7rem;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 2rem;
+        }
+
+        a {
+            position: absolute;
+            width: 5rem;
+            height: 5rem;
+            right: 0.8rem;
+            bottom: 0.8rem;
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    &__mark {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.6rem;
+        width: 18.8rem;
+        height: 4.8rem;
+        border-radius: 10rem;
+
+        svg {
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+
+        span {
+            font-weight: 700;
+            font-size: 1.4rem;
+            line-height: 1.4rem;
+            text-transform: uppercase;
+            color: $color-primary;
+        }
+
+        &_best {
+            background: linear-gradient(90deg, #F9C271, #F9E49E);
+        }
+
+        &_expert {
+            background: linear-gradient(90deg, #C1C5FD, #B5ECE9);
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        padding-top: 1rem;
+
+        @media #{$lg} {
+            padding: 0 1.2rem;
+        }
+
+        h2 {
+            font-weight: 500;
+            font-size: 3rem;
+            color: $color-primary;
+            margin-bottom: 2.8rem;
+
+            @media #{$lg} {
+                font-size: 2.5rem;
+                line-height: 1.4rem;
+                margin-bottom: 1.8rem;
+            }
+        }
+
+        &__block {
+            display: flex;
+            align-items: center;
+            gap: 1.4rem;
+            margin-bottom: 2.5rem;
+
+            @media #{$lg} {
+                gap: 1rem;
+                margin-bottom: 0.8rem;
+            }
+        }
+
+        .btn-calendar {
+            margin-top: auto;
+
+            @media #{$lg} {
+                width: calc(100% + 2.4rem);
+                padding: 0 6rem;
+                transform: translateX(-1.2rem);
+            }
+        }
+    }
+
+    &__exp {
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.4rem;
+        color: $color-active;
+    }
+
+    &__comments {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+
+        img {
+            width: 2rem;
+            height: 2rem;
+            object-fit: contain;
+            object-position: center;
+        }
+
+        span {
+            font-size: 1.4rem;
+            line-height: 1.4rem;
+            color: $color-primary;
+        }
+    }
+
+    &__description {
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+        color: $color-secondary;
+        max-width: 61rem;
+        min-height: 5rem;
+        margin-bottom: 1rem;
+
+        @media #{$lg} {
+            min-height: 0;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__address {
+        font-weight: 700;
+        font-size: 1.6rem;
+        line-height: 1.4rem;
+        color: $color-primary;
+    }
+
+    &__btn-map {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+
+        &:hover {
+            svg path {
+                fill: $color-active-secondary;
+            }
+
+            span {
+                color: $color-active-secondary;
+            }
+        }
+
+        svg {
+            width: 2.4rem;
+            height: 2.4rem;
+
+            path {
+                transition: all .2s linear;
+            }
+        }
+
+        span {
+            font-weight: 500;
+            font-size: 1.4rem;
+            line-height: 1.4rem;
+            color: $color-active;
+            transition: all .2s linear;
+        }
+    }
+
+    &__restrictions {
+        margin-bottom: 1.6rem;
+
+        @media #{$lg} {
+            margin-bottom: 2rem;
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 1.6rem;
+            color: $color-active;
+            margin-bottom: 0.8rem;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+
+            li {
+                position: relative;
+                color: $color-secondary;
+                padding-left: 2.3rem;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 1.4rem;
+                    height: 1.4rem;
+                    background: url(../images/svg/restriction-icon.svg) no-repeat center / contain;
+                    top: 0.4rem;
+                    left: 0.2rem;
+                }
+
+                &, span {
+                    font-weight: 500;
+                    font-size: 1.4rem;
+                    line-height: 2.2rem;
+                }
+
+                span {
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+}

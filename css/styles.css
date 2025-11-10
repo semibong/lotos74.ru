@@ -10446,6 +10446,7 @@ a:hover {
 @media (max-width: 992px) {
   .specialists__address__item {
     width: 100%;
+    box-shadow: none;
   }
 }
 .specialists__address__item:hover .specialists__address__item__select {
@@ -11096,4 +11097,303 @@ body:has(#specialists-profile) .select2-dropdown {
   line-height: 1.6rem;
   color: #748CA4;
   padding: 0 0.8rem;
+}
+
+.specialist {
+  background: url(../images/specialist-block-bg.jpg) no-repeat center/cover;
+  padding: 6.5rem 0 4.5rem;
+  margin: -8.6rem 0 1.6rem 0;
+}
+@media (max-width: 992px) {
+  .specialist {
+    padding: 6.6rem 0 1.2rem 0;
+    margin: -6.6rem 0 7.2rem 0;
+  }
+}
+.specialist__wrapper {
+  display: flex;
+  gap: 8rem;
+}
+@media (max-width: 992px) {
+  .specialist__wrapper {
+    position: relative;
+    padding-top: 8.6rem;
+  }
+}
+.specialist__wrapper .service__navbar {
+  position: static;
+  z-index: 1;
+}
+@media (max-width: 992px) {
+  .specialist__wrapper .service__navbar {
+    position: absolute;
+    width: 100%;
+    left: -1rem;
+  }
+}
+.specialist__wrapper .service__navbar ul li {
+  width: 29.5rem;
+}
+.specialist__wrapper .service__navbar ul li::before {
+  content: none;
+}
+.specialist__wrapper .service__navbar ul li a {
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0.4rem 7rem 0 rgba(0, 159, 162, 0.15);
+  padding: 0 3.5rem 0 2.3rem;
+  border-radius: 1rem;
+}
+@media (max-width: 992px) {
+  .specialist__wrapper .service__navbar ul li a {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    border-radius: 0;
+  }
+}
+.specialist__wrapper .service__navbar ul li a.active {
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0.4rem 7rem 0 rgba(0, 159, 162, 0.3);
+}
+@media (max-width: 992px) {
+  .specialist__wrapper .service__navbar ul li a.active {
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+.specialist__wrapper .service__navbar ul li a.active::before {
+  rotate: 90deg;
+  top: 1.9rem;
+}
+.specialist__content {
+  display: flex;
+  gap: 3.8rem;
+  padding-top: 2.3rem;
+}
+@media (max-width: 992px) {
+  .specialist__content {
+    flex-direction: column;
+    gap: 4.5rem;
+    padding-top: 0;
+  }
+}
+.specialist__column {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.6rem;
+}
+@media (max-width: 992px) {
+  .specialist__column {
+    gap: 1rem;
+  }
+}
+.specialist__image {
+  position: relative;
+  display: flex;
+  width: 30.8rem;
+  height: 30.8rem;
+}
+@media (max-width: 992px) {
+  .specialist__image {
+    width: 34.7rem;
+    height: 34.7rem;
+  }
+}
+.specialist__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 2rem;
+}
+.specialist__image a {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  right: 0.8rem;
+  bottom: 0.8rem;
+}
+.specialist__image a svg {
+  width: 100%;
+  height: 100%;
+}
+.specialist__mark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  width: 18.8rem;
+  height: 4.8rem;
+  border-radius: 10rem;
+}
+.specialist__mark svg {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.specialist__mark span {
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  text-transform: uppercase;
+  color: #394250;
+}
+.specialist__mark_best {
+  background: linear-gradient(90deg, #F9C271, #F9E49E);
+}
+.specialist__mark_expert {
+  background: linear-gradient(90deg, #C1C5FD, #B5ECE9);
+}
+.specialist__info {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+}
+@media (max-width: 992px) {
+  .specialist__info {
+    padding: 0 1.2rem;
+  }
+}
+.specialist__info h2 {
+  font-weight: 500;
+  font-size: 3rem;
+  color: #394250;
+  margin-bottom: 2.8rem;
+}
+@media (max-width: 992px) {
+  .specialist__info h2 {
+    font-size: 2.5rem;
+    line-height: 1.4rem;
+    margin-bottom: 1.8rem;
+  }
+}
+.specialist__info__block {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  margin-bottom: 2.5rem;
+}
+@media (max-width: 992px) {
+  .specialist__info__block {
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+  }
+}
+.specialist__info .btn-calendar {
+  margin-top: auto;
+}
+@media (max-width: 992px) {
+  .specialist__info .btn-calendar {
+    width: calc(100% + 2.4rem);
+    padding: 0 6rem;
+    transform: translateX(-1.2rem);
+  }
+}
+.specialist__exp {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.4rem;
+  color: #009FA2;
+}
+.specialist__comments {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.specialist__comments img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+  object-position: center;
+}
+.specialist__comments span {
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  color: #394250;
+}
+.specialist__description {
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  color: #748CA4;
+  max-width: 61rem;
+  min-height: 5rem;
+  margin-bottom: 1rem;
+}
+@media (max-width: 992px) {
+  .specialist__description {
+    min-height: 0;
+    margin-bottom: 1.5rem;
+  }
+}
+.specialist__address {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.4rem;
+  color: #394250;
+}
+.specialist__btn-map {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.specialist__btn-map:hover svg path {
+  fill: #14787A;
+}
+.specialist__btn-map:hover span {
+  color: #14787A;
+}
+.specialist__btn-map svg {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.specialist__btn-map svg path {
+  transition: all 0.2s linear;
+}
+.specialist__btn-map span {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  color: #009FA2;
+  transition: all 0.2s linear;
+}
+.specialist__restrictions {
+  margin-bottom: 1.6rem;
+}
+@media (max-width: 992px) {
+  .specialist__restrictions {
+    margin-bottom: 2rem;
+  }
+}
+.specialist__restrictions p {
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: #009FA2;
+  margin-bottom: 0.8rem;
+}
+.specialist__restrictions ul {
+  list-style: none;
+  padding-left: 0;
+}
+.specialist__restrictions ul li {
+  position: relative;
+  color: #748CA4;
+  padding-left: 2.3rem;
+}
+.specialist__restrictions ul li::before {
+  content: "";
+  position: absolute;
+  width: 1.4rem;
+  height: 1.4rem;
+  background: url(../images/svg/restriction-icon.svg) no-repeat center/contain;
+  top: 0.4rem;
+  left: 0.2rem;
+}
+.specialist__restrictions ul li, .specialist__restrictions ul li span {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+}
+.specialist__restrictions ul li span {
+  color: #394250;
 }/*# sourceMappingURL=styles.css.map */
