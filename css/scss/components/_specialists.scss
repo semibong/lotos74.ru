@@ -815,3 +815,7 @@
         }
     }
 }
+
+body:has( #specialists-profile) .select2-dropdown {
+    border: none !important;
+}

@@ -10813,6 +10813,10 @@ a:hover {
   transition: all 0.2s linear;
 }
 
+body:has(#specialists-profile) .select2-dropdown {
+  border: none !important;
+}
+
 .banner {
   margin-bottom: 8rem;
 }
