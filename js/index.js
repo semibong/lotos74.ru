@@ -643,6 +643,54 @@ $(document).ready(function () {
         });
     }
 
+    if ($('.specialist').length) {
+        if ($('.specialist__block__show').length) {
+            $('.specialist__block__show').each(function () {
+                let showBtn = $(this);
+                let showBtnTextField = showBtn.children()[0];
+                let showBtnText = showBtnTextField.innerHTML;
+                let block = $(this).parent().children()[0];
+                let height = window.getComputedStyle(block).getPropertyValue('height');
+
+                $(block).animate({height: '100%'}, 0);
+                let maxHeight = $(block).outerHeight();
+                $(block).removeAttr('style');
+
+                if (+height.slice(0, -2) >= maxHeight) {
+                    showBtn.addClass('invisible');
+                } else {
+                    showBtn.removeClass('invisible');
+                }
+
+                $(window).on('resize', function () {
+                    height = window.getComputedStyle(block).getPropertyValue('height');
+
+                    $(block).animate({height: '100%'}, 0);
+                    maxHeight = $(block).outerHeight();
+                    $(block).removeAttr('style');
+
+                    if (+height.slice(0, -2) >= maxHeight) {
+                        showBtn.addClass('invisible');
+                    } else {
+                        showBtn.removeClass('invisible');
+                    }
+                });
+
+                showBtn.on('click', function () {
+                    showBtn.toggleClass('active');
+
+                    if (showBtn.hasClass('active')) {
+                        $(block).animate({height: `${maxHeight}px`}, 300);
+                        showBtnTextField.innerHTML = 'Скрыть';
+                    } else {
+                        $(block).animate({height: `${height}`}, 300);
+                        showBtnTextField.innerHTML = showBtnText;
+                    }
+                });
+            });
+        }
+    }
+
     if ($('.control').length) {
         const controlSlider = new Swiper('.control__slider', {
             speed: 1000,

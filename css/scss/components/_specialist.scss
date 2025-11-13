@@ -1,98 +1,33 @@
 .specialist {
-    background: url(../images/specialist-block-bg.jpg) no-repeat center / cover;
-    padding: 6.5rem 0 4.5rem;
-    margin: -8.6rem 0 1.6rem 0;
+    margin: -8.6rem 0 8.4rem 0;
 
     @media #{$lg} {
-        padding: 6.6rem 0 1.2rem 0;
-        margin: -6.6rem 0 7.2rem 0;
+        margin: -6.6rem 0 6rem 0;
+    }
+
+    &__main-info {
+        background: url(../images/specialist-block-bg.jpg) no-repeat center / cover;
+        padding: 6.5rem 0 4.5rem;
+        margin-bottom: 1.6rem;
+
+        @media #{$lg} {
+            padding: 6.6rem 0 1.2rem 0;
+            margin-bottom: 5rem;
+        }
     }
 
     &__wrapper {
         display: flex;
-        gap: 8rem;
+        gap: 4rem;
 
         @media #{$lg} {
             position: relative;
-            padding-top: 8.6rem;
-        }
-
-        .service__navbar {
-            position: static;
-            z-index: 1;
-
-            @media #{$lg} {
-                position: absolute;
-                width: 100%;
-                left: -1rem;
-            }
-
-            ul {
-                li {
-                    width: 29.5rem;
-
-                    &::before {
-                        content: none;
-                    }
-
-                    a {
-                        background-color: rgba(#fff, 0.3);
-                        box-shadow: 0 0.4rem 7rem 0 rgba($color-active, 0.15);
-                        padding: 0 3.5rem 0 2.3rem;
-                        border-radius: 1rem;
-
-                        @media #{$lg} {
-                            background-color: transparent;
-                            box-shadow: none;
-                            padding: 0;
-                            border-radius: 0;
-                        }
-
-                        &.active {
-                            background-color: rgba(#fff, 0.05);
-                            box-shadow: 0 0.4rem 7rem 0 rgba($color-active, 0.3);
-
-                            @media #{$lg} {
-                                background-color: transparent;
-                                box-shadow: none;
-                            }
-
-                            &::before {
-                                rotate: 90deg;
-                                top: 1.9rem;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    &__content {
-        display: flex;
-        gap: 3.8rem;
-        padding-top: 2.3rem;
-
-        @media #{$lg} {
             flex-direction: column;
-            gap: 4.5rem;
-            padding-top: 0;
+            gap: 3.3rem;
         }
     }
 
-    &__column {
-        flex-shrink: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 1.6rem;
-
-        @media #{$lg} {
-            gap: 1rem;
-        }
-    }
-
-    &__image {
+    &__preview {
         position: relative;
         display: flex;
         width: 30.8rem;
@@ -104,19 +39,26 @@
         }
 
         img {
-            width: 100%;
-            height: 100%;
             object-fit: cover;
             object-position: center;
-            border-radius: 2rem;
+        }
+
+        img, video, iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
         }
 
         a {
             position: absolute;
             width: 5rem;
             height: 5rem;
-            right: 0.8rem;
-            bottom: 0.8rem;
+            right: 3.6rem;
+            bottom: 0;
+
+            @media #{$lg} {
+                right: 5rem;
+            }
 
             svg {
                 width: 100%;
@@ -133,6 +75,7 @@
         width: 18.8rem;
         height: 4.8rem;
         border-radius: 10rem;
+        margin-bottom: 2rem;
 
         svg {
             width: 2.4rem;
@@ -155,11 +98,10 @@
             background: linear-gradient(90deg, #C1C5FD, #B5ECE9);
         }
     }
-
-    &__info {
+    
+    &__content {
         display: flex;
         flex-direction: column;
-        padding-top: 1rem;
 
         @media #{$lg} {
             padding: 0 1.2rem;
@@ -168,25 +110,14 @@
         h2 {
             font-weight: 500;
             font-size: 3rem;
+            line-height: 3rem;
             color: $color-primary;
-            margin-bottom: 2.8rem;
+            margin-bottom: 1.4rem;
 
             @media #{$lg} {
                 font-size: 2.5rem;
                 line-height: 1.4rem;
                 margin-bottom: 1.8rem;
-            }
-        }
-
-        &__block {
-            display: flex;
-            align-items: center;
-            gap: 1.4rem;
-            margin-bottom: 2.5rem;
-
-            @media #{$lg} {
-                gap: 1rem;
-                margin-bottom: 0.8rem;
             }
         }
 
@@ -198,6 +129,18 @@
                 padding: 0 6rem;
                 transform: translateX(-1.2rem);
             }
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 1rem;
+
+        @media #{$lg} {
+            gap: 0.9rem;
+            margin-bottom: 1.3rem;
         }
     }
 
@@ -213,6 +156,12 @@
         align-items: center;
         gap: 0.7rem;
 
+        &:hover {
+            span {
+                color: $color-active;
+            }
+        }
+
         img {
             width: 2rem;
             height: 2rem;
@@ -224,6 +173,7 @@
             font-size: 1.4rem;
             line-height: 1.4rem;
             color: $color-primary;
+            transition: all .1s linear;
         }
     }
 
@@ -236,92 +186,497 @@
         margin-bottom: 1rem;
 
         @media #{$lg} {
-            min-height: 0;
-            margin-bottom: 1.5rem;
+            min-height: 8.4rem;
+            margin-bottom: 1rem;
         }
     }
 
     &__address {
-        font-weight: 700;
-        font-size: 1.6rem;
-        line-height: 1.4rem;
-        color: $color-primary;
-    }
-
-    &__btn-map {
         display: flex;
         align-items: center;
-        gap: 0.4rem;
-
-        &:hover {
-            svg path {
-                fill: $color-active-secondary;
-            }
-
-            span {
-                color: $color-active-secondary;
-            }
-        }
-
-        svg {
-            width: 2.4rem;
-            height: 2.4rem;
-
-            path {
-                transition: all .2s linear;
-            }
-        }
-
-        span {
-            font-weight: 500;
-            font-size: 1.4rem;
-            line-height: 1.4rem;
-            color: $color-active;
-            transition: all .2s linear;
-        }
-    }
-
-    &__restrictions {
-        margin-bottom: 1.6rem;
+        gap: 1.4rem;
+        margin-bottom: 1rem;
 
         @media #{$lg} {
-            margin-bottom: 2rem;
+            gap: 0.6rem;
+            margin-bottom: 1.6rem;
         }
 
         p {
-            font-weight: 500;
+            font-weight: 700;
             font-size: 1.6rem;
-            color: $color-active;
-            margin-bottom: 0.8rem;
+            line-height: 1.4rem;
+            color: $color-primary;
         }
 
-        ul {
-            list-style: none;
-            padding-left: 0;
+        &__map {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
 
-            li {
+            &:hover {
+                svg path {
+                    fill: $color-active-secondary;
+                }
+
+                span {
+                    color: $color-active-secondary;
+                }
+            }
+
+            svg {
+                width: 2.4rem;
+                height: 2.4rem;
+
+                path {
+                    transition: all .2s linear;
+                }
+            }
+
+            span {
+                font-weight: 500;
+                font-size: 1.4rem;
+                line-height: 1.4rem;
+                color: $color-active;
+                transition: all .2s linear;
+            }
+        }
+    }
+
+    &__blocks {
+        display: flex;
+        flex-direction: column;
+        gap: 2.2rem;
+
+        @media #{$lg} {
+            gap: 3rem;
+        }
+    }
+
+    &__block {
+        position: relative;
+        background-color: rgba(#fff, 0.3);
+        backdrop-filter: blur(4px);
+        padding: 2.2rem 2.2rem 3rem 3rem;
+        border: 1px #fff solid;
+        border-radius: 2rem;
+
+        @media #{$lg} {
+            padding: 1.2rem 1.2rem 1.4rem;
+        }
+
+        &:has(>.specialist__video) {
+            @media #{$lg} {
+                background-color: transparent;
+                backdrop-filter: none;
+                padding: 0;
+                border: none;
+                border-radius: 0;
+            }
+        }
+
+        h2 {
+            font-weight: 500;
+            font-size: 3.2rem;
+            line-height: 3.5rem;
+            color: $color-primary;
+
+            @media #{$lg} {
+                font-size: 2.5rem;
+            }
+        }
+        
+        &__show {
+            width: calc(100% + 5.2rem);
+            height: 4.4rem;
+            background-color: rgba(#fff, 0.3);
+            border: none;
+            border-top: 1px #E2F3FA solid;
+            border-radius: 0 0 2rem 2rem;
+            cursor: pointer;
+            transform: translate(-3rem, 3rem);
+            outline: none;
+
+            @media #{$lg} {
+                width: calc(100% + 2.4rem);
+                transform: translate(-1.2rem, 1.4rem);
+            }
+
+            &:hover {
+                span {
+                    color: $color-active;
+                }
+            }
+
+            &.active {
+                span {
+                    &::before {
+                        transform: translateY(50%);
+                        top: 50%;
+                        rotate: 180deg;
+                    }
+                }
+            }
+
+            &.invisible {
+                display: none;
+            }
+
+            span {
                 position: relative;
+                font-size: 1.4rem;
                 color: $color-secondary;
-                padding-left: 2.3rem;
+                transition: all .1s linear;
 
                 &::before {
                     content: '';
                     position: absolute;
-                    width: 1.4rem;
-                    height: 1.4rem;
-                    background: url(../images/svg/restriction-icon.svg) no-repeat center / contain;
-                    top: 0.4rem;
-                    left: 0.2rem;
+                    width: 0.9rem;
+                    height: 1.1rem;
+                    background: url(../images/svg/select-arrow.svg) no-repeat center / cover;
+                    transform: translateY(-50%);
+                    top: calc(50% + 0.1rem);
+                    right: -2.5rem;
                 }
+            }
+        }
+    }
 
-                &, span {
-                    font-weight: 500;
+    &__video {
+        display: flex;
+        gap: 4.8rem;
+
+        @media #{$lg} {
+            flex-direction: column-reverse;
+            gap: 1.6rem;
+            padding-top: 4.5rem;
+        }
+
+        &__content {
+            padding-top: 0.4rem;
+
+            @media #{$lg} {
+                padding-top: 0;
+            }
+
+            h2 {
+                font-weight: 600;
+                margin-bottom: 1.8rem;
+
+                @media #{$lg} {
+                    margin-bottom: 0;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+
+            p {
+                font-size: 1.6rem;
+                line-height: 2.2rem;
+                color: $color-primary;
+                padding-left: 1.2rem;
+
+                @media #{$lg} {
                     font-size: 1.4rem;
-                    line-height: 2.2rem;
+                    line-height: 1.8rem;
+                    padding: 0 1.2rem;
+                }
+            }
+        }
+
+        iframe {
+            flex-shrink: 0;
+            width: 64.5rem;
+            height: 36.3rem;
+            border-radius: 2rem;
+
+            @media #{$lg} {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 347 / 195;
+            }
+        }
+    }
+
+    &__profile {
+        h2 {
+            font-weight: 600;
+            margin-bottom: 4.5rem;
+
+            @media #{$lg} {
+                margin-bottom: 1.4rem;
+            }
+        }
+
+        &__content {
+            column-count: 3;
+            max-width: 94.5rem;
+            padding-left: 2.8rem;
+
+            @media #{$lg} {
+                column-count: 1;
+                max-width: none;
+                padding-left: 1rem;
+            }
+        }
+
+        &__item {
+            font-weight: 600;
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+            text-wrap: nowrap;
+            color: $color-primary;
+            position: relative;
+            display: flex;
+            align-items: center;
+            min-height: 2.4rem;
+            padding-left: 3.7rem;
+            margin-bottom: 1.5rem;
+
+            @media #{$lg} {
+                line-height: 1.6rem;
+                text-wrap: wrap;
+                padding-left: 3.3rem;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 2.4rem;
+                height: 2.4rem;
+                background: url(../images/svg/specialist-profile-icon.svg) no-repeat center / contain;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+
+    &__activity {
+        height: 21.7rem;
+        overflow: hidden;
+
+        @media #{$lg} {
+            height: 50.5rem;
+        }
+
+        h2 {
+            margin-bottom: 3.4rem;
+
+            @media #{$lg} {
+                line-height: 2.5rem;
+                margin-bottom: 1.4rem;
+            }
+        }
+
+        &__content {
+            &, *:not(a) {
+                font-size: 1.6rem;
+                color: $color-primary;
+            }
+
+            ul, ol {
+                padding-left: 2.4rem;
+            }
+        }
+    }
+
+    &__education {
+        height: 20rem;
+        overflow: hidden;
+
+        @media #{$lg} {
+            height: 21.5rem;
+        }
+
+        h2 {
+            margin-bottom: 2rem;
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        &__item {
+            position: relative;
+            padding-left: 3.7rem;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 1px;
+                height: calc(100% - 3.2rem);
+                background-color: #91DCDE;
+                top: 2.2rem;
+                left: 1.4rem;
+
+                @media #{$lg} {
+                    height: calc(100% - 2.2rem);
+                }
+            }
+
+            p {
+                font-weight: 600;
+                font-size: 1.6rem;
+                color: $color-primary;
+                position: relative;
+                margin-bottom: 2.2rem;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width:  2.9rem;
+                    height: 2.9rem;
+                    background: url(../images/svg/specialist-education-icon.svg) no-repeat center / contain;
+                    top: -0.5rem;
+                    left: -3.7rem;
+                }
+            }
+
+            ul {
+                list-style: none;
+                padding-left: 0;
+
+                li {
+                    font-size: 1.6rem;
+                    color: $color-primary;
+                    display: flex;
+                    gap: 1rem;
+                    margin-bottom: 1.5rem;
+
+                    @media #{$lg} {
+                        font-size: 1.4rem;
+                        line-height: 1.4rem;
+                        margin-bottom: 1rem;
+                    }
+
+                    span {
+                        font-weight: 600;
+                        font-size: 1.6rem;
+                        color: $color-active;
+                    }
+                }
+            }
+        }
+    }
+
+    &__conferences {
+        height: 16rem;
+        overflow: hidden;
+
+        @media #{$lg} {
+            height: 24rem;
+        }
+
+        h2 {
+            margin-bottom: 2.5rem;
+        }
+
+        &__content {
+            padding-bottom: 0.5rem;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                list-style: none;
+                padding-left: 0;
+
+                @media #{$lg} {
+                    gap: 1.8rem;
                 }
 
-                span {
+                li {
+                    font-size: 1.6rem;
                     color: $color-primary;
+                    position: relative;
+                    padding-left: 4rem;
+
+                    @media #{$lg} {
+                        font-size: 1.4rem;
+                        line-height: 1.8rem;
+                    }
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        width: 2.4rem;
+                        height: 2.4rem;
+                        background: url(../images/svg/specialist-conferences-icon.svg) no-repeat center / contain;
+                        top: -0.2rem;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &__achievements {
+        height: 12rem;
+        overflow: hidden;
+
+        @media #{$lg} {
+            height: 20rem;
+        }
+
+        h2 {
+            margin-bottom: 2.5rem;
+
+            @media #{$lg} {
+                margin-bottom: 3.5rem;
+            }
+        }
+
+        &__content {
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 2.2rem;
+                list-style: none;
+                padding-left: 0;
+
+                @media #{$lg} {
+                    gap: 1.6rem;
+                }
+
+                li {
+                    font-size: 1.6rem;
+                    color: $color-primary;
+                    position: relative;
+                    padding-left: 3.2rem;
+
+                    @media #{$lg} {
+                        font-size: 1.4rem;
+                        line-height: 1.8rem;
+                    }
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        width: 2.4rem;
+                        height: 2.4rem;
+                        background: url(../images/svg/specialist-achievements-icon.svg) no-repeat center / contain;
+                        top: -0.4rem;
+                        left: 0;
+
+                        @media #{$lg} {
+                            top: -0.3rem;
+                        }
+                    }
+
+                    span {
+                        font-weight: 600;
+                        font-size: 1.6rem;
+                        color: $color-active;
+                        padding-right: 1.2rem;
+
+                        @media #{$lg} {
+                            font-size: 1.4rem;
+                            line-height: 1.8rem;
+                        }
+                    }
                 }
             }
         }
