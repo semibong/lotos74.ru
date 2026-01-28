@@ -11938,7 +11938,7 @@ body:has(#specialists-profile) .select2-dropdown {
 .donors__detail-text p, .donors__detail-text ul, .donors__detail-text ol {
   margin-bottom: 3.4rem;
 }
-.donors__detail-text p:last-of-type, .donors__detail-text ul:last-of-type, .donors__detail-text ol:last-of-type {
+.donors__detail-text p:last-of-type {
   margin-bottom: 0;
 }
 .donors__detail-text p, .donors__detail-text li {

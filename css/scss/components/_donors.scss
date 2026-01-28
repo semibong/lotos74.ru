@@ -210,10 +210,10 @@
 
         p, ul, ol {
             margin-bottom: 3.4rem;
+        }
 
-            &:last-of-type {
-                margin-bottom: 0;
-            }
+        p:last-of-type {
+            margin-bottom: 0;
         }
 
         p, li {
