@@ -715,4 +715,25 @@ $(document).ready(function () {
             }
         });
     }
+
+    if ($('.donor').length) {
+        const donorSlider = new Swiper('.donor__gallery>.swiper', {
+            loop: true,
+            speed: 1000,
+            effect: 'fade',
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true
+            },
+            navigation: {
+                prevEl: '.donor__gallery__arrows .slider-arrow-prev',
+                nextEl: '.donor__gallery__arrows .slider-arrow-next'
+            },
+            pagination: {
+                el: '.donor__gallery .slider-progressbar',
+                type: 'progressbar'
+            }
+        });
+    }
 });
