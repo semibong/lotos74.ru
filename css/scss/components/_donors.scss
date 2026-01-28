@@ -100,8 +100,8 @@
 
             .btn {
                 height: 4.8rem;
-                background: linear-gradient(90deg, #DBE7F3 0%, #DBE7F3 50%, #00CBCF 50%, $color-active 100%);
-                background-size: 200%;
+                background: linear-gradient(90deg, #DBE7F3 0%, #DBE7F3 33%, #00CBCF 66%, $color-active 100%);
+                background-size: 300%;
                 padding: 0 8.7rem 0 7rem;
 
                 @media #{$lg} {
