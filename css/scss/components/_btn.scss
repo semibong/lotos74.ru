@@ -230,4 +230,20 @@
             right: 2.8rem;
         }
     }
+
+    &-question {
+        padding: 0 2.5rem 0 5.5rem;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 3.5rem;
+            height: 3.5rem;
+            background: url(../images/svg/btn-question.svg) no-repeat center / contain;
+            pointer-events: none;
+            transform: translateY(-50%);
+            top: 50%;
+            left: 0.8rem;
+        }
+    }
 }

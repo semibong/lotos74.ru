@@ -736,4 +736,37 @@ $(document).ready(function () {
             }
         });
     }
+
+    if ($('.faq, .faq-detail').length) {
+        $('.faq__category__more').on('click', function () {
+            let list = $(this).prev();
+            list.toggleClass('expand');
+
+            if (list.hasClass('expand')) {
+                $(this).html('Меньше');
+            } else {
+                $(this).html('Еще');
+            }
+        });
+
+        $('.faq__question__answer-toggle').on('click', function () {
+            $(this).toggleClass('active');
+
+            if ($(this).hasClass('active')) {
+                $(this).next().slideDown(300);
+            } else {
+                $(this).next().slideUp(300);
+            }
+        });
+
+        $('.faq-detail__question-toggle').on('click', function () {
+            $(this).parent().toggleClass('active');
+
+            if ($(this).parent().hasClass('active')) {
+                $(this).next().slideDown(300);
+            } else {
+                $(this).next().slideUp(300);
+            }
+        });
+    }
 });
