@@ -12,7 +12,6 @@ $color-active-secondary: #14787A;
 $color-active-tertiary: #2297BD;
 
 html {
-    scroll-behavior: smooth;
     font-size: calc(100vw / 1920 * 10);
 
     @media #{$lg} {
@@ -29,7 +28,7 @@ html {
 }
 
 body {
-    background-color: #F8FCFF;
+    background-color: #F5FAFA;
 
     &::before {
         content: '';

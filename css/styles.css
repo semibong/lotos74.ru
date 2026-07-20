@@ -29,7 +29,6 @@
   font-style: italic;
 }
 html {
-  scroll-behavior: smooth;
   font-size: 0.5208333333vw;
 }
 @media (max-width: 992px) {
@@ -49,7 +48,7 @@ html {
 }
 
 body {
-  background-color: #F8FCFF;
+  background-color: #F5FAFA;
 }
 body::before {
   content: "";
@@ -672,7 +671,7 @@ a:hover {
   background-color: #fff;
   border-radius: 1rem;
 }
-.slider-progressbar span {
+.slider-progressbar span, .slider-progressbar div {
   background-color: #5ED3D5 !important;
   border-radius: 1rem;
 }
@@ -13344,4 +13343,2859 @@ body:has(#specialists-profile) .select2-dropdown {
 .gift__rules ul li b {
   font-weight: 600;
   color: #394250;
+}
+
+.dentistry .title {
+  color: #394250;
+}
+.dentistry .title:has(+ .title-description) {
+  margin-bottom: 2rem;
+}
+@media (max-width: 992px) {
+  .dentistry .title:has(+ .title-description) {
+    margin-bottom: 1rem;
+  }
+}
+.dentistry .title, .dentistry .title span {
+  font-weight: 500;
+  font-size: 4rem;
+  line-height: 3.5rem;
+  text-align: start;
+}
+@media (max-width: 992px) {
+  .dentistry .title, .dentistry .title span {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+.dentistry .title span {
+  color: #009FA2;
+}
+.dentistry .title-box {
+  max-width: 58.8rem;
+  margin-bottom: 4rem;
+}
+@media (max-width: 992px) {
+  .dentistry .title-box {
+    margin-bottom: 3rem;
+  }
+}
+.dentistry .title-description {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  color: #748CA4;
+}
+@media (max-width: 992px) {
+  .dentistry .title-description {
+    line-height: 1.6rem;
+  }
+}
+.dentistry .btn-round {
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-decoration: none;
+  gap: 0.8rem;
+  background: linear-gradient(175deg, #4CD4D7 0%, #009FA2 40%, #009FA2 60%, #31CACD 100%);
+  padding: 0 5rem;
+  border-radius: 10rem;
+}
+@media (max-width: 992px) {
+  .dentistry .btn-round {
+    height: 4.8rem;
+  }
+}
+.dentistry .slider-progressbar {
+  position: absolute;
+  width: calc(100% - 3.6rem);
+  height: 2px !important;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 0;
+}
+@media (max-width: 992px) {
+  .dentistry .slider-progressbar {
+    width: calc(100% - 2.8rem);
+  }
+}
+.dentistry .slider-progressbar span, .dentistry .slider-progressbar div {
+  background-color: #80BFC0 !important;
+}
+.dentistry .up {
+  width: 5rem;
+  height: 5rem;
+  right: 3rem;
+}
+@media (max-width: 768px) {
+  .dentistry .up {
+    display: none;
+  }
+}
+.dentistry .up:hover svg circle {
+  fill-opacity: 1;
+}
+.dentistry .up svg circle {
+  transition: fill-opacity 0.2s linear;
+}
+.dentistry .up svg path {
+  stroke: #fff !important;
+}
+.dentistry .footer__wrapper {
+  background: #016668;
+}
+.dentistry .footer__wrapper .container {
+  padding: 3.5rem 0 2rem;
+}
+@media (max-width: 992px) {
+  .dentistry .footer__wrapper .container {
+    padding: 0 0 1.3rem;
+  }
+}
+.dentistry .footer__content {
+  padding-bottom: 4.5rem;
+  margin-bottom: 1rem;
+}
+@media (max-width: 992px) {
+  .dentistry .footer__content {
+    padding-bottom: 0;
+    margin-bottom: 1.8rem;
+  }
+}
+.dentistry .footer__contacts {
+  gap: 3rem;
+  right: 0;
+}
+@media (max-width: 992px) {
+  .dentistry .footer__contacts {
+    background-color: #035A5C;
+  }
+}
+.dentistry .footer__contacts .phone:hover span {
+  color: #2DDFE3;
+}
+.dentistry .footer__contacts .phone span {
+  color: #fff;
+}
+.dentistry .footer__columns {
+  display: flex;
+  gap: 11rem;
+}
+@media (max-width: 992px) {
+  .dentistry .footer__columns {
+    flex-wrap: wrap;
+    gap: 2.7rem 5.4rem;
+  }
+}
+.dentistry .footer__column {
+  max-width: 27rem;
+}
+@media (max-width: 992px) {
+  .dentistry .footer__column {
+    max-width: none;
+  }
+}
+@media (max-width: 768px) {
+  .dentistry .footer__column {
+    width: calc(50% - 2.7rem);
+  }
+}
+@media (max-width: 576px) {
+  .dentistry .footer__column {
+    width: auto;
+  }
+}
+@media (max-width: 992px) {
+  .dentistry .footer__column:has(> .footer__logo) {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2.4rem;
+    width: 100%;
+    order: 1;
+  }
+}
+@media (max-width: 768px) {
+  .dentistry .footer__column:has(> .footer__logo) {
+    margin-top: 1.7rem;
+  }
+}
+.dentistry .footer__nav__group {
+  padding-top: 0.6rem;
+}
+@media (max-width: 992px) {
+  .dentistry .footer__nav__group {
+    padding-top: 0;
+  }
+}
+.dentistry .footer__nav__group > a {
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  letter-spacing: 1.32px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 2.5rem;
+}
+@media (max-width: 992px) {
+  .dentistry .footer__nav__group > a {
+    margin-bottom: 1.4rem;
+  }
+}
+.dentistry .footer__nav__group > a:hover {
+  color: #009FA2;
+}
+@media (max-width: 992px) {
+  .dentistry .footer__nav__group .menu {
+    display: block;
+  }
+}
+.dentistry .footer__nav__group .menu ul {
+  gap: 1.2rem;
+}
+@media (max-width: 992px) {
+  .dentistry .footer__nav__group .menu ul {
+    gap: 1rem;
+  }
+}
+.dentistry .footer__nav__group .menu ul li a {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+.dentistry .footer__nav__group .menu ul li a:hover {
+  color: #009FA2;
+}
+.dentistry .footer__logo {
+  display: flex;
+  width: 27rem;
+  height: 7rem;
+  margin-bottom: 4rem;
+}
+@media (max-width: 992px) {
+  .dentistry .footer__logo {
+    margin-bottom: 0;
+  }
+}
+.dentistry .footer__text {
+  font-size: 1.3rem;
+  line-height: 2rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+@media (max-width: 992px) {
+  .dentistry .footer__text {
+    line-height: 1.4rem;
+  }
+}
+@media (max-width: 992px) {
+  .dentistry .footer__download {
+    position: absolute;
+    flex-direction: column;
+    width: max-content;
+    height: max-content;
+    gap: 0.5rem;
+    top: 7rem;
+    right: 2.3rem;
+  }
+}
+@media (max-width: 768px) {
+  .dentistry .footer__download {
+    top: 24rem;
+  }
+}
+@media (max-width: 992px) {
+  .dentistry .footer__download a {
+    max-width: 16.2rem;
+  }
+}
+.dentistry .footer__copyright {
+  color: rgba(255, 255, 255, 0.35);
+}
+@media (max-width: 992px) {
+  .dentistry .footer__copyright {
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    display: initial;
+  }
+}
+.dentistry .footer__disclaimer {
+  background-color: #DEFEFF;
+}
+.dentistry .footer__disclaimer__content {
+  padding: 2.5rem 0;
+}
+@media (max-width: 992px) {
+  .dentistry .footer__disclaimer__content {
+    padding: 1rem 0;
+  }
+}
+.dentistry .footer__disclaimer__text {
+  font-style: normal;
+  font-size: 3.4rem;
+  line-height: 2rem;
+  color: #016668;
+}
+@media (max-width: 992px) {
+  .dentistry .footer__disclaimer__text {
+    font-size: 2rem;
+    line-height: 2.2rem;
+  }
+}
+.dentistry_hero {
+  position: relative;
+  margin-bottom: 21.8rem;
+}
+@media (max-width: 992px) {
+  .dentistry_hero {
+    margin-bottom: 6rem;
+  }
+}
+.dentistry_hero::before {
+  content: "";
+  position: absolute;
+  width: 43.6rem;
+  height: 43.6rem;
+  background-color: rgba(221, 227, 231, 0.7);
+  border-radius: 50%;
+  filter: blur(60px);
+  z-index: -2;
+  left: 6.3rem;
+  bottom: -15.5rem;
+}
+@media (max-width: 992px) {
+  .dentistry_hero::before {
+    content: none;
+  }
+}
+.dentistry_hero::after {
+  content: "";
+  position: absolute;
+  width: 46.8rem;
+  height: 46.8rem;
+  background-color: rgba(133, 201, 226, 0.2);
+  border-radius: 50%;
+  filter: blur(75px);
+  z-index: -2;
+  left: 67.7rem;
+  bottom: -9rem;
+}
+@media (max-width: 992px) {
+  .dentistry_hero::after {
+    content: none;
+  }
+}
+.dentistry_hero-bg {
+  position: absolute;
+  display: flex;
+  width: 118.4rem;
+  height: 98.6rem;
+  z-index: -1;
+  top: -21.2rem;
+  right: 0;
+}
+@media (max-width: 992px) {
+  .dentistry_hero-bg {
+    width: 100%;
+    height: 54rem;
+    top: -9rem;
+  }
+}
+@media (max-width: 768px) {
+  .dentistry_hero-bg {
+    height: auto;
+    aspect-ratio: 375/450;
+    top: -17rem;
+  }
+}
+.dentistry_hero-bg picture {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.dentistry_hero-bg picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+@media (max-width: 992px) {
+  .dentistry_hero-bg picture img {
+    object-position: center bottom;
+  }
+}
+.dentistry_hero__wrapper {
+  padding-top: 3rem;
+}
+@media (max-width: 992px) {
+  .dentistry_hero__wrapper {
+    padding-top: 19.5rem;
+  }
+}
+.dentistry_hero__wrapper > .container {
+  width: 100%;
+  margin: 0;
+}
+.dentistry_hero__content {
+  max-width: 56.5rem;
+  margin-bottom: 7.5rem;
+}
+@media (max-width: 992px) {
+  .dentistry_hero__content {
+    max-width: none;
+    margin-bottom: 3.8rem;
+  }
+}
+.dentistry_hero-title {
+  color: #394250;
+  margin-bottom: 4rem;
+}
+@media (max-width: 992px) {
+  .dentistry_hero-title {
+    letter-spacing: 1px;
+    max-width: 33.3rem;
+    margin-bottom: 1.2rem;
+  }
+}
+@media (max-width: 992px) {
+  .dentistry_hero-title::first-line {
+    letter-spacing: 0;
+  }
+}
+.dentistry_hero-title, .dentistry_hero-title span {
+  font-weight: 500;
+  font-size: 5.5rem;
+  line-height: 5rem;
+}
+@media (max-width: 992px) {
+  .dentistry_hero-title, .dentistry_hero-title span {
+    font-size: 3rem;
+    line-height: 2.5rem;
+  }
+}
+.dentistry_hero-title span {
+  color: #009FA2;
+}
+.dentistry_hero-subtitle {
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  color: #394250;
+  margin-bottom: 3.5rem;
+}
+@media (max-width: 992px) {
+  .dentistry_hero-subtitle {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    max-width: 33.3rem;
+    margin-bottom: 3rem;
+  }
+}
+.dentistry_hero .btn {
+  margin-bottom: 4rem;
+}
+@media (max-width: 992px) {
+  .dentistry_hero .btn {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 768px) {
+  .dentistry_hero .btn {
+    width: 100%;
+  }
+}
+.dentistry_hero-utp {
+  position: relative;
+  background: linear-gradient(0deg, transparent, rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(15px);
+  box-sizing: border-box;
+  box-shadow: 0 0.4rem 6rem 0 rgba(0, 159, 162, 0.15);
+  padding: 3.8rem 0 5rem;
+  border-radius: 100rem;
+}
+@media (max-width: 992px) {
+  .dentistry_hero-utp {
+    width: calc(100% + 2.8rem);
+    padding: 3.2rem 0;
+    border-radius: 5rem;
+    margin-left: -1.4rem;
+  }
+}
+.dentistry_hero-utp::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(0deg, transparent, #fff);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  will-change: transform;
+}
+.dentistry_hero-utp__content {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+@media (max-width: 992px) {
+  .dentistry_hero-utp__content {
+    flex-wrap: wrap;
+    gap: 3.2rem 1.6rem;
+    padding-left: 1.1rem;
+  }
+}
+.dentistry_hero-utp__item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media (max-width: 992px) {
+  .dentistry_hero-utp__item {
+    width: calc(50% - 0.8rem);
+  }
+}
+.dentistry_hero-utp__item-title {
+  font-weight: 300;
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  color: #009FA2;
+}
+@media (max-width: 992px) {
+  .dentistry_hero-utp__item-title {
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+  }
+}
+.dentistry_hero-utp__item-title span {
+  font-weight: 400;
+  font-size: 5.6rem;
+  line-height: 5.6rem;
+}
+@media (max-width: 992px) {
+  .dentistry_hero-utp__item-title span {
+    font-weight: 300;
+  }
+}
+.dentistry_hero-utp__item-text {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  color: #394250;
+  padding-left: 0.2rem;
+  text-wrap: balance;
+}
+@media (max-width: 576px) {
+  .dentistry_hero-utp__item-text br {
+    display: none;
+  }
+}
+.dentistry_hero-utp-mini {
+  display: flex;
+  gap: 5rem;
+}
+@media (max-width: 992px) {
+  .dentistry_hero-utp-mini {
+    display: none;
+  }
+}
+.dentistry_hero-utp-mini__item p {
+  font-size: 3.2rem;
+  line-height: 3.8rem;
+  color: #394250;
+}
+.dentistry_hero-utp-mini__item span {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #748CA4;
+}
+.dentistry_services {
+  position: relative;
+  margin-bottom: 7.5rem;
+}
+@media (max-width: 992px) {
+  .dentistry_services {
+    margin-bottom: 6rem;
+  }
+}
+.dentistry_services::before {
+  content: "";
+  position: absolute;
+  width: 43.6rem;
+  height: 43.6rem;
+  background-color: rgba(221, 227, 231, 0.7);
+  filter: blur(60px);
+  border-radius: 50%;
+  z-index: -1;
+  left: -16.6rem;
+  bottom: -10.8rem;
+}
+@media (max-width: 992px) {
+  .dentistry_services::before {
+    content: none;
+  }
+}
+.dentistry_services__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-top: 6rem;
+}
+@media (max-width: 992px) {
+  .dentistry_services__content {
+    gap: 1rem;
+    padding-top: 0;
+  }
+}
+.dentistry_services__item {
+  position: relative;
+  width: calc(33.33% - 1.333rem);
+  min-height: 17rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  box-sizing: border-box;
+  padding: 1.5rem 5.8rem 0 2.8rem;
+  border: #E4EBE8 1px solid;
+  border-radius: 2.2rem;
+  transition: border-color 0.2s linear;
+}
+@media (max-width: 992px) {
+  .dentistry_services__item {
+    width: calc(50% - 0.5rem);
+    border-color: rgba(0, 159, 162, 0.5);
+  }
+}
+@media (max-width: 768px) {
+  .dentistry_services__item {
+    width: 100%;
+    min-height: 13rem;
+    padding: 1.5rem 5.8rem 1.5rem 1.3rem;
+  }
+}
+.dentistry_services__item:hover {
+  border-color: rgba(0, 159, 162, 0.5);
+}
+.dentistry_services__item:hover .dentistry_services__item-link {
+  background-color: transparent;
+}
+.dentistry_services__item:hover .dentistry_services__item-link::before {
+  opacity: 1;
+}
+.dentistry_services__item:hover .dentistry_services__item-link svg {
+  rotate: -45deg;
+}
+.dentistry_services__item:hover .dentistry_services__item-link svg path {
+  stroke: #fff;
+}
+.dentistry_services__item_feature {
+  background-color: rgba(16, 133, 135, 0.6);
+  border-color: #C0FAFB;
+}
+@media (max-width: 992px) {
+  .dentistry_services__item_feature {
+    background-color: rgba(16, 133, 135, 0.9);
+  }
+}
+.dentistry_services__item_feature::before {
+  content: "";
+  position: absolute;
+  width: 18.8rem;
+  height: 100%;
+  background: radial-gradient(circle, rgba(30, 208, 212, 0.8) 0%, transparent 70%);
+  border-radius: 2.9rem;
+  right: 0;
+  bottom: 0.5rem;
+}
+@media (max-width: 992px) {
+  .dentistry_services__item_feature::before {
+    height: 9.2rem;
+    background: radial-gradient(ellipse, rgba(30, 208, 212, 0.5) 0%, transparent 70%);
+  }
+}
+.dentistry_services__item_feature .dentistry_services__item-title {
+  color: #fff;
+}
+.dentistry_services__item_feature .dentistry_services__item-list li {
+  color: #fff;
+}
+.dentistry_services__item_feature .dentistry_services__item-list li:hover, .dentistry_services__item_feature .dentistry_services__item-list li:hover a {
+  color: #14787A;
+}
+.dentistry_services__item_feature .dentistry_services__item-list li a {
+  color: #fff;
+}
+.dentistry_services__item_feature .dentistry_services__item-link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.dentistry_services__item_feature .dentistry_services__item-link svg path {
+  stroke: #fff;
+}
+.dentistry_services__item > a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+.dentistry_services__item-title {
+  font-weight: 400;
+  font-size: 2.2rem;
+  line-height: 3.2rem;
+  color: #394250;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1rem;
+}
+@media (max-width: 768px) {
+  .dentistry_services__item-title {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+}
+.dentistry_services__item-list {
+  padding-left: 2rem;
+}
+.dentistry_services__item-list li {
+  color: #748CA4;
+  width: fit-content;
+  transition: color 0.2s linear;
+}
+.dentistry_services__item-list li:hover, .dentistry_services__item-list li:hover a {
+  color: #009FA2;
+}
+.dentistry_services__item-list li a {
+  position: relative;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  color: #748CA4;
+  display: block;
+  z-index: 3;
+  transition: color 0.2s linear;
+}
+.dentistry_services__item-link {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.4rem;
+  height: 4.4rem;
+  background-color: #D9F2EA;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: background-color 0.2s linear;
+  right: 1.3rem;
+  bottom: 1.3rem;
+}
+.dentistry_services__item-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(355deg, #4CD4D7 0%, #009FA2 40%, #009FA2 60%, #31CACD 100%);
+  opacity: 0;
+  transition: opacity 0.2s linear;
+  top: 0;
+  left: 0;
+}
+.dentistry_services__item-link svg {
+  width: 1.6rem;
+  height: 1.6rem;
+  transition: rotate 0.2s linear;
+}
+.dentistry_services__item-link svg path {
+  transition: stroke 0.2s linear;
+}
+.dentistry_services__item-star {
+  position: absolute;
+  display: flex;
+  width: 2.6rem;
+  height: 2.6rem;
+  top: 1.3rem;
+  right: 1.5rem;
+}
+.dentistry_services__item-star svg {
+  width: 100%;
+  height: 100%;
+}
+.dentistry_services-bg {
+  position: absolute;
+  display: flex;
+  width: 95.5rem;
+  height: 58.9rem;
+  z-index: -1;
+  top: -15rem;
+  right: -16.5rem;
+}
+@media (max-width: 992px) {
+  .dentistry_services-bg {
+    display: none;
+  }
+}
+.dentistry_services-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.dentistry_about {
+  margin-bottom: 11.5rem;
+}
+@media (max-width: 992px) {
+  .dentistry_about {
+    margin-bottom: 6rem;
+  }
+}
+@media (max-width: 992px) {
+  .dentistry_about .title {
+    font-size: 4rem;
+    line-height: 3.5rem;
+  }
+}
+@media (max-width: 992px) {
+  .dentistry_about .title-box {
+    margin-bottom: 2rem;
+  }
+}
+.dentistry_about__content {
+  position: relative;
+  max-width: 105.8rem;
+}
+.dentistry_about__content::before {
+  content: "";
+  position: absolute;
+  width: 49.4rem;
+  height: 49.4rem;
+  background-color: #D8F5F5;
+  border-radius: 50%;
+  filter: blur(60px);
+  z-index: -1;
+  top: 17rem;
+  right: -22.3rem;
+}
+@media (max-width: 992px) {
+  .dentistry_about__content::before {
+    content: none;
+  }
+}
+.dentistry_about__content p {
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  color: #394250;
+  margin-bottom: 3rem;
+}
+@media (max-width: 992px) {
+  .dentistry_about__content p {
+    margin-bottom: 0;
+  }
+}
+.dentistry_about__content p b {
+  font-weight: 500;
+}
+.dentistry_about__content p span {
+  color: #009FA2;
+}
+.dentistry_about__content a {
+  text-decoration: underline;
+}
+.dentistry_about__content ul {
+  padding-left: 2rem;
+}
+.dentistry_about__content ul li {
+  color: #394250;
+}
+.dentistry_about__content ul li::marker {
+  color: #009FA2;
+  width: 2px;
+}
+.dentistry_about__content ul li span {
+  color: #009FA2;
+}
+.dentistry_about__content .btn {
+  margin-bottom: 3rem;
+}
+@media (max-width: 992px) {
+  .dentistry_about__content .btn {
+    margin: 2.5rem 0;
+  }
+}
+@media (max-width: 768px) {
+  .dentistry_about__content .btn {
+    width: 100%;
+  }
+}
+.dentistry_about-text p {
+  line-height: 2.2rem;
+  margin-bottom: 0;
+}
+.dentistry_utp {
+  position: relative;
+  width: 100%;
+  height: 56.4rem;
+  background-color: #E8EFED;
+  box-sizing: border-box;
+  padding-top: 3.2rem;
+  margin-bottom: 12rem;
+}
+@media (max-width: 992px) {
+  .dentistry_utp {
+    height: auto;
+    padding: 2.2rem 0 14.4rem;
+    margin-bottom: 6rem;
+  }
+}
+.dentistry_utp::before {
+  content: "";
+  position: absolute;
+  width: 84.1rem;
+  height: 100%;
+  background: url(../images/dentistry-utp-bg-1.png) no-repeat left center/contain;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+}
+@media (max-width: 992px) {
+  .dentistry_utp::before {
+    width: 28rem;
+    height: 26rem;
+    background: url(../images/dentistry-utp-bg-mob.png) no-repeat left center/contain;
+    top: auto;
+    bottom: 0;
+  }
+}
+.dentistry_utp::after {
+  content: "";
+  position: absolute;
+  width: 68.4rem;
+  height: 100%;
+  background: url(../images/dentistry-utp-bg-2.png) no-repeat right center/contain;
+  pointer-events: none;
+  top: 0;
+  right: 0;
+}
+@media (max-width: 992px) {
+  .dentistry_utp::after {
+    content: none;
+  }
+}
+.dentistry_utp .title-box {
+  position: relative;
+  margin-bottom: 2.5rem;
+  z-index: 1;
+}
+@media (max-width: 992px) {
+  .dentistry_utp .title-box {
+    margin-bottom: 5rem;
+  }
+}
+.dentistry_utp__content {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(2px);
+  padding: 4.5rem 0 2.2rem;
+  border: rgba(255, 255, 255, 0.5) 1px solid;
+  border-radius: 100rem;
+  z-index: 1;
+  overflow-x: hidden;
+}
+@media (max-width: 992px) {
+  .dentistry_utp__content {
+    width: 100%;
+    background-color: transparent;
+    backdrop-filter: none;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+  }
+}
+.dentistry_utp__slider {
+  position: relative;
+}
+@media (max-width: 992px) {
+  .dentistry_utp__slider {
+    padding-bottom: 2rem;
+  }
+}
+.dentistry_utp__slider::before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 7rem);
+  height: 15.2rem;
+  background-color: #fff;
+  border-radius: 100rem;
+  filter: blur(35px);
+  pointer-events: none;
+  left: -4.5rem;
+  bottom: 2.8rem;
+}
+@media (max-width: 992px) {
+  .dentistry_utp__slider::before {
+    content: none;
+  }
+}
+.dentistry_utp__slider::after {
+  content: "";
+  position: absolute;
+  width: 15.7rem;
+  height: 8.7rem;
+  background-color: #fff;
+  filter: blur(35px);
+  top: 1rem;
+  right: 20rem;
+}
+@media (max-width: 992px) {
+  .dentistry_utp__slider::after {
+    content: none;
+  }
+}
+.dentistry_utp__slider .swiper {
+  overflow: visible;
+}
+.dentistry_utp__slider .swiper-slide {
+  display: flex;
+  height: auto;
+}
+@media (max-width: 992px) {
+  .dentistry_utp__slider .swiper-slide {
+    width: auto !important;
+  }
+}
+.dentistry_utp__slider .slider-progressbar {
+  width: calc(100% - 9.2rem);
+}
+.dentistry_utp__item {
+  min-height: 23.5rem;
+}
+@media (max-width: 992px) {
+  .dentistry_utp__item {
+    width: 27rem;
+    min-height: 20rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(2px);
+    box-sizing: border-box;
+    padding: 2.2rem 1.2rem 2.2rem 2rem;
+    border: rgba(255, 255, 255, 0.5) 1px solid;
+    border-radius: 3rem;
+  }
+}
+.dentistry_utp__item-number {
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  color: #009FA2;
+  display: block;
+  width: 4rem;
+  padding-bottom: 1.2rem;
+  border-bottom: #009FA2 1px solid;
+  margin-bottom: 2.8rem;
+}
+@media (max-width: 992px) {
+  .dentistry_utp__item-number {
+    padding-bottom: 0.4rem;
+    margin-bottom: 1rem;
+  }
+}
+.dentistry_utp__item-title {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  color: #394250;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 992px) {
+  .dentistry_utp__item-title {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    margin-bottom: 1rem;
+  }
+}
+.dentistry_utp__item-text {
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  color: #748CA4;
+}
+@media (max-width: 992px) {
+  .dentistry_utp__item-text {
+    line-height: 1.6rem;
+  }
+}
+.dentistry_specialists {
+  position: relative;
+  margin-bottom: 12rem;
+  overflow-x: hidden;
+}
+@media (max-width: 992px) {
+  .dentistry_specialists {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+}
+.dentistry_specialists::before {
+  content: "";
+  position: absolute;
+  width: 51.1rem;
+  height: 51.1rem;
+  background-color: rgba(221, 227, 231, 0.7);
+  border-radius: 50%;
+  filter: blur(60px);
+  z-index: -1;
+  top: 9.6rem;
+  left: -9.3rem;
+}
+@media (max-width: 992px) {
+  .dentistry_specialists::before {
+    width: 59.5rem;
+    height: 59.5rem;
+    transform: translateX(-50%);
+    top: 7.7rem;
+    left: 50%;
+  }
+}
+.dentistry_specialists::after {
+  content: "";
+  position: absolute;
+  width: 43.6rem;
+  height: 43.6rem;
+  background-color: rgba(221, 227, 231, 0.7);
+  border-radius: 50%;
+  filter: blur(60px);
+  z-index: -1;
+  top: 22rem;
+  right: -11rem;
+}
+@media (max-width: 992px) {
+  .dentistry_specialists::after {
+    content: none;
+  }
+}
+.dentistry_specialists__slider {
+  position: relative;
+  padding-bottom: 3.6rem;
+}
+@media (max-width: 992px) {
+  .dentistry_specialists__slider {
+    padding-bottom: 2.3rem;
+    margin-bottom: 6rem;
+  }
+}
+.dentistry_specialists__slider .swiper {
+  overflow: visible;
+}
+.dentistry_specialists__slider .swiper-slide {
+  display: flex;
+  height: auto;
+  transition: opacity 0.5s ease-in-out, scale 0.5s ease-in-out;
+  opacity: 0;
+  scale: 0.8;
+}
+@media (max-width: 992px) {
+  .dentistry_specialists__slider .swiper-slide {
+    width: auto !important;
+    opacity: 1;
+    scale: 1;
+  }
+}
+@media (max-width: 992px) {
+  .dentistry_specialists__slider .swiper-slide {
+    width: auto !important;
+  }
+}
+.dentistry_specialists__slider .swiper-slide-active, .dentistry_specialists__slider .swiper-slide-active + .swiper-slide, .dentistry_specialists__slider .swiper-slide-active + .swiper-slide + .swiper-slide, .dentistry_specialists__slider .swiper-slide-active + .swiper-slide + .swiper-slide + .swiper-slide {
+  opacity: 1;
+  scale: 1;
+}
+.dentistry_specialists__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  padding: 0.5rem 0.6rem 1.1rem;
+  border: #fff 1px solid;
+  border-radius: 2rem;
+}
+@media (max-width: 992px) {
+  .dentistry_specialists__card {
+    width: 34.7rem;
+    padding: 0.5rem 0.6rem 1.3rem;
+  }
+}
+.dentistry_specialists__card:hover .dentistry_specialists__card-bottom .btn {
+  opacity: 1;
+}
+.dentistry_specialists__card > a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+.dentistry_specialists__card-image {
+  flex-shrink: 0;
+  display: flex;
+  width: 100%;
+  height: 34.6rem;
+  border-radius: 1.5rem;
+  margin-bottom: 1.6rem;
+}
+@media (max-width: 992px) {
+  .dentistry_specialists__card-image {
+    margin-bottom: 1rem;
+  }
+}
+.dentistry_specialists__card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: inherit;
+}
+.dentistry_specialists__card-tag {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 3rem;
+  color: #009FA2;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.92);
+  padding: 0 1.8rem;
+  border-radius: 10rem;
+  top: 1.7rem;
+  left: 2.1rem;
+}
+.dentistry_specialists__card__content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0 0.5rem 0 1.7rem;
+}
+@media (max-width: 992px) {
+  .dentistry_specialists__card__content {
+    padding: 0 0.7rem 0 1.5rem;
+  }
+}
+.dentistry_specialists__card-name {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  letter-spacing: -0.2px;
+  text-wrap: balance;
+  color: #394250;
+  max-width: 100%;
+  width: 15.7rem;
+  margin-bottom: 0.8rem;
+}
+@media (max-width: 992px) {
+  .dentistry_specialists__card-name {
+    line-height: 2rem;
+  }
+}
+.dentistry_specialists__card-role {
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  color: #748CA4;
+  margin-bottom: 1rem;
+}
+.dentistry_specialists__card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+.dentistry_specialists__card-bottom .btn {
+  height: 4.2rem;
+  padding: 0 1.7rem 0 3.7rem;
+  opacity: 0;
+}
+@media (max-width: 992px) {
+  .dentistry_specialists__card-bottom .btn {
+    opacity: 1;
+  }
+}
+.dentistry_specialists__card-bottom .btn svg {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+.dentistry_specialists__card-experience {
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  text-transform: uppercase;
+  color: #009FA2;
+}
+.dentistry_cases {
+  background: url(../images/dentistry-cases-bg.jpg) no-repeat center/cover;
+  padding: 2.8rem 0 3.6rem;
+  margin-bottom: 9rem;
+  overflow-x: hidden;
+}
+@media (max-width: 992px) {
+  .dentistry_cases {
+    padding: 2rem 0 3.4rem;
+    margin-bottom: 6rem;
+  }
+}
+@media (max-width: 768px) {
+  .dentistry_cases {
+    background: url(../images/dentistry-cases-bg-mob.jpg) no-repeat right center/cover;
+  }
+}
+.dentistry_cases__slider {
+  position: relative;
+  padding-bottom: 3rem;
+}
+@media (max-width: 992px) {
+  .dentistry_cases__slider {
+    padding-bottom: 3.8rem;
+  }
+}
+.dentistry_cases__slider .swiper {
+  overflow: visible;
+}
+.dentistry_cases__slider .swiper-slide {
+  display: flex;
+  height: auto;
+  transition: opacity 0.5s ease-in-out, scale 0.5s ease-in-out;
+  opacity: 0;
+  scale: 0.8;
+}
+@media (max-width: 992px) {
+  .dentistry_cases__slider .swiper-slide {
+    width: auto !important;
+    opacity: 1;
+    scale: 1;
+  }
+}
+@media (max-width: 992px) {
+  .dentistry_cases__slider .swiper-slide {
+    width: auto !important;
+  }
+}
+.dentistry_cases__slider .swiper-slide-active, .dentistry_cases__slider .swiper-slide-active + .swiper-slide, .dentistry_cases__slider .swiper-slide-active + .swiper-slide + .swiper-slide {
+  opacity: 1;
+  scale: 1;
+}
+.dentistry_cases__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  box-sizing: border-box;
+  padding: 0.4rem 0.4rem 2.8rem;
+  border: #fff 1px solid;
+  border-radius: 2rem;
+}
+@media (max-width: 992px) {
+  .dentistry_cases__item {
+    width: 34.7rem;
+    padding-bottom: 3.8rem;
+  }
+}
+.dentistry_cases__item:hover .dentistry_cases__item-text {
+  color: #009FA2;
+}
+.dentistry_cases__item > a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+.dentistry_cases__item-images {
+  flex-shrink: 0;
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  height: 22.7rem;
+  margin-bottom: 1.7rem;
+}
+@media (max-width: 992px) {
+  .dentistry_cases__item-images {
+    gap: 0.4rem;
+    height: 18rem;
+    margin-bottom: 1rem;
+  }
+}
+.dentistry_cases__item-image {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem;
+}
+.dentistry_cases__item-image span {
+  position: absolute;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 3rem;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+  box-sizing: border-box;
+  padding: 0 1.3rem;
+  border-radius: 10rem;
+  top: 1.5rem;
+  left: 1.5rem;
+}
+@media (max-width: 992px) {
+  .dentistry_cases__item-image span {
+    line-height: 2.4rem;
+    padding: 0 0.8rem;
+    top: 1.2rem;
+    left: 1.2rem;
+  }
+}
+.dentistry_cases__item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: inherit;
+}
+.dentistry_cases__item__content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0 1.8rem;
+}
+@media (max-width: 992px) {
+  .dentistry_cases__item__content {
+    padding: 0 1rem;
+  }
+}
+.dentistry_cases__item-text {
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  color: #394250;
+  margin-bottom: 2.5rem;
+  transition: color 0.2s linear;
+}
+@media (max-width: 992px) {
+  .dentistry_cases__item-text {
+    margin-bottom: 0.8rem;
+  }
+}
+.dentistry_cases__item-specialist {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: #009FA2;
+  margin-top: auto;
+}
+.dentistry_popular {
+  margin-bottom: 6rem;
+}
+@media (max-width: 992px) {
+  .dentistry_popular {
+    margin-bottom: 5rem;
+  }
+}
+.dentistry_popular .title-box {
+  max-width: 66rem;
+  margin-bottom: 5rem;
+}
+@media (max-width: 992px) {
+  .dentistry_popular .title-box {
+    margin-bottom: 3.8rem;
+  }
+}
+.dentistry_popular-filter {
+  position: relative;
+  margin-bottom: 3rem;
+}
+@media (max-width: 992px) {
+  .dentistry_popular-filter {
+    width: calc(100% + 2.8rem);
+    margin-left: -1.4rem;
+    margin-bottom: 2.2rem;
+  }
+}
+.dentistry_popular-filter::before {
+  content: none;
+  position: absolute;
+  width: 6rem;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #F5FAFA);
+  z-index: 1;
+  pointer-events: none;
+  top: 0;
+  right: 0;
+}
+@media (max-width: 992px) {
+  .dentistry_popular-filter::before {
+    content: "";
+  }
+}
+.dentistry_popular-filter__content {
+  display: flex;
+  gap: 1rem;
+}
+@media (max-width: 992px) {
+  .dentistry_popular-filter__content {
+    padding: 0 1.4rem;
+    overflow-x: auto;
+  }
+}
+.dentistry_popular-filter__content::-webkit-scrollbar {
+  display: none;
+}
+.dentistry_popular-filter__item {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  color: #748CA4;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 4.5rem;
+  padding: 0 2.6rem;
+  border-radius: 10rem;
+  outline: none;
+  transition: color 0.2s linear;
+}
+.dentistry_popular-filter__item:hover {
+  color: #009FA2;
+}
+.dentistry_popular-filter__item.active {
+  color: #fff;
+}
+.dentistry_popular-filter__item.active::before {
+  opacity: 1;
+}
+.dentistry_popular-filter__item.active span {
+  color: rgba(255, 255, 255, 0.5);
+}
+.dentistry_popular-filter__item::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(175deg, #4CD4D7 0%, #009FA2 40%, #009FA2 60%, #31CACD 100%);
+  z-index: -1;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+  top: 0;
+  left: 0;
+}
+.dentistry_popular-filter__item span {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: rgba(116, 140, 164, 0.5);
+  padding-top: 0.2rem;
+  transition: color 0.2s linear;
+}
+@media (max-width: 992px) {
+  .dentistry_popular-filter__item span {
+    display: none;
+  }
+}
+.dentistry_popular__content {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  box-shadow: 0 0.4rem 6rem 0 rgba(0, 0, 0, 0.05);
+  border: #fff 1px solid;
+  border-radius: 1.4rem;
+  margin-bottom: 2.5rem;
+}
+@media (max-width: 992px) {
+  .dentistry_popular__content {
+    flex-direction: column;
+  }
+}
+.dentistry_popular__content::before {
+  content: "";
+  position: absolute;
+  width: 55.7rem;
+  height: 46rem;
+  background: url(../images/dentistry-price-popular-decor.png) no-repeat center/contain;
+  z-index: -1;
+  top: -32rem;
+  right: 7rem;
+}
+@media (max-width: 992px) {
+  .dentistry_popular__content::before {
+    content: none;
+  }
+}
+.dentistry_popular__item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  height: 8.8rem;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 1.5rem 4.8rem 1.5rem 2.8rem;
+}
+@media (max-width: 992px) {
+  .dentistry_popular__item {
+    width: 100%;
+    padding: 1.5rem 1rem 1.5rem 1.4rem;
+  }
+}
+@media (min-width: 993px) {
+  .dentistry_popular__item:nth-of-type(4n+1), .dentistry_popular__item:nth-of-type(4n+4) {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+@media (min-width: 993px) {
+  .dentistry_popular__item:nth-of-type(1) {
+    border-top-left-radius: inherit;
+  }
+}
+@media (max-width: 992px) {
+  .dentistry_popular__item:nth-of-type(1) {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+  }
+}
+@media (min-width: 993px) {
+  .dentistry_popular__item:nth-of-type(2) {
+    border-top-right-radius: inherit;
+  }
+}
+@media (min-width: 993px) {
+  .dentistry_popular__item:nth-last-of-type(1) {
+    border-bottom-right-radius: inherit;
+  }
+}
+@media (max-width: 992px) {
+  .dentistry_popular__item:nth-last-of-type(1) {
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+  }
+}
+@media (min-width: 993px) {
+  .dentistry_popular__item:nth-last-of-type(2) {
+    border-bottom-left-radius: inherit;
+  }
+}
+@media (max-width: 992px) {
+  .dentistry_popular__item:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+.dentistry_popular__item:hover .dentistry_popular__item-title {
+  color: #009FA2;
+}
+.dentistry_popular__item:hover .dentistry_popular__item-price {
+  color: #009FA2;
+}
+.dentistry_popular__item > a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+.dentistry_popular__item__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.dentistry_popular__item-title {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: #394250;
+  transition: color 0.2s linear;
+}
+.dentistry_popular__item-subtitle {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: #748CA4;
+}
+.dentistry_popular__item-price {
+  font-size: 2.2rem;
+  line-height: 2.8rem;
+  color: #394250;
+  transition: color 0.2s linear;
+}
+@media (max-width: 992px) {
+  .dentistry_popular__item-price {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+  }
+}
+.dentistry_popular-notice {
+  background-color: #DFEFEF;
+  box-sizing: border-box;
+  padding: 2.4rem 2.8rem;
+  border-radius: 2rem;
+}
+@media (max-width: 992px) {
+  .dentistry_popular-notice {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+  }
+}
+.dentistry_popular-notice p {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: #748CA4;
+}
+.dentistry_popular-notice p span {
+  color: #009FA2;
+}
+@media (max-width: 992px) {
+  .dentistry_popular-notice br {
+    display: none;
+  }
+}
+.dentistry_price {
+  margin-bottom: 6.5rem;
+}
+@media (max-width: 992px) {
+  .dentistry_price {
+    margin-bottom: 6rem;
+  }
+}
+.dentistry_price__wrapper {
+  position: relative;
+  display: flex;
+  gap: 5.2rem;
+}
+@media (max-width: 992px) {
+  .dentistry_price__wrapper {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+.dentistry_price-sidebar {
+  flex-shrink: 0;
+  position: sticky;
+  width: 30rem;
+  height: max-content;
+  top: 10rem;
+  left: 0;
+}
+@media (max-width: 992px) {
+  .dentistry_price-sidebar {
+    position: relative;
+    width: calc(100% - 2.5rem);
+    padding: 0 1.4rem 0 1.1rem;
+    top: 0;
+  }
+}
+.dentistry_price-sidebar-title {
+  font-size: 1.4rem;
+  line-height: 3rem;
+  color: #748CA4;
+  margin-bottom: 1rem;
+}
+.dentistry_price-sidebar__item {
+  width: 100%;
+}
+.dentistry_price-sidebar__item.active .dentistry_price-sidebar__item__header {
+  font-weight: 500;
+  color: #009FA2;
+}
+.dentistry_price-sidebar__item.active .dentistry_price-sidebar__item__header::before, .dentistry_price-sidebar__item.active .dentistry_price-sidebar__item__header::after {
+  opacity: 1;
+}
+.dentistry_price-sidebar__item__header {
+  font-size: 1.4rem;
+  color: #394250;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2.8rem;
+  cursor: pointer;
+  transition: color 0.2s linear;
+}
+.dentistry_price-sidebar__item__header:hover {
+  color: #009FA2;
+}
+.dentistry_price-sidebar__item__header::before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 1.1rem);
+  height: 100%;
+  background: linear-gradient(90deg, rgba(15, 255, 232, 0.1), rgba(255, 255, 255, 0.1));
+  opacity: 0;
+  transition: opacity 0.2s linear;
+  top: 0;
+  right: 0;
+}
+.dentistry_price-sidebar__item__header::after {
+  content: "";
+  position: absolute;
+  width: 0.2rem;
+  height: 100%;
+  background-color: #009FA2;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+  top: 0;
+  left: -1.1rem;
+}
+.dentistry_price-sidebar__item__header span {
+  font-size: 1.4rem;
+  color: #748CA4;
+}
+.dentistry_price-sidebar__item__content {
+  display: none;
+  box-sizing: border-box;
+  padding: 0.4rem 0 0.4rem 1.7rem;
+}
+.dentistry_price-sidebar__item__content a {
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+  color: #748CA4;
+  display: block;
+  transition: color 0.2s linear;
+}
+.dentistry_price-sidebar__item__content a:hover {
+  color: #009FA2;
+}
+.dentistry_price__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+@media (max-width: 992px) {
+  .dentistry_price__content {
+    gap: 2.5rem;
+  }
+}
+.dentistry_price__content .b-search {
+  height: 4.8rem;
+  background-color: transparent;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 10rem;
+}
+.dentistry_price__content .b-search::before {
+  right: 11.6rem;
+}
+@media (max-width: 992px) {
+  .dentistry_price__content .b-search::before {
+    right: 1.5rem;
+  }
+}
+.dentistry_price__content .b-search input[type=text] {
+  font-size: 1.4rem;
+  background: transparent;
+  box-sizing: border-box;
+  border: #CFDAE4 1px solid;
+  border-radius: inherit;
+}
+@media (max-width: 992px) {
+  .dentistry_price__content .b-search input[type=text] {
+    padding-right: 13rem;
+  }
+}
+.dentistry_price__content .b-search input[type=text]::placeholder {
+  color: #97ADC3;
+}
+.dentistry_price__content .b-search input[type=submit] {
+  right: 0;
+}
+@media (max-width: 992px) {
+  .dentistry_price__content .b-search input[type=submit] {
+    padding: 0 3.3rem;
+  }
+}
+.dentistry_price__content .b-search .search-buttons {
+  right: 16rem;
+}
+@media (max-width: 992px) {
+  .dentistry_price__content .b-search .search-buttons {
+    right: 7rem;
+  }
+}
+.dentistry_price__categories {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media (max-width: 992px) {
+  .dentistry_price__categories {
+    gap: 0.5rem;
+  }
+}
+.dentistry_price__category {
+  width: 100%;
+  box-sizing: border-box;
+  border: #E8EDF2 1px solid;
+  border-radius: 2rem;
+  overflow: hidden;
+  transition: border-color 0.2s linear, box-shadow 0.2s linear;
+}
+.dentistry_price__category:hover {
+  border-color: #AAE8E1;
+}
+.dentistry_price__category.active {
+  border-color: #AAE8E1;
+  box-shadow: 0 0 3rem 0 rgba(176, 209, 210, 0.3);
+}
+.dentistry_price__category.active > .dentistry_price__category__header .dentistry_price__category-badge {
+  color: #009FA2;
+  background-color: #D6F4F1;
+}
+.dentistry_price__category.active > .dentistry_price__category__header .dentistry_price__category-arrow {
+  background-color: #009FA2;
+}
+.dentistry_price__category.active > .dentistry_price__category__header .dentistry_price__category-arrow svg {
+  transform: rotateX(180deg);
+}
+.dentistry_price__category.active > .dentistry_price__category__header .dentistry_price__category-arrow svg path {
+  stroke: #fff;
+}
+.dentistry_price__category__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+  height: 7.4rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
+  padding: 0 2.2rem 0 4rem;
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  .dentistry_price__category__header {
+    height: 6.8rem;
+    padding: 0 1.4rem;
+  }
+}
+.dentistry_price__category__header-right {
+  display: flex;
+  gap: 2.5rem;
+}
+@media (max-width: 992px) {
+  .dentistry_price__category__header-right {
+    gap: 0.6rem;
+  }
+}
+.dentistry_price__category-title {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  color: #394250;
+}
+@media (max-width: 992px) {
+  .dentistry_price__category-title {
+    font-size: 1.4rem;
+  }
+}
+.dentistry_price__category-badge {
+  font-size: 1.4rem;
+  line-height: 1.3rem;
+  text-align: center;
+  color: #748CA4;
+  display: flex;
+  align-items: center;
+  height: 3.1rem;
+  background-color: #ECF3F9;
+  padding: 0 1.5rem;
+  border-radius: 10rem;
+  transition: color 0.2s linear, background-color 0.2s linear;
+}
+@media (max-width: 992px) {
+  .dentistry_price__category-badge {
+    font-size: 1.3rem;
+    width: min-content;
+    height: 3.2rem;
+    padding: 0 1.2rem;
+  }
+}
+.dentistry_price__category-arrow {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.1rem;
+  height: 3.1rem;
+  background-color: #E2EBF3;
+  border-radius: 50%;
+  transition: background-color 0.2s linear;
+}
+.dentistry_price__category-arrow svg {
+  width: 1rem;
+  height: 0.6rem;
+  transition: transform 0.2s linear;
+}
+.dentistry_price__category-arrow svg path {
+  transition: stroke 0.2s linear;
+}
+.dentistry_price__category__content {
+  display: none;
+}
+.dentistry_price__category__content > .dentistry_price__category {
+  box-shadow: none;
+  border: none;
+  border-bottom: #CFDAE4 1px solid;
+  border-radius: 0;
+}
+.dentistry_price__category__content > .dentistry_price__category:first-of-type {
+  border-top: #CFDAE4 1px solid;
+}
+.dentistry_price__category__content > .dentistry_price__category:last-of-type {
+  border-bottom: 0;
+}
+.dentistry_price__category__content > .dentistry_price__category.active .dentistry_price__category-badge {
+  color: #748CA4;
+  background-color: #ECF3F9;
+}
+.dentistry_price__category__content > .dentistry_price__category.active .dentistry_price__category-arrow {
+  background-color: #D6F4F1;
+}
+.dentistry_price__category__content > .dentistry_price__category.active .dentistry_price__category-arrow svg path {
+  stroke: #394250;
+}
+.dentistry_price__category__content > .dentistry_price__category.active .dentistry_price__category__content .dentistry_price__position:first-of-type {
+  border-top: #CFDAE4 1px solid;
+}
+.dentistry_price__category__content > .dentistry_price__category .dentistry_price__category__header {
+  background-color: #EEF4F3;
+  height: 6rem;
+}
+.dentistry_price__category__content > .dentistry_price__category .dentistry_price__category-title {
+  letter-spacing: -0.08px;
+  color: #009FA2;
+  position: relative;
+  padding-left: 1.4rem;
+}
+.dentistry_price__category__content > .dentistry_price__category .dentistry_price__category-title::before {
+  content: "";
+  position: absolute;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #009FA2;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 0;
+}
+.dentistry_price__position {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 7rem;
+  box-sizing: border-box;
+  padding: 0 2.2rem 0 4rem;
+  border-bottom: #E4EBE8 1px solid;
+  transition: background-color 0.2s linear;
+}
+@media (max-width: 992px) {
+  .dentistry_price__position {
+    display: inline-block;
+    padding: 1.2rem 9rem 0.7rem 1.4rem;
+  }
+}
+.dentistry_price__position:hover {
+  background-color: #D6F4F1;
+}
+.dentistry_price__position:hover .dentistry_price__position-link {
+  opacity: 1;
+}
+.dentistry_price__position:first-of-type {
+  border-top: #E4EBE8 1px solid;
+}
+.dentistry_price__position:last-of-type {
+  border-bottom: none;
+}
+.dentistry_price__position > a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+.dentistry_price__position__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+@media (max-width: 992px) {
+  .dentistry_price__position__content {
+    display: inline;
+  }
+}
+.dentistry_price__position__content-right {
+  display: flex;
+  align-items: center;
+  gap: 1.7rem;
+}
+@media (max-width: 992px) {
+  .dentistry_price__position__content-right {
+    display: inline;
+  }
+}
+.dentistry_price__position-title {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  letter-spacing: -0.08px;
+  color: #394250;
+}
+@media (max-width: 992px) {
+  .dentistry_price__position-title {
+    font-size: 1.4rem;
+    width: calc(100% + 7.6rem);
+    margin-bottom: 0.6rem;
+  }
+}
+.dentistry_price__position-subtitle {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  color: #748CA4;
+}
+@media (max-width: 992px) {
+  .dentistry_price__position-subtitle {
+    font-size: 1.3rem;
+    display: inline;
+    margin-right: 0.8rem;
+  }
+}
+.dentistry_price__position-price {
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #394250;
+}
+@media (max-width: 992px) {
+  .dentistry_price__position-price {
+    display: inline;
+  }
+}
+.dentistry_price__position-link {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  letter-spacing: -0.44px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  height: 3.4rem;
+  background-color: #22B5A7;
+  box-sizing: border-box;
+  padding: 0 1.8rem;
+  border-radius: 10rem;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+}
+@media (max-width: 992px) {
+  .dentistry_price__position-link {
+    font-weight: 500;
+    color: #009FA2;
+    position: absolute;
+    height: 2.7rem;
+    background-color: transparent;
+    padding: 0 1.2rem;
+    border: #009FA2 1px solid;
+    opacity: 1;
+    right: 0.4rem;
+    bottom: 0.7rem;
+  }
+}
+.dentistry_price-notice {
+  background-color: #F2F8F6;
+  box-sizing: border-box;
+  padding: 2.2rem 2.2rem 3.6rem 3.8rem;
+  border: #CFDAE4 1px dashed;
+  border-radius: 2rem;
+}
+@media (max-width: 992px) {
+  .dentistry_price-notice {
+    padding: 1.2rem 1.4rem 4.4rem;
+  }
+}
+.dentistry_price-notice p {
+  color: #394250;
+}
+.dentistry_price-notice p, .dentistry_price-notice p b {
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+}
+@media (max-width: 992px) {
+  .dentistry_price-notice p, .dentistry_price-notice p b {
+    line-height: 2rem;
+  }
+}
+.dentistry_price-notice p b {
+  font-weight: 500;
+}
+.dentistry_guarantees {
+  background: linear-gradient(0deg, #E8EFED, #F5FAFA);
+  padding: 1.4rem 0 15.5rem;
+  margin-bottom: 11rem;
+}
+@media (max-width: 992px) {
+  .dentistry_guarantees {
+    padding: 0 0 8.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+.dentistry_guarantees .title-box {
+  margin-bottom: 7.5rem;
+}
+@media (max-width: 992px) {
+  .dentistry_guarantees .title-box {
+    margin-bottom: 3rem;
+  }
+}
+.dentistry_guarantees__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+}
+@media (max-width: 992px) {
+  .dentistry_guarantees__content {
+    gap: 1rem;
+  }
+}
+.dentistry_guarantees__item {
+  width: calc(25% - 1.2rem);
+  background-color: rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+  box-shadow: 0 0.4rem 3rem 0 rgba(0, 0, 0, 0.05);
+  padding: 0 2rem 3.4rem 2.5rem;
+  border: #fff 1px solid;
+  border-radius: 1.4rem;
+}
+@media (max-width: 992px) {
+  .dentistry_guarantees__item {
+    width: calc(50% - 0.5rem);
+    padding: 0 4.8rem 2rem 2.2rem;
+  }
+}
+@media (max-width: 768px) {
+  .dentistry_guarantees__item {
+    width: 100%;
+  }
+}
+.dentistry_guarantees__item__header {
+  display: flex;
+  align-items: center;
+  width: calc(100% + 3rem);
+  height: 8rem;
+  margin-bottom: 1rem;
+  margin-left: -2.5rem;
+}
+@media (max-width: 992px) {
+  .dentistry_guarantees__item__header {
+    width: calc(100% + 5.8rem);
+    margin-left: -2.2rem;
+    margin-bottom: 0.5rem;
+  }
+}
+.dentistry_guarantees__item-image {
+  display: flex;
+  align-self: end;
+  width: 11.2rem;
+  height: 11.2rem;
+  margin-bottom: -0.5rem;
+}
+.dentistry_guarantees__item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.dentistry_guarantees__item-title {
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: #394250;
+}
+.dentistry_guarantees__item-text {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #748CA4;
+}
+@media (max-width: 992px) {
+  .dentistry_guarantees__item-text {
+    line-height: 1.6rem;
+  }
+}
+.dentistry_reviews {
+  position: relative;
+  margin-bottom: 8.8rem;
+}
+@media (max-width: 992px) {
+  .dentistry_reviews {
+    margin-bottom: 4rem;
+  }
+}
+.dentistry_reviews::before {
+  content: none;
+  position: absolute;
+  width: 37.5rem;
+  height: 37.5rem;
+  background-color: #CBF0F0;
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(60px);
+  transform: translateX(-50%);
+  top: 10rem;
+  left: 50%;
+}
+@media (max-width: 992px) {
+  .dentistry_reviews::before {
+    content: "";
+  }
+}
+.dentistry_reviews .title-box {
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 768px) {
+  .dentistry_reviews .title-box {
+    max-width: 40rem;
+  }
+}
+@media (max-width: 576px) {
+  .dentistry_reviews .title-box {
+    max-width: 23.4rem;
+  }
+}
+@media (max-width: 768px) {
+  .dentistry_reviews .title-description br {
+    display: none;
+  }
+}
+.dentistry_reviews__wrapper {
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 10rem;
+}
+@media (max-width: 992px) {
+  .dentistry_reviews__wrapper {
+    padding-bottom: 0;
+  }
+}
+.dentistry_reviews__slider {
+  position: relative;
+  padding-bottom: 4rem;
+  z-index: 2;
+}
+@media (max-width: 992px) {
+  .dentistry_reviews__slider {
+    padding-bottom: 2.7rem;
+  }
+}
+.dentistry_reviews__slider::before, .dentistry_reviews__slider::after {
+  content: "";
+  position: absolute;
+  width: 28rem;
+  height: 28rem;
+  background-color: #CBF0F0;
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(60px);
+}
+@media (max-width: 992px) {
+  .dentistry_reviews__slider::before, .dentistry_reviews__slider::after {
+    content: none;
+  }
+}
+.dentistry_reviews__slider::before {
+  left: -6rem;
+  bottom: -2rem;
+}
+.dentistry_reviews__slider::after {
+  top: -7rem;
+  right: -5.7rem;
+}
+.dentistry_reviews__slider .swiper {
+  overflow: visible;
+}
+.dentistry_reviews__slider .swiper-slide {
+  display: flex;
+  height: auto;
+  transition: opacity 0.5s ease-in-out, scale 0.5s ease-in-out;
+  opacity: 0;
+  scale: 0.8;
+}
+@media (max-width: 992px) {
+  .dentistry_reviews__slider .swiper-slide {
+    width: auto !important;
+    opacity: 1;
+    scale: 1;
+  }
+}
+@media (max-width: 992px) {
+  .dentistry_reviews__slider .swiper-slide {
+    width: auto !important;
+  }
+}
+.dentistry_reviews__slider .swiper-slide-active, .dentistry_reviews__slider .swiper-slide-active + .swiper-slide, .dentistry_reviews__slider .swiper-slide-active + .swiper-slide + .swiper-slide, .dentistry_reviews__slider .swiper-slide-active + .swiper-slide + .swiper-slide + .swiper-slide {
+  opacity: 1;
+  scale: 1;
+}
+.dentistry_reviews__item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 25.8rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+  padding: 2rem 0.8rem 2.4rem 2.8rem;
+  border: #fff 1px solid;
+  border-radius: 3rem;
+}
+@media (max-width: 992px) {
+  .dentistry_reviews__item {
+    width: 31.7rem;
+  }
+}
+.dentistry_reviews__item-name {
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #394250;
+}
+.dentistry_reviews__item-info {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.dentistry_reviews__item-info > a {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #394250;
+  text-decoration: underline;
+}
+.dentistry_reviews__item-date {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #748CA4;
+}
+.dentistry_reviews__item .stars {
+  margin-bottom: 1rem;
+}
+.dentistry_reviews__item-text {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: #394250;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 1rem;
+}
+.dentistry_reviews__item-readall {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #009FA2;
+  margin-top: auto;
+}
+.dentistry_reviews-bg {
+  position: absolute;
+  display: flex;
+  width: 62.5rem;
+  height: 64.2rem;
+  pointer-events: none;
+  top: -26.5rem;
+  right: 46.3rem;
+}
+@media (max-width: 992px) {
+  .dentistry_reviews-bg {
+    width: 21.6rem;
+    height: 27rem;
+    top: -9.5rem;
+    right: 0;
+  }
+}
+.dentistry_reviews-bg picture {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.dentistry_reviews-bg picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.dentistry_faq {
+  margin-bottom: 17rem;
+}
+@media (max-width: 992px) {
+  .dentistry_faq {
+    margin-bottom: 6rem;
+  }
+}
+.dentistry_faq .title-box {
+  margin-bottom: 1.5rem;
+}
+.dentistry_faq__item {
+  position: relative;
+  width: 100%;
+  border-bottom: #E4EBE8 1px solid;
+}
+.dentistry_faq__item:first-of-type {
+  border-top: #E4EBE8 1px solid;
+}
+@media (max-width: 992px) {
+  .dentistry_faq__item:first-of-type {
+    border-top: none;
+  }
+}
+.dentistry_faq__item.active .dentistry_faq__item-question p {
+  color: #009FA2;
+}
+.dentistry_faq__item.active .dentistry_faq__item-button {
+  background-color: transparent;
+}
+.dentistry_faq__item.active .dentistry_faq__item-button::before {
+  opacity: 1;
+}
+.dentistry_faq__item.active .dentistry_faq__item-button svg {
+  rotate: 45deg;
+}
+.dentistry_faq__item.active .dentistry_faq__item-button svg path {
+  stroke: #fff;
+}
+.dentistry_faq__item::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3.5rem;
+  background: linear-gradient(0deg, #F5FAFA, transparent);
+  pointer-events: none;
+  left: 0;
+  bottom: 0;
+}
+.dentistry_faq__item-question {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+  width: 100%;
+  height: 7.8rem;
+  z-index: 1;
+  box-sizing: border-box;
+  padding: 0 1.5rem 0 2.5rem;
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  .dentistry_faq__item-question {
+    padding: 0 0 0 1.4rem;
+  }
+}
+.dentistry_faq__item-question:hover p {
+  color: #009FA2;
+}
+.dentistry_faq__item-question p {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  color: #394250;
+  transition: color 0.2s linear;
+}
+@media (max-width: 992px) {
+  .dentistry_faq__item-question p {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+}
+.dentistry_faq__item-button {
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  background-color: #D9F2EA;
+  border-radius: 50%;
+  transition: background-color 0.2s linear;
+}
+.dentistry_faq__item-button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(175deg, #4CD4D7 0%, #009FA2 40%, #009FA2 60%, #31CACD 100%);
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+  top: 0;
+  left: 0;
+}
+.dentistry_faq__item-button svg {
+  width: 1.4rem;
+  height: 1.4rem;
+  transition: rotate 0.2s linear;
+}
+.dentistry_faq__item-button svg path {
+  transition: stroke 0.2s linear;
+}
+.dentistry_faq__item-answer {
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  color: #748CA4;
+  display: none;
+  padding: 0 22rem 6.5rem 5.5rem;
+}
+@media (max-width: 992px) {
+  .dentistry_faq__item-answer {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    padding: 0 1.4rem 3.5rem;
+    margin-top: -1rem;
+  }
+}
+.dentistry_cta {
+  position: relative;
+  display: flex;
+  gap: 11rem;
+  background-color: rgba(1, 102, 104, 0.2);
+  box-sizing: border-box;
+  padding: 3.2rem 6rem 2.5rem;
+  border-radius: 3.2rem;
+  margin-bottom: 7rem;
+}
+@media (max-width: 992px) {
+  .dentistry_cta {
+    flex-direction: column;
+    gap: 2.4rem;
+    padding: 2.5rem 1.4rem 3.2rem;
+    border-radius: 2rem;
+    margin-bottom: 5rem;
+  }
+}
+@media (max-width: 768px) {
+  .dentistry_cta {
+    background-color: rgba(1, 102, 104, 0.35);
+  }
+}
+.dentistry_cta::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(../images/dentistry-cta-bg.png) no-repeat center/cover;
+  border-radius: inherit;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+@media (max-width: 992px) {
+  .dentistry_cta::before {
+    background-position: left bottom;
+  }
+}
+@media (max-width: 768px) {
+  .dentistry_cta::before {
+    background: url(../images/dentistry-cta-bg-mob.png) no-repeat center/cover;
+  }
+}
+.dentistry_cta__content .title {
+  color: #fff;
+}
+@media (max-width: 992px) {
+  .dentistry_cta__content .title::first-line {
+    font-size: 3rem;
+  }
+}
+.dentistry_cta__content .title span {
+  color: #2DDFE3;
+}
+.dentistry_cta__content .title-box {
+  margin-bottom: 3.5rem;
+}
+@media (max-width: 992px) {
+  .dentistry_cta__content .title-box {
+    margin-bottom: 1.5rem;
+  }
+}
+.dentistry_cta__content .title-description {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+@media (max-width: 992px) {
+  .dentistry_cta__content .title-description {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+}
+.dentistry_cta-address {
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0.6rem;
+}
+.dentistry_cta-phone {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  color: #1EF8FD;
+}
+.dentistry_cta-phone:hover {
+  color: #1ad3d6;
+}
+.dentistry_cta__form {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  width: 51.5rem;
+  padding-top: 3.5rem;
+}
+@media (max-width: 992px) {
+  .dentistry_cta__form {
+    width: 100%;
+    padding-top: 0;
+  }
+}
+.dentistry_cta__form input {
+  font-size: 1.6rem;
+  color: #D2FEFF;
+  width: 100%;
+  height: 6rem;
+  background-color: rgba(217, 217, 217, 0.1);
+  backdrop-filter: blur(7px);
+  box-sizing: border-box;
+  padding: 0 2.5rem;
+  border: #E1F2F3 1px solid;
+  border-radius: 10rem;
+  margin-bottom: 1rem;
+  outline: none;
+  transition: border-color 0.2s linear, backdrop-filter 0.2s linear;
+}
+@media (max-width: 992px) {
+  .dentistry_cta__form input {
+    height: 5rem;
+    margin-bottom: 0.7rem;
+  }
+}
+.dentistry_cta__form input:focus {
+  border-color: #14787A;
+}
+.dentistry_cta__form input::placeholder {
+  color: #C2EFF0;
+}
+.dentistry_cta__form button {
+  font-size: 1.6rem;
+  color: #fff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 6rem;
+  background: linear-gradient(175deg, #4CD4D7 0%, #009FA2 50%, #31CACD 100%);
+  box-sizing: border-box;
+  box-shadow: 0 0.4rem 3rem 0 rgba(255, 255, 255, 0.6);
+  border: none;
+  border-radius: 10rem;
+  margin: 1.5rem 0 2.5rem;
+  outline: none;
+  cursor: pointer;
+  transition: color 0.2s linear;
+}
+@media (max-width: 992px) {
+  .dentistry_cta__form button {
+    height: 5rem;
+    margin: 1rem 0 4.5rem;
+  }
+}
+.dentistry_cta__form button:hover {
+  color: #14787A;
+}
+.dentistry_cta__form button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(90deg, #fff 0%, transparent 47%, #fff 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  will-change: transform;
+}
+.dentistry_cta__form button::after {
+  content: "";
+  position: absolute;
+  width: 1.4rem;
+  height: 1.4rem;
+  background: url(../images/svg/btn-arrow.svg) no-repeat center/contain;
+  pointer-events: none;
+  transform: translateY(-50%);
+  top: 50%;
+  right: 2.6rem;
+}
+@media (max-width: 992px) {
+  .dentistry_cta__form button::after {
+    right: 2rem;
+  }
+}
+.dentistry_cta__form-checkbox input {
+  display: none;
+}
+.dentistry_cta__form-checkbox input:checked + label::before {
+  opacity: 0;
+}
+.dentistry_cta__form-checkbox input:checked + label::after {
+  opacity: 1;
+}
+.dentistry_cta__form-checkbox label {
+  position: relative;
+  display: inline-block;
+  padding-left: 3rem;
+  cursor: pointer;
+}
+.dentistry_cta__form-checkbox label::before, .dentistry_cta__form-checkbox label::after {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  transition: opacity 0.1s linear;
+  top: 0.2rem;
+  left: 0;
+}
+@media (max-width: 992px) {
+  .dentistry_cta__form-checkbox label::before, .dentistry_cta__form-checkbox label::after {
+    top: -0.3rem;
+  }
+}
+.dentistry_cta__form-checkbox label::before {
+  background: url(../images/svg/dentistry-cta-checkbox.svg) no-repeat center/contain;
+}
+.dentistry_cta__form-checkbox label::after {
+  background: url(../images/svg/dentistry-cta-checkbox-active.svg) no-repeat center/contain;
+  opacity: 0;
+}
+.dentistry_cta__form-checkbox label, .dentistry_cta__form-checkbox label a {
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  color: #2CD2D5;
+}
+@media (max-width: 992px) {
+  .dentistry_cta__form-checkbox label, .dentistry_cta__form-checkbox label a {
+    line-height: 1.4rem;
+  }
+}
+.dentistry_cta__form-checkbox label a {
+  text-decoration: underline;
+}
+.dentistry_cta__form-checkbox label a:hover {
+  color: #14787A;
 }/*# sourceMappingURL=styles.css.map */
