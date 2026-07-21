@@ -2474,11 +2474,21 @@
             margin-bottom: 0.5rem;
         }
 
-        .title-box {
-            margin-bottom: 7.5rem;
+        .title {
+            &, span {
+                line-height: 4rem;
 
-            @media #{$lg} {
-                margin-bottom: 3rem;
+                @media #{$lg} {
+                    line-height: 2rem;
+                }
+            }
+
+            &-box {
+                margin-bottom: 7.5rem;
+
+                @media #{$lg} {
+                    margin-bottom: 3rem;
+                }
             }
         }
 

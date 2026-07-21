@@ -15623,6 +15623,14 @@ body:has(#specialists-profile) .select2-dropdown {
     margin-bottom: 0.5rem;
   }
 }
+.dentistry_guarantees .title, .dentistry_guarantees .title span {
+  line-height: 4rem;
+}
+@media (max-width: 992px) {
+  .dentistry_guarantees .title, .dentistry_guarantees .title span {
+    line-height: 2rem;
+  }
+}
 .dentistry_guarantees .title-box {
   margin-bottom: 7.5rem;
 }
@@ -17295,6 +17303,4 @@ body:has(#specialists-profile) .select2-dropdown {
   .anchor {
     top: -10rem;
   }
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
