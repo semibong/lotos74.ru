@@ -13345,6 +13345,9 @@ body:has(#specialists-profile) .select2-dropdown {
   color: #394250;
 }
 
+.dentistry::before {
+  content: none;
+}
 .dentistry .title {
   color: #394250;
   margin-bottom: 0;
@@ -13396,7 +13399,8 @@ body:has(#specialists-profile) .select2-dropdown {
   font-size: 1.5rem;
   text-decoration: none;
   gap: 0.8rem;
-  background: linear-gradient(175deg, #4CD4D7 0%, #009FA2 40%, #009FA2 60%, #31CACD 100%);
+  background: linear-gradient(90deg, #009FA2, #4CD4D7, #009FA2);
+  background-size: 200%;
   padding: 0 5rem;
   border-radius: 10rem;
 }
@@ -13404,6 +13408,9 @@ body:has(#specialists-profile) .select2-dropdown {
   .dentistry .btn-round {
     height: 4.8rem;
   }
+}
+.dentistry .btn-round:hover {
+  background-position: right;
 }
 .dentistry .slider-progressbar {
   position: absolute;
@@ -13664,23 +13671,6 @@ body:has(#specialists-profile) .select2-dropdown {
     content: none;
   }
 }
-.dentistry_hero::after {
-  content: "";
-  position: absolute;
-  width: 46.8rem;
-  height: 46.8rem;
-  background-color: rgba(133, 201, 226, 0.2);
-  border-radius: 50%;
-  filter: blur(75px);
-  z-index: -2;
-  left: 67.7rem;
-  bottom: -9rem;
-}
-@media (max-width: 992px) {
-  .dentistry_hero::after {
-    content: none;
-  }
-}
 .dentistry_hero-bg {
   position: absolute;
   display: flex;
@@ -13719,6 +13709,58 @@ body:has(#specialists-profile) .select2-dropdown {
   .dentistry_hero-bg picture img {
     object-position: center bottom;
   }
+}
+.dentistry_hero-bg-decor {
+  position: absolute;
+  width: 100%;
+  height: 125.4rem;
+  z-index: -2;
+  top: 0;
+  left: 0;
+  top: -40.4rem;
+}
+@media (max-width: 992px) {
+  .dentistry_hero-bg-decor {
+    display: none;
+  }
+}
+.dentistry_hero-bg-decor span {
+  position: absolute;
+  height: auto;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  filter: blur(70px);
+}
+.dentistry_hero-bg-decor span:nth-of-type(1) {
+  width: 46.8rem;
+  background-color: rgba(133, 201, 226, 0.2);
+  top: 72.8rem;
+  left: 67.7rem;
+}
+.dentistry_hero-bg-decor span:nth-of-type(2) {
+  width: 64.5rem;
+  background-color: rgba(115, 184, 253, 0.1);
+  top: -1.7rem;
+  left: 54.2rem;
+}
+.dentistry_hero-bg-decor span:nth-of-type(3) {
+  width: 62rem;
+  background-color: rgba(0, 159, 162, 0.1);
+  top: -16.2rem;
+  left: -5rem;
+}
+.dentistry_hero-bg-decor span:nth-of-type(4) {
+  width: 82rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  top: 40rem;
+  left: -7.5rem;
+}
+.dentistry_hero-bg-decor span:nth-of-type(5) {
+  width: 63rem;
+  background-color: rgba(0, 143, 146, 0.2);
+  filter: blur(135px);
+  top: 16.5rem;
+  right: 5.2rem;
 }
 .dentistry_hero__wrapper {
   padding-top: 3rem;
@@ -14841,6 +14883,7 @@ body:has(#specialists-profile) .select2-dropdown {
 .dentistry_popular-filter {
   position: relative;
   margin-bottom: 3rem;
+  z-index: 1;
 }
 @media (max-width: 992px) {
   .dentistry_popular-filter {
@@ -16927,6 +16970,36 @@ body:has(#specialists-profile) .select2-dropdown {
     top: -15rem;
   }
 }
+.dentistry-detail .dentistry_hero-bg-decor {
+  height: 142.4rem;
+  top: -45.4rem;
+}
+.dentistry-detail .dentistry_hero-bg-decor span:nth-of-type(1) {
+  width: 53rem;
+  background-color: rgba(0, 159, 162, 0.07);
+  top: 53.3rem;
+  left: -3.2rem;
+}
+.dentistry-detail .dentistry_hero-bg-decor span:nth-of-type(2) {
+  width: 64.5rem;
+  background-color: rgba(115, 184, 253, 0.1);
+  top: -2rem;
+  left: 54.2rem;
+}
+.dentistry-detail .dentistry_hero-bg-decor span:nth-of-type(3) {
+  width: 62rem;
+  background-color: rgba(0, 159, 162, 0.1);
+  top: -16.2rem;
+  left: -5rem;
+}
+.dentistry-detail .dentistry_hero-bg-decor span:nth-of-type(4) {
+  width: 63rem;
+  background-color: rgba(0, 143, 146, 0.2);
+  filter: blur(135px);
+  top: 16rem;
+  left: auto;
+  right: 5.2rem;
+}
 .dentistry-detail_about {
   position: relative;
   margin-bottom: 9.5rem;
@@ -17222,4 +17295,6 @@ body:has(#specialists-profile) .select2-dropdown {
   .anchor {
     top: -10rem;
   }
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/*# sourceMappingURL=styles.css.map */

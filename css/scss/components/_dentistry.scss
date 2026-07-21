@@ -1,4 +1,8 @@
 .dentistry {
+    &::before {
+        content: none;
+    }
+
     .title {
         color: $color-primary;
         margin-bottom: 0;
@@ -52,12 +56,17 @@
         font-size: 1.5rem;
         text-decoration: none;
         gap: 0.8rem;
-        background: linear-gradient(175deg, #4CD4D7 0%, $color-active 40%, $color-active 60%, #31CACD 100%);
+        background: linear-gradient(90deg, $color-active, #4CD4D7, $color-active);
+        background-size: 200%;
         padding: 0 5rem;
         border-radius: 10rem;
 
         @media #{$lg} {
             height: 4.8rem;
+        }
+
+        &:hover {
+            background-position: right;
         }
     }
 
@@ -342,23 +351,6 @@
             }
         }
 
-        &::after {
-            content: '';
-            position: absolute;
-            width: 46.8rem;
-            height: 46.8rem;
-            background-color: rgba(#85C9E2, 0.2);
-            border-radius: 50%;
-            filter: blur(75px);
-            z-index: -2;
-            left: 67.7rem;
-            bottom: -9rem;
-
-            @media #{$lg} {
-                content: none;
-            }
-        }
-
         &-bg {
             position: absolute;
             display: flex;
@@ -393,6 +385,64 @@
 
                     @media #{$lg} {
                         object-position: center bottom;
+                    }
+                }
+            }
+
+            &-decor {
+                position: absolute;
+                width: 100%;
+                height: 125.4rem;
+                z-index: -2;
+                top: 0;
+                left: 0;
+                top: -40.4rem;
+
+                @media #{$lg} {
+                    display: none;
+                }
+
+                span {
+                    position: absolute;
+                    height: auto;
+                    aspect-ratio: 1 / 1;
+                    border-radius: 50%;
+                    filter: blur(70px);
+
+                    &:nth-of-type(1) {
+                        width: 46.8rem;
+                        background-color: rgba(#85C9E2, 0.2);
+                        top: 72.8rem;
+                        left: 67.7rem;
+                    }
+
+                    &:nth-of-type(2) {
+                        width: 64.5rem;
+                        background-color: rgba(#73B8FD, 0.1);
+                        top: -1.7rem;
+                        left: 54.2rem;
+                    }
+
+                    &:nth-of-type(3) {
+                        width: 62rem;
+                        background-color: rgba($color-active, 0.1);
+                        top: -16.2rem;
+                        left: -5rem;
+                    }
+
+                    &:nth-of-type(4) {
+                        width: 82rem;
+                        background-color: rgba(#fff, 0.2);
+                        top: 40rem;
+                        left: -7.5rem;
+                    }
+
+                    &:nth-of-type(5) {
+                        width: 63rem;
+                        background-color: rgba(#008F92, 0.2);
+                        filter: blur(135px);
+                        top: 16.5rem;
+                        right: 5.2rem;
                     }
                 }
             }
@@ -1599,6 +1649,7 @@
         &-filter {
             position: relative;
             margin-bottom: 3rem;
+            z-index: 1;
 
             @media #{$lg} {
                 width: calc(100% + 2.8rem);
@@ -3891,6 +3942,43 @@
                         height: auto;
                         aspect-ratio: 375 / 400;
                         top: -15rem;
+                    }
+
+                    &-decor {
+                        height: 142.4rem;
+                        top: -45.4rem;
+
+                        span {
+                            &:nth-of-type(1) {
+                                width: 53rem;
+                                background-color: rgba($color-active, 0.07);
+                                top: 53.3rem;
+                                left: -3.2rem;
+                            }
+
+                            &:nth-of-type(2) {
+                                width: 64.5rem;
+                                background-color: rgba(#73B8FD, 0.1);
+                                top: -2rem;
+                                left: 54.2rem;
+                            }
+
+                            &:nth-of-type(3) {
+                                width: 62rem;
+                                background-color: rgba($color-active, 0.1);
+                                top: -16.2rem;
+                                left: -5rem;
+                            }
+
+                            &:nth-of-type(4) {
+                                width: 63rem;
+                                background-color: rgba(#008F92, 0.2);
+                                filter: blur(135px);
+                                top: 16rem;
+                                left: auto;
+                                right: 5.2rem;
+                            }
+                        }
                     }
                 }
             }

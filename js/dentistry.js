@@ -105,6 +105,7 @@ $(document).ready(function() {
 
     if ($('.dentistry_utp').length) {
         const dentistryUtpSlider = new Swiper('.dentistry_utp__slider .swiper', {
+            loop: true,
             speed: 1000,
             slidesPerView: 'auto',
             spaceBetween: 10,
@@ -128,6 +129,7 @@ $(document).ready(function() {
 
     if ($('.dentistry_specialists').length) {
         const dentistrySpecialistsSlider = new Swiper('.dentistry_specialists__slider .swiper', {
+            loop: true,
             speed: 1000,
             slidesPerView: 'auto',
             spaceBetween: 20,
@@ -150,6 +152,7 @@ $(document).ready(function() {
 
     if ($('.dentistry_cases').length) {
         const dentistryCasesSlider = new Swiper('.dentistry_cases__slider .swiper', {
+            loop: true,
             speed: 1000,
             slidesPerView: 'auto',
             spaceBetween: 20,
@@ -198,6 +201,18 @@ $(document).ready(function() {
             }
         });
 
+        function animatePricePositions(content) {
+            let delay = 0;
+            content.children('.dentistry_price__position').each(function() {
+                $(this).removeClass('animate__animated animate__faster animate__fadeInUp');
+                void this.offsetWidth; // reflow so the animation restarts on every re-open
+                $(this)
+                    .css('animation-delay', delay + 's')
+                    .addClass('animate__animated animate__faster animate__fadeInUp');
+                delay += 0.07;
+            });
+        }
+
         $('.dentistry_price__category.active').each((_, e) => {
             $(e.children[1]).slideDown(0);
         });
@@ -212,13 +227,14 @@ $(document).ready(function() {
             } else {
                 content.slideDown(300);
                 parent.addClass('active');
-                
+                animatePricePositions(content);
             }
         });
     }
 
     if ($('.dentistry_reviews').length) {
         const dentistryReviewsSlider = new Swiper('.dentistry_reviews__slider .swiper', {
+            loop: true,
             speed: 1000,
             slidesPerView: 'auto',
             spaceBetween: 16,

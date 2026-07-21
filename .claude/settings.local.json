@@ -1,7 +1,25 @@
 {
   "permissions": {
     "allow": [
-      "Bash(pkill -f \"http.server 8777\")"
+      "Bash(pkill -f \"http.server 8777\")",
+      "Bash(awk 'NR>=1606 && NR<=1825 && /class=\"\\(dentistry_[a-z_]*|title-box|swiper|slider-progressbar|btn\\)/ {gsub\\(/^[ \\\\t]+/,\"\"\\); print NR\": \"$0}' dentistry-services.html)",
+      "Bash(awk 'NR>=907 && NR<=1002 && /class=\"\\(dentistry_price[a-z_-]*\\)\"/ {gsub\\(/^[ \\\\t]+/,\"\"\\); print NR\": \"$0}' dentistry-services.html)",
+      "Bash(python3 \"/private/tmp/claude-501/-Users-sem-semibong--------------------------lotos74-ru/0867a002-83b3-49ee-9540-684f3185d96d/scratchpad/add_anim.py\")",
+      "Bash(python3 \"/private/tmp/claude-501/-Users-sem-semibong--------------------------lotos74-ru/0867a002-83b3-49ee-9540-684f3185d96d/scratchpad/tweak_anim.py\")",
+      "Bash(python3 \"/private/tmp/claude-501/-Users-sem-semibong--------------------------lotos74-ru/0867a002-83b3-49ee-9540-684f3185d96d/scratchpad/move_to_card.py\")",
+      "Bash(python3 \"/private/tmp/claude-501/-Users-sem-semibong--------------------------lotos74-ru/0867a002-83b3-49ee-9540-684f3185d96d/scratchpad/nested_cat.py\")",
+      "Bash(awk 'NR==1259 || NR==1340 { n=match\\($0,/[^ ]/\\)-1; printf \"line %d: leading_spaces=%d  | %s\\\\n\", NR, n, substr\\($0,1,90\\) }' dentistry-services.html)",
+      "Bash(awk 'NR>=713 && NR<=1371 && /<div class=\"dentistry_price__category\\( active\\)?\"/ { n=match\\($0,/[^ ]/\\)-1; printf \"line %d: indent=%d\\\\n\", NR, n }' dentistry-service.html)",
+      "Bash(python3 \"/private/tmp/claude-501/-Users-sem-semibong--------------------------lotos74-ru/0867a002-83b3-49ee-9540-684f3185d96d/scratchpad/anim_service.py\")",
+      "Bash(awk '/<div class=\"dentistry_price__category\\( active\\)?\"\\( data-wp-child\\)?>/ { n=match\\($0,/[^ ]/\\)-1; if\\(n==36\\) print NR\": indent36 hasWp=\"\\($0 ~ /data-wp-child/\\) }' dentistry-service.html)",
+      "Bash(python3 \"/private/tmp/claude-501/-Users-sem-semibong--------------------------lotos74-ru/0867a002-83b3-49ee-9540-684f3185d96d/scratchpad/fix_overflow.py\")",
+      "Bash(awk 'NR>=1371 && NR<=1392' dentistry-service.html)",
+      "Bash(awk 'NR>=1380 && NR<=1388' dentistry-service.html)",
+      "Bash(awk '/&_banner \\\\{|&_banner\\\\{/{f=1} f&&/overflow/{print NR\": \"$0} f&&/^    \\\\}/{c++; if\\(c>0 && /^    [a-z&]/\\){}}' css/scss/components/_dentistry.scss)",
+      "Bash(awk 'NR>=3660 && NR<=3720 {print NR\": \"$0}' css/scss/components/_dentistry.scss)",
+      "Bash(awk 'NR>=3560 && NR<=3660 && /\\(&_banner|&__wrapper|&__content|overflow|&-image\\)/{print NR\": \"$0}' css/scss/components/_dentistry.scss)",
+      "Bash(python3 \"/private/tmp/claude-501/-Users-sem-semibong--------------------------lotos74-ru/0867a002-83b3-49ee-9540-684f3185d96d/scratchpad/banner_anim.py\")",
+      "Bash(awk 'NR>=1371 && NR<=1390' dentistry-service.html)"
     ]
   }
 }
