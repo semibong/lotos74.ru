@@ -16742,13 +16742,13 @@ body:has(#specialists-profile) .select2-dropdown {
   gap: 5rem;
   height: 5rem;
   background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
   box-sizing: border-box;
   box-shadow: 0 0.4rem 3rem 0 rgba(0, 0, 0, 0.05);
   padding: 1rem;
   border-radius: 10rem;
   margin-top: 1rem;
-  z-index: 100;
+  z-index: 90;
   top: 12rem;
 }
 @media (max-width: 992px) {
@@ -16771,6 +16771,77 @@ body:has(#specialists-profile) .select2-dropdown {
 .dentistry_sections a.active {
   color: #fff;
   background-color: #009FA2;
+}
+.dentistry_sidenav {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+  z-index: 90;
+  top: 28rem;
+  left: 3rem;
+}
+@media (max-width: 992px) {
+  .dentistry_sidenav {
+    display: none;
+  }
+}
+.dentistry_sidenav:hover .dentistry_sidenav__item span {
+  opacity: 1;
+}
+.dentistry_sidenav__item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  outline: none;
+  transition: color 0.3s ease;
+}
+.dentistry_sidenav__item i {
+  position: relative;
+  flex-shrink: 0;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 50%;
+  border: 0.2rem solid #B0DBDB;
+  margin-left: 0.4rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, width 0.3s ease, height 0.3s ease, margin 0.3s ease;
+}
+.dentistry_sidenav__item i::after {
+  content: "";
+  position: absolute;
+  inset: 0.2rem;
+  border-radius: 50%;
+  background-color: #009FA2;
+  transform: scale(0);
+  transition: transform 0.3s ease;
+}
+.dentistry_sidenav__item span {
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  color: #394250;
+  opacity: 0;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+.dentistry_sidenav__item:hover i {
+  border-color: #009FA2;
+}
+.dentistry_sidenav__item:hover span {
+  color: #009FA2;
+}
+.dentistry_sidenav__item.active i {
+  width: 1.9rem;
+  height: 1.9rem;
+  border-color: #009FA2;
+  margin: 0;
+}
+.dentistry_sidenav__item.active i::after {
+  transform: scale(1);
+}
+.dentistry_sidenav__item.active span {
+  color: #009FA2;
+  opacity: 1;
 }
 .dentistry-detail.dentistry_hero {
   margin-bottom: 10rem;
@@ -17145,7 +17216,7 @@ body:has(#specialists-profile) .select2-dropdown {
 
 .anchor {
   position: absolute;
-  top: -15rem;
+  top: -18rem;
 }
 @media (max-width: 992px) {
   .anchor {

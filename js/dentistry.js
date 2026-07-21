@@ -46,11 +46,61 @@ $(document).ready(function() {
         }
     });
 
-    if ($('.dentistry_sections').length) {
-        $('.dentistry_sections a').on('click', function() {
-            $('.dentistry_sections a').removeClass('active');
-            $(this).addClass('active');
+    if ($('.dentistry_sections').length || $('.dentistry_sidenav').length) {
+        const $navLinks = $('.dentistry_sections a, .dentistry_sidenav__item');
+        const sections = [];
+
+        $navLinks.each(function() {
+            const id = $(this).attr('href');
+            if (id && id.charAt(0) === '#') {
+                const target = document.querySelector(id);
+                if (target && sections.indexOf(id) === -1) {
+                    sections.push(id);
+                }
+            }
         });
+
+        let suppressSpy = false;
+        let suppressTimer = null;
+
+        function setActiveSection(id) {
+            $navLinks.removeClass('active');
+            $navLinks.filter('[href="' + id + '"]').addClass('active');
+        }
+
+        function updateActiveSection() {
+            if (suppressSpy) return;
+
+            const offset = window.innerHeight * 0.35;
+            let currentId = sections[0];
+
+            for (let i = 0; i < sections.length; i++) {
+                const target = document.querySelector(sections[i]);
+                if (target && target.getBoundingClientRect().top - offset <= 0) {
+                    currentId = sections[i];
+                }
+            }
+
+            setActiveSection(currentId);
+        }
+
+        if (sections.length) {
+            $navLinks.on('click', function() {
+                setActiveSection($(this).attr('href'));
+
+                // Freeze the scroll-spy while the smooth scroll animation runs,
+                // otherwise intermediate scroll positions flicker the active state.
+                suppressSpy = true;
+                clearTimeout(suppressTimer);
+                suppressTimer = setTimeout(function() {
+                    suppressSpy = false;
+                    updateActiveSection();
+                }, 900);
+            });
+
+            window.addEventListener('scroll', updateActiveSection, { passive: true });
+            updateActiveSection();
+        }
     }
 
     if ($('.dentistry_utp').length) {
