@@ -1,4 +1,58 @@
 $(document).ready(function() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            $('.burger').removeClass('burger-opened');
+            $('body').removeClass('noscroll');
+            window.scroll(0, scrollTop);
+
+            if (targetElement) {
+                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                const startPosition = window.pageYOffset;
+                const distance = targetPosition - startPosition;
+                const duration = 800;
+
+                let startTimestamp = null;
+
+                function animation(timestamp) {
+                    if (!startTimestamp) startTimestamp = timestamp;
+
+                    const elapsed = timestamp - startTimestamp;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const easeInOut = progress < 0.5
+                    ? 2 * progress * progress
+                    : -1 + (4 - 2 * progress) * progress;
+
+                    window.scrollTo(0, startPosition + distance * easeInOut);
+
+                    if (elapsed < duration) {
+                        window.requestAnimationFrame(animation);
+                    }
+                }
+            }
+
+            window.requestAnimationFrame(animation);
+        });
+    });
+
+    let scrollTop = 0;
+    window.addEventListener('scroll', function () {
+        if (!$('body').hasClass('noscroll')) {
+            scrollTop = window.scrollY;
+        }
+    });
+
+    if ($('.dentistry_sections').length) {
+        $('.dentistry_sections a').on('click', function() {
+            $('.dentistry_sections a').removeClass('active');
+            $(this).addClass('active');
+        });
+    }
+
     if ($('.dentistry_utp').length) {
         const dentistryUtpSlider = new Swiper('.dentistry_utp__slider .swiper', {
             speed: 1000,
@@ -153,5 +207,33 @@ $(document).ready(function() {
                 parent.addClass('active');
             }
         });
+    }
+
+    if ($('.dentistry_steps').length) {
+        const dentistryStepsSlider = new Swiper('.dentistry_steps__slider .swiper', {
+            speed: 1000,
+            slidesPerView: 'auto',
+            spaceBetween: 10,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true
+            },
+            scrollbar: {
+                el: '.dentistry_steps__slider .slider-progressbar',
+                draggable: true
+            },
+        });
+
+        function dentistryStepsSliderHandler() {
+            if (window.outerWidth > 992) {
+                dentistryStepsSlider.disable();
+            } else {
+                dentistryStepsSlider.enable();
+            }
+        }
+
+        dentistryStepsSliderHandler();
+        $(window).on('resize', dentistryStepsSliderHandler);
     }
 });

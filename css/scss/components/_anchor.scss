@@ -1,0 +1,12 @@
+*:has(>.anchor) {
+    position: relative;
+}
+
+.anchor {
+    position: absolute;
+    top: -15rem;
+
+    @media #{$lg} {
+        top: -10rem;
+    }
+}
