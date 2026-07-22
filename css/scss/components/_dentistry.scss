@@ -719,7 +719,7 @@
             min-height: 17rem;
             background-color: rgba(#fff, 0.6);
             box-sizing: border-box;
-            padding: 1.5rem 5.8rem 0 2.8rem;
+            padding: 1.5rem 5.8rem 1.5rem 2.8rem;
             border: #E4EBE8 1px solid;
             border-radius: 2.2rem;
             transition: border-color .2s linear;
@@ -841,6 +841,10 @@
             &-list {
                 padding-left: 2rem;
 
+                &_hidden {
+                    display: none;
+                }
+
                 li {
                     color: $color-secondary;
                     width: fit-content;
@@ -860,6 +864,24 @@
                         display: block;
                         z-index: 3;
                         transition: color .2s linear;
+                    }
+                }
+
+                &-show {
+                    font-size: 1.4rem;
+                    line-height: 2.2rem;
+                    color: $color-active;
+                    position: relative;
+                    background-color: transparent;
+                    padding: 0;
+                    border: none;
+                    margin: 0.5rem 0 0 2rem;
+                    z-index: 2;
+                    transition: color .2s linear;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $color-active-secondary;
                     }
                 }
             }

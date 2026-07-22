@@ -14022,7 +14022,7 @@ body:has(#specialists-profile) .select2-dropdown {
   min-height: 17rem;
   background-color: rgba(255, 255, 255, 0.6);
   box-sizing: border-box;
-  padding: 1.5rem 5.8rem 0 2.8rem;
+  padding: 1.5rem 5.8rem 1.5rem 2.8rem;
   border: #E4EBE8 1px solid;
   border-radius: 2.2rem;
   transition: border-color 0.2s linear;
@@ -14126,6 +14126,9 @@ body:has(#specialists-profile) .select2-dropdown {
 .dentistry_services__item-list {
   padding-left: 2rem;
 }
+.dentistry_services__item-list_hidden {
+  display: none;
+}
 .dentistry_services__item-list li {
   color: #748CA4;
   width: fit-content;
@@ -14142,6 +14145,22 @@ body:has(#specialists-profile) .select2-dropdown {
   display: block;
   z-index: 3;
   transition: color 0.2s linear;
+}
+.dentistry_services__item-list-show {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  color: #009FA2;
+  position: relative;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  margin: 0.5rem 0 0 2rem;
+  z-index: 2;
+  transition: color 0.2s linear;
+  cursor: pointer;
+}
+.dentistry_services__item-list-show:hover {
+  color: #14787A;
 }
 .dentistry_services__item-link {
   position: absolute;

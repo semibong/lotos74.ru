@@ -203,6 +203,23 @@ $(document).ready(function() {
         }
     }
 
+    if ($('.dentistry_services').length) {
+        $('.dentistry_services__item-list-show').on('click', function() {
+            const btn = $(this);
+            const hiddenList = btn.prev();
+
+            hiddenList.toggleClass('active');
+
+            if (hiddenList.hasClass('active')) {
+                hiddenList.slideDown(300);
+                btn.html('Скрыть');
+            } else {
+                hiddenList.slideUp(300);
+                btn.html('Показать еще');
+            }
+        });
+    }
+
     if ($('.dentistry_utp').length) {
         const dentistryUtpSlider = new Swiper('.dentistry_utp__slider .swiper', {
             loop: true,
