@@ -1,4 +1,104 @@
 $(document).ready(function() {
+    if (document.querySelector('[data-count]')) {
+        const counters = document.querySelectorAll('[data-count]');
+
+        function formatCount(el, value) {
+            const decimals = parseInt(el.getAttribute('data-count-decimals') || '0', 10);
+            const sep = el.getAttribute('data-count-sep') || '';
+            const prefix = el.getAttribute('data-count-prefix') || '';
+            const suffix = el.getAttribute('data-count-suffix') || '';
+            let s = value.toFixed(decimals);
+            if (sep) {
+                const parts = s.split('.');
+                parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, sep);
+                s = parts.join('.');
+            }
+            return prefix + s + suffix;
+        }
+
+        function runCounter(el) {
+            const target = parseFloat(el.getAttribute('data-count'));
+            // scale duration to the number's magnitude: small numbers finish quickly,
+            // large ones keep the full duration so they stay readable
+            const duration = Math.min(1600, 350 + Math.log10(Math.abs(target) + 1) * 400);
+
+            // reserve the final width now (the element is visible at this point) so counting
+            // up doesn't change width / reflow the layout
+            if (!el.style.minWidth) {
+                el.textContent = formatCount(el, target);
+                el.style.minWidth = Math.ceil(el.getBoundingClientRect().width) + 'px';
+                el.textContent = formatCount(el, 0);
+            }
+
+            let startTime = null;
+
+            function tick(now) {
+                if (startTime === null) startTime = now;
+                const progress = Math.min((now - startTime) / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                el.textContent = formatCount(el, target * eased);
+                if (progress < 1) {
+                    window.requestAnimationFrame(tick);
+                } else {
+                    el.textContent = formatCount(el, target);
+                }
+            }
+
+            window.requestAnimationFrame(tick);
+        }
+
+        function startCounters() {
+            // use tabular figures and start each counter at 0 (final width is reserved later,
+            // in runCounter, once the element is actually visible)
+            counters.forEach(el => {
+                if (window.getComputedStyle(el).display === 'inline') {
+                    el.style.display = 'inline-block';
+                }
+                el.style.fontVariantNumeric = 'tabular-nums';
+                el.textContent = formatCount(el, 0);
+            });
+
+            function startWhenAppeared(el) {
+                // if the number is inside an appearance-animated block, wait until that
+                // block is most of the way faded in before counting — a touch before it's
+                // fully visible, so the count-up overlaps the tail of the appearance
+                const box = el.closest('[data-wp-child]') || el;
+
+                function waitForOpacity() {
+                    const cs = window.getComputedStyle(box);
+                    if (cs.display !== 'none' && parseFloat(cs.opacity) > 0.6) {
+                        runCounter(el);
+                    } else {
+                        window.requestAnimationFrame(waitForOpacity);
+                    }
+                }
+
+                if ('IntersectionObserver' in window) {
+                    const io = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                io.unobserve(entry.target);
+                                waitForOpacity();
+                            }
+                        });
+                    }, { threshold: 0.6 });
+                    io.observe(el);
+                } else {
+                    waitForOpacity();
+                }
+            }
+
+            counters.forEach(startWhenAppeared);
+        }
+
+        // measure after web fonts have loaded so the reserved width matches the final glyphs
+        if (document.fonts && document.fonts.ready) {
+            document.fonts.ready.then(startCounters);
+        } else {
+            startCounters();
+        }
+    }
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();

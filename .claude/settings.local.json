@@ -19,7 +19,17 @@
       "Bash(awk 'NR>=3660 && NR<=3720 {print NR\": \"$0}' css/scss/components/_dentistry.scss)",
       "Bash(awk 'NR>=3560 && NR<=3660 && /\\(&_banner|&__wrapper|&__content|overflow|&-image\\)/{print NR\": \"$0}' css/scss/components/_dentistry.scss)",
       "Bash(python3 \"/private/tmp/claude-501/-Users-sem-semibong--------------------------lotos74-ru/0867a002-83b3-49ee-9540-684f3185d96d/scratchpad/banner_anim.py\")",
-      "Bash(awk 'NR>=1371 && NR<=1390' dentistry-service.html)"
+      "Bash(awk 'NR>=1371 && NR<=1390' dentistry-service.html)",
+      "Bash(awk '/&-utp-mini \\\\{|&-utp-mini\\\\{/{f=1} f{print NR\": \"$0} f&&/^        \\\\}$/{c++; if\\(c>=1\\) exit}' css/scss/components/_dentistry.scss)",
+      "Bash(node -e ' *)",
+      "Bash(awk '/\\\\.dentistry_hero-utp-mini__item \\\\{/{f=1} f{print} f&&/\\\\}/{c++; if\\(c>=1\\)exit}' css/styles.css)",
+      "Bash(awk '/\\\\.dentistry_hero-utp__item \\\\{/{f=1} f{print} f&&/\\\\}/{c++; if\\(c>=1\\)exit}' css/styles.css)",
+      "Bash(node -c js/dentistry.js)",
+      "Bash(node -c js/animate/animate.js)",
+      "Bash(git checkout *)",
+      "Bash(python3 -)",
+      "Bash(pkill -f \"http.server 878\")",
+      "Bash(awk 'NR>=296 && NR<=360' dentistry-service.html)"
     ]
   }
 }
